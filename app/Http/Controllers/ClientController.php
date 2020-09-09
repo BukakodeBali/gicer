@@ -32,7 +32,7 @@ class ClientController extends Controller
                         ->orWhere('pic', 'like', "%$keyword%");
         })->orderBy('id', 'desc');
 
-        $clients = $perPage == 'all' ? $clients->get():$clients->paginate(10);
+        $clients = $perPage == 'all' ? $clients->get():$clients->paginate($perPage);
 
         return ClientResources::collection($clients);
     }
