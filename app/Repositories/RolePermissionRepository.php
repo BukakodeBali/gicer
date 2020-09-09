@@ -22,7 +22,7 @@ class RolePermissionRepository
     {
         return $this->role->when($keyword <> '', function ($q) use ($keyword) {
             $q->where('name', 'like', "%{$keyword}%");
-        })->get();
+        })->orderBy('id', 'desc')->get();
     }
 
     public function addRoleWithPermissions(Array $role, Array $permissions)
@@ -41,10 +41,11 @@ class RolePermissionRepository
         return $this->role->with('permissions')->find($id);
     }
 
-    public function updateRole(Array $permissions, Int $id)
+    public function updateRole(Array $data, Int $id)
     {
         $role = $this->role->find($id);
-        return $role->syncPermissions($permissions);
+        $role->update(['name' => $data['name']]);
+        return $role->syncPermissions($data['permissions']);
     }
 
     public function deleteRole(Int $id)

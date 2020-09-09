@@ -29,7 +29,7 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
     $router->group(['prefix' => '/roles'], function () use ($router) {
         $router->get('/', 'RolePermissionController@showRoles');
         $router->post('/', 'RolePermissionController@addRole');
-        $router->get('/{id}', 'RolePermissionController@getRoleWithPermissionsById/');
+        $router->get('/{id}', 'RolePermissionController@getRoleWithPermissionsById');
         $router->put('/{id}', 'RolePermissionController@updateRole');
         $router->delete('/{id}', 'RolePermissionController@deleteRole');
     });

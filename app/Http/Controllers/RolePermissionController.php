@@ -40,7 +40,7 @@ class RolePermissionController extends Controller
 
     public function updateRole(RoleUpdateRequest $request, $id)
     {
-        $requestData = $request->only(['permissions']);
+        $requestData = $request->only(['permissions', 'name']);
         $updateRole = $this->rolePermissionService->updateRole($requestData, $id);
         return $updateRole ? $this->updateTrue('role'):$this->updateFalse('role');
     }

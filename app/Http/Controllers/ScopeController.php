@@ -24,7 +24,7 @@ class ScopeController extends Controller
                 ->orWhere('description', 'like', "%{$keyword}%");
         })->orderBy('id', 'desc');
 
-        $scopes = $perPage == 'all' ? $scopes->get() : $scopes->paginate(10);
+        $scopes = $perPage == 'all' ? $scopes->get() : $scopes->paginate($perPage);
 
         return ScopeResources::collection($scopes);
     }

@@ -49,7 +49,7 @@ class ClientController extends Controller
         $password = Str::random(8);
 
         $user = [
-            'username'  => $data['name'],
+            'username'  => $data['code'],
             'email'     => $data['email'],
             'password'  => app('hash')->make($password),
         ];
@@ -75,6 +75,7 @@ class ClientController extends Controller
             $client = new Client($data);
             $user   = User::create($user);
             $user->client()->save($client);
+            $user->assignRole('Client');
             DB::commit();
             return $this->storeTrue('perusahaan');
         } catch (\Exception $e) {
@@ -121,9 +122,13 @@ class ClientController extends Controller
                 Storage::disk('local')->move("qrcode/{$client['code']}.PNG", "qrcode/{$data['code']}.PNG");
             }
 
+            $user->username = $data['code'];
+
             $user->email = $data['email'];
 
             $user->save();
+
+            $user->assignRole('Client');
 
             $client->update($data);
 

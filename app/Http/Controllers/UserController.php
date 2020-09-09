@@ -28,10 +28,15 @@ class UserController extends Controller
     {
         $keyword    = $request->input('keyword') ?? '';
         $perPage    = $request->input('per_page') ?? 10;
-        $listUser   = User::with('roles')->when($keyword <> '', function($q) use ($keyword) {
-            $q->where('email', 'like', "%{$keyword}%")
-                ->orWhere('username', 'like', "%{$keyword}%");
-        })->orderBy('id', 'desc');
+        $listUser   = User::with('roles')
+            ->when($keyword <> '', function($q) use ($keyword) {
+                $q->where('email', 'like', "%{$keyword}%")
+                    ->orWhere('username', 'like', "%{$keyword}%")
+                    ->orWhereHas('roles', function ($q) use ($keyword) {
+                        $q->where('name', 'like', "%{$keyword}%");
+                    });
+            })
+            ->orderBy('id', 'desc');
 
         $listUser = $perPage === 'all' ? $listUser->get():$listUser->paginate($perPage);
 

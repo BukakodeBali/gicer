@@ -44,7 +44,7 @@ class RolePermissionService
 
     public function updateRole(Array $data, Int $id)
     {
-        return $this->rolePermissionRepository->updateRole($data['permissions'], $id);
+        return $this->rolePermissionRepository->updateRole($data, $id);
     }
 
     public function deleteRole(Int $id)
