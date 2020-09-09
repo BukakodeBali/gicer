@@ -28,7 +28,7 @@ class RolePermissionRepository
     public function addRoleWithPermissions(Array $role, Array $permissions)
     {
         $role = $this->role->create($role);
-        return $this->updateRole($permissions, $role->id);
+        return $this->updateRole(['permissions' => $permissions, 'name' => $role->name], $role->id);
     }
 
     public function getRoleById(Int $id)
