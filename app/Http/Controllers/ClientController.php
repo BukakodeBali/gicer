@@ -143,16 +143,16 @@ class ClientController extends Controller
         $client = Client::find($id);
 
         if ($client) {
-
-            DB::beginTransaction();
-
             try {
+                DB::beginTransaction();
                 User::find($client['user_id'])->delete();
                 $client->delete();
+                DB::commit();
+
                 return $this->destroyTrue('perusahaan');
             } catch (\Exception $e) {
                 DB::rollBack();
-                return $this->destroyTrue('perusahaan');
+                return $this->destroyFalse('perusahaan');
             }
         }
 

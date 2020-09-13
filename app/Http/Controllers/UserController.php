@@ -4,6 +4,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserStoreRequest;
+use App\Http\Requests\UserUpdateRequest;
+use App\Http\Resources\UserDetailResources;
 use App\Http\Resources\UserResources;
 use App\Models\User;
 use App\Repositories\UserRepository;
@@ -54,15 +56,46 @@ class UserController extends Controller
      */
     public function store(UserStoreRequest $request)
     {
-        $data = $request->except(['password_confirmation', 'roles']);
+        $data = $request->except(['password_confirmation', 'role']);
 
         $data['password'] = app('hash')->make($data['password']);
 
         $user = User::create($data);
 
-        $user->assignRole($request->roles);
+        $user->assignRole($request->role);
 
         return $user ? $this->storeTrue('user'):$this->storeFalse('user');
+    }
+
+    public function edit($id)
+    {
+        $user = User::find($id);
+        if ($user) {
+            return new UserDetailResources($user);
+        }
+
+        return $this->dataNotFound('user');
+    }
+
+    public function update(UserUpdateRequest $request, $id)
+    {
+        $user = User::find($id);
+
+        if ($user) {
+            $password   = $request->password;
+
+            $data       = $request->except(['password', 'password_confirmation', 'id', 'role', 'created_at']);
+
+            if ($password != '' && $password != null) {
+                $data['password'] = app('hash')->make($password);
+            }
+
+            $user->assignRole($request->role);
+
+            return $user->update($data) ? $this->updateTrue('user') : $this->updateFalse('user');
+        }
+
+        return $this->dataNotFound('user');
     }
 
     public function me()
