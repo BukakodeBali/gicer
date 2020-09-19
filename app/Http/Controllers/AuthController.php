@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ClientLoginRequest;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Auth;
@@ -80,5 +81,37 @@ class AuthController extends Controller
     {
         auth()->logout();
         return response()->json(['message' => 'Logout successfully :-)'], 200);
+    }
+
+    public function clientLogin(ClientLoginRequest $request)
+    {
+        $username = $request->code;
+        $password = $request->password;
+
+        $user = User::where('username', $username)->first();
+
+        if ($user) {
+            $token = Auth::attempt(['email' => $user->email, 'password' => $password]);
+
+            if ($token === false ) {
+                $response = [
+                    'status'=> false,
+                    'message'  => 'Password salah'
+                ];
+
+                return response()->json($response, 401);
+            } else {
+                $response = [
+                    'status'    => true,
+                    'message'   => 'Login successfully',
+                    'data'      => $user,
+                    'token_data'=> $this->respondWithToken($token)
+                ];
+
+                return response()->json($response, 200);
+            }
+        }
+
+        return $this->dataNotFound('user');
     }
 }

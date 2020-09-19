@@ -17,6 +17,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/login', 'AuthController@login');
+$router->post('/client_login', 'AuthController@clientLogin');
 
 $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
     $router->get('/me', 'UserController@me');
@@ -83,5 +84,7 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->put('/{id}', 'CertificateController@update');
         $router->post('/', 'CertificateController@store');
         $router->delete('/{id}', 'CertificateController@destroy');
+
+        $router->get('/dashboard/count', 'CertificateController@dashboard');
     });
 });

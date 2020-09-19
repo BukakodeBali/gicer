@@ -18,13 +18,22 @@ class CertificateController extends Controller
 {
     public function index(Request $request)
     {
-        $keyword = $request->keyword;
-        $perPage = $request->per_page;
-        $issueDate = $request->input('issue_date', false);
+        $keyword    = $request->keyword;
+        $perPage    = $request->per_page;
+        $issueDate  = $request->input('issue_date', false);
+        $status     = $request->status;
+        $startDate  = $request->start_date;
+        $endDate    = $request->end_date;
 
         $certificates = Certificate::with(['client:id,code,name', 'product', 'status_app'])
                         ->when($issueDate, function ($q) use ($issueDate){
                             $q->whereDate('issue_date', $issueDate);
+                        })
+                        ->when($startDate <> '' && $endDate <> '', function ($q) use ($startDate, $endDate) {
+                            $q->whereBetween('expired', [$startDate, $endDate]);
+                        })
+                        ->when($status <> '', function ($q) use ($status) {
+                            $q->where('status_id', $status);
                         })
                         ->when($keyword <> '', function ($q) use ($keyword){
                             $q->whereHas('client', function ($q) use ($keyword) {
@@ -84,14 +93,28 @@ class CertificateController extends Controller
         return $this->dataNotFound($certificate);
     }
 
+    public function dashboard()
+    {
+        $now            = Carbon::now()->toDateString();
+        $nowAddMonth    = Carbon::now()->addMonth()->toDateString();
+        $total          = Certificate::all()->count();
+        $active         = Certificate::where('status', 'Active')->get()->count();
+        $expired        = Certificate::where('status', 'Expired')->get()->count();
+        $willExpired    = Certificate::whereBetween('expired', [$now, $nowAddMonth])->get()->count();
+
+        return response()->json([
+            'total'         => $total,
+            'active'        => $active,
+            'expired'       => $expired,
+            'will_expired'  => $willExpired
+        ], 200);
+    }
+
     public function buildDetail(Array $data)
     {
         $status     = Status::get();
-
         $details    = [];
-
         $startDate  = Carbon::parse($data['issue_date']);
-
         $period     = 0;
 
         foreach ($status as $key => $status) {
