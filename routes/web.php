@@ -88,3 +88,5 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->get('/dashboard/count', 'CertificateController@dashboard');
     });
 });
+
+$router->post('/contact', 'ContactController@contact');
