@@ -53,6 +53,7 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
 
         $router->get('/generate/code', 'ClientController@generateCode');
         $router->get('/{id}/with-certificates', 'ClientController@getDetailWithCertificates');
+        $router->get('/get/certificates', 'ClientController@clientCertificates');
     });
 
     $router->group(['prefix' => '/scopes'], function () use ($router) {

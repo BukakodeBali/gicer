@@ -11,6 +11,7 @@ use App\Http\Resources\ClientResources;
 use App\Models\Client;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -176,6 +177,30 @@ class ClientController extends Controller
                 'certificates.details.status',
                 'scope:id,name'
             ])->find($id);
+            return new ClientCertificatesResources($client);
+        }
+
+        return $this->dataNotFound('perusahaan');
+    }
+
+    public function clientCertificates()
+    {
+        $user   = Auth::id();
+        $client = Client::where('user_id', $user)->first();
+
+        if ($client) {
+            $client = Client::with([
+                'certificates' => function ($q) {
+                    return $q->orderBy('id', 'desc');
+                },
+                'certificates.product:id,code,name,number,period',
+                'certificates.status_app:id,name',
+                'certificates.details' => function ($q) {
+                    return $q->whereNotIn('status_id', [1,5]);
+                },
+                'certificates.details.status',
+                'scope:id,name'
+            ])->find($client->id);
             return new ClientCertificatesResources($client);
         }
 
