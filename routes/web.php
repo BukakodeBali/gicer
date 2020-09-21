@@ -17,7 +17,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/login', 'AuthController@login');
-$router->post('/logout', 'AuthController@logout');
+$router->get('/logout', 'AuthController@logout');
 $router->post('/client_login', 'AuthController@clientLogin');
 
 $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
