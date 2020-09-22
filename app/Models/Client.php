@@ -11,7 +11,7 @@ class Client extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['code', 'scope_id', 'name', 'ecode', 'nace_code', 'pic', 'email', 'phone', 'address', 'user_id', 'password'];
+    protected $fillable = ['code', 'scope_id', 'name', 'ecode', 'nace_code', 'pic', 'email', 'phone', 'address', 'user_id', 'password', 'client_hash'];
 
     public function user()
     {

@@ -97,4 +97,5 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
     });
 });
 
-$router->post('/contact', 'ContactController@contact');
+$router->post('/contact', 'PublicController@contact');
+$router->get('/get_hash/certificates', 'PublicController@getCertificatesByHash');
