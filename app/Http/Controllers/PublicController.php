@@ -26,7 +26,7 @@ class PublicController extends Controller
     public function getCertificatesByHash(Request $request)
     {
         $hash = $request->client_hash;
-        $client = Client::where('client_hash', $hash)->fisrt();
+        $client = Client::where('client_hash', $hash)->first();
         if ($client) {
             $client = Client::with([
                 'certificates' => function ($q) {
