@@ -61,6 +61,8 @@ class ClientController extends Controller
 
         $qrcode     = app('hash')->make($qrcode);
 
+        $data['client_hash'] = $qrcode;
+
         $storagePath= Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
 
         $filename   = $data['code'].'.PNG';
