@@ -91,9 +91,9 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
     });
 
     $router->group(['prefix' => '/feedbacks'], function () use ($router) {
-        $router->get('/', 'FeedbackController@index');
-        $router->post('/', 'FeedbackController@store');
-        $router->delete('/{id}', 'FeedbackController@destroy');
+        $router->get('/', 'FeedBackController@index');
+        $router->post('/', 'FeedBackController@store');
+        $router->delete('/{id}', 'FeedBackController@destroy');
     });
 });
 
