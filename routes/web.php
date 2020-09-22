@@ -89,6 +89,12 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
 
         $router->get('/dashboard/count', 'CertificateController@dashboard');
     });
+
+    $router->group(['prefix' => '/feedbacks'], function () use ($router) {
+        $router->get('/', 'FeedbackController@index');
+        $router->post('/', 'FeedbackController@store');
+        $router->delete('/{id}', 'FeedbackController@destroy');
+    });
 });
 
 $router->post('/contact', 'ContactController@contact');
