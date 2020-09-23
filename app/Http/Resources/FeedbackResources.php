@@ -15,6 +15,7 @@ class FeedbackResources extends JsonResource
             'id'    => $this->id,
             'client_code' => $this->client->code,
             'client_name' => $this->client->name,
+            'feedback' => $this->feedback,
             'created_at_human' => Carbon::parse($this->created_at)->diffForHumans(),
             'created_at' => Carbon::parse($this->created_at)->toDateTimeString()
         ];

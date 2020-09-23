@@ -98,6 +98,17 @@ class UserController extends Controller
         return $this->dataNotFound('user');
     }
 
+    public function destroy($id)
+    {
+        $user = User::find($id);
+
+        if ($user) {
+            return $user->delete() ? $this->destroyTrue('pengguna') : $this->destroyFalse('pengguna');
+        }
+
+        return $this->dataNotFound('user');
+    }
+
     public function me()
     {
         $user = request()->user();

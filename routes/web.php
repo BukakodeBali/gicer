@@ -28,6 +28,7 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->post('/', 'UserController@store');
         $router->get('/{id}', 'UserController@edit');
         $router->put('/{id}', 'UserController@update');
+        $router->delete('/{id}', 'UserController@destroy');
     });
 
     $router->group(['prefix' => '/roles'], function () use ($router) {

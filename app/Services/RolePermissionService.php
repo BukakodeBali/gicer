@@ -19,7 +19,8 @@ class RolePermissionService
     public function showRoles(Array $data)
     {
         $keyword = $data['keyword'] ?? '';
-        return $this->rolePermissionRepository->showRoles($keyword);
+        $perPage = $data['per_page'] ?? 'all';
+        return $this->rolePermissionRepository->showRoles($keyword, $perPage);
     }
 
     public function addRole(Array $data)

@@ -18,11 +18,15 @@ class RolePermissionRepository
         $this->permission = $permission;
     }
 
-    public function showRoles(String $keyword)
+    public function showRoles(String $keyword, $perPage)
     {
-        return $this->role->when($keyword <> '', function ($q) use ($keyword) {
-            $q->where('name', 'like', "%{$keyword}%");
-        })->orderBy('id', 'desc')->get();
+        $data = $this->role->when($keyword <> '', function ($q) use ($keyword) {
+                    $q->where('name', 'like', "%{$keyword}%");
+                })->orderBy('id', 'desc');
+
+        $data = $perPage == 'all' ? $data->get() : $data->paginate($perPage);
+
+        return $data;
     }
 
     public function addRoleWithPermissions(Array $role, Array $permissions)
