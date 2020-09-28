@@ -61,4 +61,11 @@ class Controller extends BaseController
             'message' => "Gagal menghapus data {$param}!"
         ], 400);
     }
+
+    public function unAuthorized()
+    {
+        return response()->json([
+            'message' => "Tidak memiliki akses"
+        ], 403);
+    }
 }

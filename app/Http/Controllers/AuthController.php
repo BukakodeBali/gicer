@@ -30,10 +30,11 @@ class AuthController extends Controller
             $user = User::whereEmail($email)->first();
             if ($user) {
                 $response = [
-                    'status'    => true,
-                    'message'   => 'Login successfully',
-                    'data'      => $user,
-                    'token_data'=> $this->respondWithToken($token)
+                    'status'        => true,
+                    'message'       => 'Login successfully',
+                    'data'          => $user,
+                    'token_data'    => $this->respondWithToken($token),
+                    'permissions'   => $user->getAllPermissions()->pluck('name')
                 ];
             } else {
                 $response = [

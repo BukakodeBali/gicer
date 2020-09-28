@@ -9,24 +9,35 @@ use App\Http\Requests\ScopeUpdateRequest;
 use App\Http\Resources\ScopeResources;
 use App\Models\Scope;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ScopeController extends Controller
 {
+    public $user;
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
+
     public function index(Request $request)
     {
-        $keyword = $request->keyword;
+        if ($this->user->can('show scope')):
+            $keyword = $request->keyword;
 
-        $perPage = $request->per_page;
+            $perPage = $request->per_page;
 
-        $scopes = Scope::when($keyword <> '', function ($q) use ($keyword) {
-            return $q->where('code', 'like', "%{$keyword}%")
-                ->orWhere('name', 'like', "%{$keyword}%")
-                ->orWhere('description', 'like', "%{$keyword}%");
-        })->orderBy('id', 'desc');
+            $scopes = Scope::when($keyword <> '', function ($q) use ($keyword) {
+                return $q->where('code', 'like', "%{$keyword}%")
+                    ->orWhere('name', 'like', "%{$keyword}%")
+                    ->orWhere('description', 'like', "%{$keyword}%");
+            })->orderBy('id', 'desc');
 
-        $scopes = $perPage == 'all' ? $scopes->get() : $scopes->paginate($perPage);
+            $scopes = $perPage == 'all' ? $scopes->get() : $scopes->paginate($perPage);
 
-        return ScopeResources::collection($scopes);
+            return ScopeResources::collection($scopes);
+        else:
+            return $this->unAuthorized();
+        endif;
     }
 
     /**
@@ -36,11 +47,15 @@ class ScopeController extends Controller
      */
     public function store(ScopeStoreRequest $request)
     {
-        $data   = $request->all();
+        if ($this->user->can('create scope')):
+            $data   = $request->all();
 
-        $scope  = Scope::create($data);
+            $scope  = Scope::create($data);
 
-        return $scope ? $this->storeTrue('scope') : $this->storeFalse('scope');
+            return $scope ? $this->storeTrue('scope') : $this->storeFalse('scope');
+        else:
+            return $this->unAuthorized();
+        endif;
     }
 
     /**
@@ -50,13 +65,17 @@ class ScopeController extends Controller
      */
     public function edit($id)
     {
-        $scope = Scope::find($id);
+        if ($this->user->can('edit scope')):
+            $scope = Scope::find($id);
 
-        if ($scope) {
-            return new ScopeResources($scope);
-        }
+            if ($scope) {
+                return new ScopeResources($scope);
+            }
 
-        return $this->dataNotFound('scope');
+            return $this->dataNotFound('scope');
+        else:
+            return $this->unAuthorized();
+        endif;
     }
 
     /**
@@ -67,15 +86,19 @@ class ScopeController extends Controller
      */
     public function update(ScopeUpdateRequest $request, $id)
     {
-        $scope = Scope::find($id);
+        if ($this->user->can('update scope')):
+            $scope = Scope::find($id);
 
-        if ($scope) {
-            $data = $request->all();
-            $scope->update($data);
-            return $this->updateTrue('scope');
-        }
+            if ($scope) {
+                $data = $request->all();
+                $scope->update($data);
+                return $this->updateTrue('scope');
+            }
 
-        return $this->dataNotFound('scope');
+            return $this->dataNotFound('scope');
+        else:
+            return $this->unAuthorized();
+        endif;
     }
 
     /**
@@ -85,16 +108,20 @@ class ScopeController extends Controller
      */
     public function destroy($id)
     {
-        $scope = Scope::find($id);
+        if ($this->user->can('delete scope')):
+            $scope = Scope::find($id);
 
-        if ($scope) {
-            if ($scope->delete()) {
-                return $this->destroyTrue('scope');
-            } else {
-                return $this->destroyFalse('scope');
+            if ($scope) {
+                if ($scope->delete()) {
+                    return $this->destroyTrue('scope');
+                } else {
+                    return $this->destroyFalse('scope');
+                }
             }
-        }
 
-        return $this->dataNotFound('scope');
+            return $this->dataNotFound('scope');
+        else:
+            return $this->unAuthorized();
+        endif;
     }
 }
