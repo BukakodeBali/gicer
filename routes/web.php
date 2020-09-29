@@ -89,6 +89,7 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->delete('/{id}', 'CertificateController@destroy');
 
         $router->get('/dashboard/count', 'CertificateController@dashboard');
+        $router->get('/download/excel', 'CertificateController@generateExcel');
     });
 
     $router->group(['prefix' => '/feedbacks'], function () use ($router) {

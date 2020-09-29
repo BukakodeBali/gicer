@@ -10,12 +10,17 @@ use App\Http\Resources\CertificateResources;
 use App\Models\Certificate;
 use App\Models\CertificateDetail;
 use App\Models\Status;
+use App\Traits\ExcelStyle;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class CertificateController extends Controller
 {
+    use ExcelStyle;
     public $user;
     public function __construct()
     {
@@ -165,6 +170,7 @@ class CertificateController extends Controller
     public function generateExcel(Request $request)
     {
         $keyword    = $request->keyword;
+        $issueDate  = $request->input('issue_date', false);
         $statusApp  = $request->status_app;
         $status     = $request->status;
         $startDate  = $request->start_date;
@@ -173,6 +179,9 @@ class CertificateController extends Controller
         $certificates = Certificate::with(['client:id,code,name', 'product', 'status_app'])
             ->when($status, function ($q) use ($status) {
                 $q->where('status', $status);
+            })
+            ->when($issueDate, function ($q) use ($issueDate){
+                $q->whereDate('issue_date', $issueDate);
             })
             ->when($startDate <> '' && $endDate <> '', function ($q) use ($startDate, $endDate) {
                 $q->whereBetween('expired', [$startDate, $endDate]);
@@ -185,6 +194,54 @@ class CertificateController extends Controller
                     $q->where('code', 'like', "%{$keyword}%")
                         ->orWhere('name', 'like', "%{$keyword}%");
                 });
-            })->orderBy('id', 'desc');
+            })->orderBy('id', 'desc')->get();
+
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+        $sheet->setTitle('Data Sertifikat');
+
+        $i = 1;
+
+        $sheet->getColumnDimension('A')->setWidth(5);
+        $sheet->getColumnDimension('B')->setAutoSize(true);
+        $sheet->getColumnDimension('C')->setAutoSize(true);
+        $sheet->getColumnDimension('D')->setAutoSize(true);
+        $sheet->getColumnDimension('E')->setAutoSize(true);
+        $sheet->getColumnDimension('F')->setAutoSize(true);
+        $sheet->getColumnDimension('G')->setAutoSize(true);
+        $sheet->getColumnDimension('H')->setAutoSize(true);
+
+        $cells  = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+        $columns= ['No', 'Kode Sertifikate', 'Kode Klien', 'Klien', 'Produk', 'Status App', 'Issue Date', 'Expired'];
+        $sheet->getStyle('A'.$i.':H'.$i)->getFont()->setBold(true);
+        $sheet->getStyle('A'.$i.':H'.$i)->applyFromArray($this->horizontalCenter());
+        $sheet->getStyle('A'.$i.':H'.$i)->applyFromArray($this->border());
+        foreach ($columns as $key => $column) {
+            $sheet->setCellValue($cells[$key].$i, $column);
+        }
+
+        $i++;
+        $start = $i;
+        foreach ($certificates as $key => $certificate) {
+            $sheet->setCellValue('A'.$i, $key+1);
+            $sheet->setCellValue('B'.$i, 'KSM/'.$certificate->client->code.'/'.$certificate->product->code);
+            $sheet->setCellValue('C'.$i, $certificate->client->code);
+            $sheet->setCellValue('D'.$i, $certificate->client->name);
+            $sheet->setCellValue('E'.$i, $certificate->product->name);
+            $sheet->setCellValue('F'.$i, $certificate->status_app->name);
+            $sheet->setCellValue('G'.$i, $certificate->issue_date);
+            $sheet->setCellValue('H'.$i, $certificate->expired);
+            $i++;
+        }
+
+        $writer = new Xlsx($spreadsheet);
+        ob_start();
+        $writer->save('php://output');
+        $content = ob_get_contents();
+        ob_end_clean();
+        $fileName = "sertifikat.xlsx";
+        Storage::disk('local')->put('excel/'.$fileName, $content);
+        $file = url('/excel/'.$fileName);
+        return response()->json($file, 200);
     }
 }
