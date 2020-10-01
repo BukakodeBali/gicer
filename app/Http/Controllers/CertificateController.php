@@ -212,7 +212,7 @@ class CertificateController extends Controller
         $sheet->getColumnDimension('H')->setAutoSize(true);
 
         $cells  = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-        $columns= ['No', 'Kode Sertifikate', 'Kode Klien', 'Klien', 'Produk', 'Status App', 'Issue Date', 'Expired'];
+        $columns= ['No', 'Kode Sertifikat', 'Kode Klien', 'Klien', 'Produk', 'Status App', 'Issue Date', 'Expired'];
         $sheet->getStyle('A'.$i.':H'.$i)->getFont()->setBold(true);
         $sheet->getStyle('A'.$i.':H'.$i)->applyFromArray($this->horizontalCenter());
         $sheet->getStyle('A'.$i.':H'.$i)->applyFromArray($this->border());
@@ -227,7 +227,7 @@ class CertificateController extends Controller
             $sheet->setCellValue('B'.$i, 'KSM/'.$certificate->client->code.'/'.$certificate->product->code);
             $sheet->setCellValue('C'.$i, $certificate->client->code);
             $sheet->setCellValue('D'.$i, $certificate->client->name);
-            $sheet->setCellValue('E'.$i, $certificate->product->name);
+            $sheet->setCellValue('E'.$i, $this->product->number." : ".$this->product->period." ".$certificate->product->name);
             $sheet->setCellValue('F'.$i, $certificate->status_app->name);
             $sheet->setCellValue('G'.$i, $certificate->issue_date);
             $sheet->setCellValue('H'.$i, $certificate->expired);
