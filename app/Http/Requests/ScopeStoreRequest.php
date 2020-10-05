@@ -26,7 +26,7 @@ class ScopeStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'code'  => 'required|unique:scopes,code',
+            'code'  => 'required',
             'name'  => 'required',
             'description' => 'nullable'
         ];
@@ -41,7 +41,6 @@ class ScopeStoreRequest extends FormRequest
     {
         return [
             'code.required' => 'Kode atau nomor wajib isi',
-            'code.unique'   => 'Kode atau nomor sudah digunakan',
             'name.required' => 'Nama scope wajib isi'
         ];
     }

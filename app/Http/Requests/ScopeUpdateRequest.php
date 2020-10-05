@@ -27,7 +27,7 @@ class ScopeUpdateRequest extends FormRequest
     {
         $id = $this->segment(2);
         return [
-            'code'  => 'required|unique:scopes,code,'.$id,
+            'code'  => 'required',
             'name'  => 'required',
             'description' => 'nullable'
         ];
@@ -42,7 +42,6 @@ class ScopeUpdateRequest extends FormRequest
     {
         return [
             'code.required' => 'Kode atau nomor wajib isi',
-            'code.unique'   => 'Kode atau nomor sudah digunakan',
             'name.required' => 'Nama scope wajib isi'
         ];
     }
