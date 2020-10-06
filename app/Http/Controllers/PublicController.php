@@ -35,7 +35,7 @@ class PublicController extends Controller
                 'certificates.product:id,code,name,number,period',
                 'certificates.status_app:id,name',
                 'certificates.details' => function ($q) {
-                    return $q->whereNotIn('status_id', [1,5]);
+                    return $q->whereNotIn('status_id', [5]);
                 },
                 'certificates.details.status',
                 'scope:id,name'

@@ -227,7 +227,7 @@ class CertificateController extends Controller
             $sheet->setCellValue('B'.$i, 'KSM/'.$certificate->client->code.'/'.$certificate->product->code);
             $sheet->setCellValue('C'.$i, $certificate->client->code);
             $sheet->setCellValue('D'.$i, $certificate->client->name);
-            $sheet->setCellValue('E'.$i, $this->product->number." : ".$this->product->period." ".$certificate->product->name);
+            $sheet->setCellValue('E'.$i, $certificate->product->number." : ".$certificate->product->period." ".$certificate->product->name);
             $sheet->setCellValue('F'.$i, $certificate->status_app->name);
             $sheet->setCellValue('G'.$i, $certificate->issue_date);
             $sheet->setCellValue('H'.$i, $certificate->expired);
