@@ -118,7 +118,7 @@ class CertificateController extends Controller
                 return $certificate->delete() ? $this->destroyTrue('sertifikat') : $this->storeFalse('sertifikat');
             }
 
-            return $this->dataNotFound($certificate);
+            return $this->dataNotFound('sertifikat');
         else:
             return $this->unAuthorized();
         endif;
