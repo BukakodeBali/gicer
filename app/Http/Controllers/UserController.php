@@ -63,7 +63,7 @@ class UserController extends Controller
      */
     public function store(UserStoreRequest $request)
     {
-        if ($this->user->can('store user')):
+        if ($this->user->can('create user')):
             $data = $request->except(['password_confirmation', 'role']);
 
             $data['password'] = app('hash')->make($data['password']);

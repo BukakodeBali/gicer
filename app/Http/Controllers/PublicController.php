@@ -19,7 +19,7 @@ class PublicController extends Controller
             return response()->json(['message' => 'Hi newbeeee :-)'], 400);
         }
 
-        Mail::to('arisudarma@gmail.com')->send(new ContactMail($request->all()));
+        Mail::to('info@ksmanajemen.com')->send(new ContactMail($request->all()));
         return response()->json(['message' => 'Email berhasil dikirim'], 200);
     }
 

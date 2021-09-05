@@ -72,7 +72,7 @@ class ClientController extends Controller
 
             $qrcode     = app('hash')->make($qrcode);
 
-            $data['client_hash'] = $qrcode;
+            $data['client_hash'] = preg_replace('/[^A-Za-z0-9\-]/', '', $qrcode);
 
             $storagePath= Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
 
@@ -80,7 +80,7 @@ class ClientController extends Controller
 
             $filepath   = $storagePath.'qrcode/'.$filename;
 
-            $qrurl      = env('APP_CLIENT_URL').'/verify/'.$qrcode;
+            $qrurl      = env('APP_CLIENT_URL').'/verify/'.$data['client_hash'];
 
             QRCode::url($qrurl)->setOutfile($filepath)->setSize(8)->setMargin(2)->setErrorCorrectionLevel('H')->png();
 
