@@ -97,6 +97,10 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->post('/', 'FeedBackController@store');
         $router->delete('/{id}', 'FeedBackController@destroy');
     });
+
+    $router->group(['prefix' => 'articles'], function () use ($router) {
+        $router->post('/', 'ArticleController@store');
+    });
 });
 
 $router->post('/contact', 'PublicController@contact');

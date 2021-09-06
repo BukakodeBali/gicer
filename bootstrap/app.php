@@ -102,9 +102,11 @@ $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(LaravelQRCode\Providers\QRCodeServiceProvider::class);
 $app->register(Illuminate\Mail\MailServiceProvider::class);
+$app->register(Intervention\Image\ImageServiceProvider::class);
 $app->alias('mailer', Illuminate\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
+$app->alias('Image', Intervention\Image\Facades\Image::class);
 /*
 |--------------------------------------------------------------------------
 | Load library for beautifully validation
