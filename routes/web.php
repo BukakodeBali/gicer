@@ -98,6 +98,14 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->delete('/{id}', 'FeedBackController@destroy');
     });
 
+    $router->group(['prefix' => '/categories'], function () use ($router) {
+        $router->get('/', 'CategoryController@index');
+        $router->post('/', 'CategoryController@store');
+        $router->get('/{id}', 'CategoryController@edit');
+        $router->put('/{id}', 'CategoryController@update');
+        $router->delete('/{id}', 'CategoryController@destroy');
+    });
+
     $router->group(['prefix' => 'articles'], function () use ($router) {
         $router->post('/', 'ArticleController@store');
     });
