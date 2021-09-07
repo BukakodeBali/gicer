@@ -2,12 +2,13 @@
 
 namespace App\Models;
 use App\Traits\CreateAndUpdateByTrait;
+use App\Traits\LinkableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
-    use SoftDeletes, CreateAndUpdateByTrait;
+    use SoftDeletes, CreateAndUpdateByTrait, LinkableTrait;
     protected $fillable = ['name', 'description'];
 
     public function image()

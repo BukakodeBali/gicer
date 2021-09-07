@@ -60,6 +60,12 @@ class CategoryController extends Controller
                 transform($request->getParent(), fn(Category $parent) => $category->parent()->associate($parent));
                 $category->save();
 
+                //META & LINK
+                $category->link()->create([
+                    'link' => $request->getCategoryLink(),
+                    'meta_description' => $request->getMetaDescription()
+                ]);
+
                 if ($request->hasFile('image')) {
                     $categoryImage  = $request->image;
                     $brandImageName = $this->doUploadImage('categories', $categoryImage, $this->dimensions);
@@ -77,28 +83,34 @@ class CategoryController extends Controller
         });
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     * @param  Category  $category
-     */
-    public function edit(Category $category)
+    public function edit($id)
     {
         if (auth()->user()->cannot('edit category')) {
             return $this->unauthorized();
         }
 
-        return new CategoryResources($category);
+        $category = Category::find($id);
+        if (!$category) {
+            return $this->dataNotFound('kategori');
+        }
+
+        return new CategoryResources($category->load('link'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param CategoryUpdateRequest $request
-     * @param Category $category
+     * @param $id
      * @return JsonResponse
      */
-    public function update(CategoryUpdateRequest $request, Category $category):JsonResponse
+    public function update(CategoryUpdateRequest $request, $id):JsonResponse
     {
+        $category = Category::find($id);
+        if (!$category) {
+            return $this->dataNotFound('kategori');
+        }
+
         return DB::transaction( function () use ($request, $category) {
             try {
                 $category->fill($request->only(['name', 'description']));
@@ -107,6 +119,17 @@ class CategoryController extends Controller
                     $request->getParent(),
                     fn(Category $parent) => $category->parent()->associate($parent),
                     $category->parent_id = 0);
+
+                $link = [
+                    'link' => $request->getCategoryLink(),
+                    'meta_description' => $request->getMetaDescription()
+                ];
+
+                if ($category->link) {
+                    $category->link()->update($link);
+                } else {
+                    $category->link()->create($link);
+                }
 
                 if ($request->hasFile('image')) {
                     $categoryImage  = $request->image;

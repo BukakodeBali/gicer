@@ -3,10 +3,12 @@
 namespace App\Http\Requests;
 
 use App\Models\Category;
+use App\Traits\CreateLinkAndMetaTrait;
 use Urameshibr\Requests\FormRequest;
 
 class CategoryUpdateRequest extends FormRequest
 {
+    use CreateLinkAndMetaTrait;
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -38,7 +40,9 @@ class CategoryUpdateRequest extends FormRequest
                     }
                 },
             ],
-            'image' => 'nullable|mimes:jpg,png,jpeg|max:2048'
+            'image' => 'nullable|mimes:jpg,png,jpeg|max:2048',
+            'link' => 'nullable',
+            'meta_description' => 'nullable'
         ];
     }
 
@@ -54,5 +58,15 @@ class CategoryUpdateRequest extends FormRequest
     public function getParent()
     {
         return Category::find($this->parent_id);
+    }
+
+    public function getCategoryLink():string
+    {
+        return $this->createLink($this->link, $this->name);
+    }
+
+    public function getMetaDescription():string
+    {
+        return $this->createMeta($this->meta_description, $this->description);
     }
 }

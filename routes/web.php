@@ -102,8 +102,10 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->get('/', 'CategoryController@index');
         $router->post('/', 'CategoryController@store');
         $router->get('/{id}', 'CategoryController@edit');
-        $router->put('/{id}', 'CategoryController@update');
+        $router->post('/{id}', 'CategoryController@update');
         $router->delete('/{id}', 'CategoryController@destroy');
+
+        $router->get('/get/list', 'CategoryController@list');
     });
 
     $router->group(['prefix' => 'articles'], function () use ($router) {
