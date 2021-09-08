@@ -109,7 +109,11 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
     });
 
     $router->group(['prefix' => 'articles'], function () use ($router) {
+        $router->get('/', 'ArticleController@index');
         $router->post('/', 'ArticleController@store');
+        $router->get('/{id}', 'ArticleController@edit');
+        $router->post('/{id}', 'ArticleController@update');
+        $router->delete('/{id}', 'ArticleController@destroy');
     });
 });
 

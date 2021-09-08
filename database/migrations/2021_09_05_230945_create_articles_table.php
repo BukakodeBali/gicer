@@ -17,6 +17,8 @@ class CreateArticlesTable extends Migration
             $table->bigIncrements('id');
             $table->string('title', 255);
             $table->text('content');
+            $table->enum('status', ['draft', 'published'])->default('draft');
+            $table->dateTime('published_at')->nullable();
             $table->unsignedBigInteger('created_by');
             $table->unsignedBigInteger('updated_by');
             $table->index('created_by');

@@ -5,9 +5,8 @@ namespace App\Http\Requests;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
-use Urameshibr\Requests\FormRequest;
 
-class ArticleStoreRequest extends FormRequest
+class ArticleUpdateRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -39,11 +38,6 @@ class ArticleStoreRequest extends FormRequest
         ];
     }
 
-    /**
-     * Get the error messages for the defined validation rules.
-     *
-     * @return array
-     */
     public function messages()
     {
         return [

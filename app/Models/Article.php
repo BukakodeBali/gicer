@@ -3,14 +3,15 @@
 namespace App\Models;
 
 use App\Traits\CreateAndUpdateByTrait;
+use App\Traits\LinkableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Article extends Model
 {
-    use CreateAndUpdateByTrait;
-    protected $fillable = ['title', 'content'];
+    use CreateAndUpdateByTrait, LinkableTrait;
+    protected $fillable = ['title', 'content', 'status', 'published_at'];
 
     public function link():MorphOne
     {

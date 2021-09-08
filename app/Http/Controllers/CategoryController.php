@@ -27,7 +27,7 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         if (auth()->user()->cannot('show categories')) {
-            return $this->unauthorized();
+            return $this->unAuthorized();
         }
 
         $keyword = $request->keyword ?? '';
@@ -68,10 +68,10 @@ class CategoryController extends Controller
 
                 if ($request->hasFile('image')) {
                     $categoryImage  = $request->image;
-                    $brandImageName = $this->doUploadImage('categories', $categoryImage, $this->dimensions);
+                    $categoryImage = $this->doUploadImage('categories', $categoryImage, $this->dimensions);
                     $category->image()->create([
                         'path' => 'categories',
-                        'name' => $brandImageName
+                        'name' => $categoryImage
                     ]);
                 }
 
@@ -86,12 +86,12 @@ class CategoryController extends Controller
     public function edit($id)
     {
         if (auth()->user()->cannot('edit category')) {
-            return $this->unauthorized();
+            return $this->unAuthorized();
         }
 
         $category = Category::find($id);
         if (!$category) {
-            return $this->dataNotFound('kategori');
+            return $this->dataNotFound($this->module);
         }
 
         return new CategoryResources($category->load('link'));
@@ -108,7 +108,7 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         if (!$category) {
-            return $this->dataNotFound('kategori');
+            return $this->dataNotFound($this->module);
         }
 
         return DB::transaction( function () use ($request, $category) {
@@ -133,10 +133,10 @@ class CategoryController extends Controller
 
                 if ($request->hasFile('image')) {
                     $categoryImage  = $request->image;
-                    $brandImageName = $this->doUploadImage('categories', $categoryImage, $this->dimensions);
+                    $categoryImage = $this->doUploadImage('categories', $categoryImage, $this->dimensions);
                     $updatedData = [
                         'path' => 'categories',
-                        'name' => $brandImageName
+                        'name' => $categoryImage
                     ];
 
                     if ($category->image) {
@@ -158,13 +158,18 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Category $category
+     * @param int $id
      * @return JsonResponse
      */
-    public function destroy(Category $category):JsonResponse
+    public function destroy($id):JsonResponse
     {
         if (auth()->user()->cannot('delete category')) {
-            return $this->unauthorized();
+            return $this->unAuthorized();
+        }
+
+        $category = Category::find($id);
+        if (!$category) {
+            return $this->dataNotFound($this->module);
         }
 
         $category->setUpdatedBy(Auth::user());
