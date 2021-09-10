@@ -18,11 +18,11 @@ class ArticleResources extends JsonResource
      */
     public function toArray($request): array
     {
-        $images = [];
+        $image = [];
         if ($this->image) {
-            $images['original'] = asset("{$this->image->path}/{$this->image->name}");
+            $image['original'] = asset("images/{$this->image->path}/{$this->image->name}");
             foreach ($this->dimensions as $dimension) {
-                $images["w-{$dimension}"] = asset("{$this->image->path}/{$dimension}/{$this->image->name}");
+                $image["w-{$dimension}"] = asset("images/{$this->image->path}/{$dimension}/{$this->image->name}");
             }
         }
 
@@ -31,8 +31,8 @@ class ArticleResources extends JsonResource
             'title' => $this->title,
             'content' => $this->content,
             'status' => $this->status,
-            'published_at' => Carbon::parse($this->published_at)->toDateTimeString(),
-            'images' => $images,
+            'published_at' => $this->published_at === null ? '' : Carbon::parse($this->published_at)->diffForHumans(),
+            'image' => $image,
             'created_at' => Carbon::parse($this->created_at)->diffForHumans(),
             'link' => $this->whenLoaded('link', function () {
                     return $this->link->link;
@@ -40,7 +40,8 @@ class ArticleResources extends JsonResource
             'meta_description' => $this->whenLoaded('link', function () {
                     return $this->link->meta_description;
                 }) ?? '',
-            'categories' => ArticleCategoryResources::collection($this->whenLoaded('categories'))
+            'categories' => ArticleCategoryResources::collection($this->whenLoaded('categories')),
+            'tags' => ArticleTagResources::collection($this->whenLoaded('tags'))
         ];
     }
 }

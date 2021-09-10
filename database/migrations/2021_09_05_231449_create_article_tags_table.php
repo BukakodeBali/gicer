@@ -14,8 +14,14 @@ class CreateArticleTagsTable extends Migration
     public function up()
     {
         Schema::create('article_tags', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('article_id');
+            $table->unsignedBigInteger('tag_id');
+
+            $table->index('article_id');
+            $table->index('tag_id');
+
+            $table->foreign('article_id')->references('id')->on('articles')->cascadeOnDelete();
+            $table->foreign('tag_id')->references('id')->on('tags')->cascadeOnDelete();
         });
     }
 

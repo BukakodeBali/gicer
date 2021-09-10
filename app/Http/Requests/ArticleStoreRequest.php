@@ -62,7 +62,7 @@ class ArticleStoreRequest extends FormRequest
 
     public function getMetaDescription():string
     {
-        return $this->createMeta($this->meta_description, $this->description);
+        return $this->createMeta($this->meta_description, $this->content);
     }
 
     public function getTags():array

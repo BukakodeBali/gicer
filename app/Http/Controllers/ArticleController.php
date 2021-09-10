@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ArticleStoreRequest;
+use App\Http\Requests\ArticleUpdateRequest;
 use App\Http\Resources\ArticleResources;
 use App\Models\Article;
 use App\Traits\ImageUploadTrait;
@@ -85,7 +86,7 @@ class ArticleController extends Controller
 
     public function edit($id)
     {
-        if (auth()->user()->cannot('Edit Article')) {
+        if (auth()->user()->cannot('edit article')) {
             return $this->unAuthorized();
         }
 
@@ -94,12 +95,12 @@ class ArticleController extends Controller
             return $this->dataNotFound($this->module);
         }
 
-        return new ArticleResources($article->load(['image', 'link', 'categories', 'tag']));
+        return new ArticleResources($article->load(['image', 'link', 'categories', 'tags']));
     }
 
-    public function update(ArticleStoreRequest $request, $id)
+    public function update(ArticleUpdateRequest $request, $id)
     {
-        if (auth()->user()->cannot('Update Article')) {
+        if (auth()->user()->cannot('update article')) {
             return $this->unAuthorized();
         }
 
@@ -157,7 +158,7 @@ class ArticleController extends Controller
             }
 
             DB::commit();
-            return $this->storeTrue($this->module);
+            return $this->updateTrue($this->module);
         } catch (Exception $e) {
             DB::rollBack();
             return $this->updateFalse($this->module);
@@ -166,7 +167,7 @@ class ArticleController extends Controller
 
     public function destroy($id)
     {
-        if (auth()->user()->cannot('Delete Article')) {
+        if (auth()->user()->cannot('delete article')) {
             return $this->unAuthorized();
         }
 

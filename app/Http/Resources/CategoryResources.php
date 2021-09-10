@@ -18,9 +18,9 @@ class CategoryResources extends JsonResource
     {
         $images = [];
         if ($this->image) {
-            $images['original'] = asset("{$this->image->path}/{$this->image->name}");
+            $images['original'] = asset("images/{$this->image->path}/{$this->image->name}");
             foreach ($this->dimensions as $dimension) {
-                $images["w-{$dimension}"] = asset("{$this->image->path}/{$dimension}/{$this->image->name}");
+                $images["w-{$dimension}"] = asset("images/{$this->image->path}/{$dimension}/{$this->image->name}");
             }
         }
 
