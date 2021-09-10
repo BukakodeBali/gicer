@@ -10,7 +10,7 @@ trait CreateLinkAndMetaTrait
     {
         $link = $primary ?? null;
         if ($link === null || $link === '') {
-            $link = preg_replace('/[^A-Za-z0-9\-]/', '', $placeholder);
+            $link = preg_replace('/[^A-Za-z0-9\- ]/', '', $placeholder);
             return Str::slug($link, '-');
         }
 

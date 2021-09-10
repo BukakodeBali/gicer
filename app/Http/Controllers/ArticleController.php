@@ -7,6 +7,8 @@ use App\Http\Resources\ArticleResources;
 use App\Models\Article;
 use App\Traits\ImageUploadTrait;
 use Carbon\Carbon;
+use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -16,6 +18,24 @@ class ArticleController extends Controller
     use ImageUploadTrait;
     protected $dimensions = [400, 600, 800];
     protected $module = 'artikel';
+
+    public function index(Request $request)
+    {
+        if (auth()->user()->cannot('show articles')) {
+            return $this->unAuthorized();
+        }
+
+        $keyword = $request->keyword ?? '';
+        $perPage = $request->per_page ?? 10;
+
+        $articles = Article::with(['categories', 'tags', 'image'])
+            ->when($keyword <> '', function ($q) use ($keyword) {
+                $q->where('title', 'like', "%{$keyword}%");
+            })
+            ->orderByDesc('id');
+        $articles = $perPage === 'all' ? $articles->get() : $articles->paginate($perPage);
+        return ArticleResources::collection($articles);
+    }
 
     public function store(ArticleStoreRequest $request)
     {
@@ -56,7 +76,7 @@ class ArticleController extends Controller
 
             DB::commit();
             return $this->storeTrue($this->module);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             DB::rollBack();
             Log::info($e->getMessage());
             return $this->storeFalse($this->module);
@@ -74,7 +94,7 @@ class ArticleController extends Controller
             return $this->dataNotFound($this->module);
         }
 
-        return new ArticleResources($article);
+        return new ArticleResources($article->load(['image', 'link', 'categories', 'tag']));
     }
 
     public function update(ArticleStoreRequest $request, $id)
@@ -138,7 +158,7 @@ class ArticleController extends Controller
 
             DB::commit();
             return $this->storeTrue($this->module);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             DB::rollBack();
             return $this->updateFalse($this->module);
         }

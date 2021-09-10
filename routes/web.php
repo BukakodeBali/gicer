@@ -106,6 +106,7 @@ $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
         $router->delete('/{id}', 'CategoryController@destroy');
 
         $router->get('/get/list', 'CategoryController@list');
+        $router->get('/get/list/subcategory', 'CategoryController@listWithSubcategory');
     });
 
     $router->group(['prefix' => 'articles'], function () use ($router) {

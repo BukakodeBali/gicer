@@ -3,12 +3,14 @@
 namespace App\Http\Requests;
 
 use App\Models\Tag;
+use App\Traits\CreateLinkAndMetaTrait;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Urameshibr\Requests\FormRequest;
 
 class ArticleStoreRequest extends FormRequest
 {
+    use CreateLinkAndMetaTrait;
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,7 +26,7 @@ class ArticleStoreRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'title' => 'required',
@@ -44,7 +46,7 @@ class ArticleStoreRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
+    public function messages(): array
     {
         return [
             'title.required' => 'Judul artikel wajib isi',
@@ -55,24 +57,12 @@ class ArticleStoreRequest extends FormRequest
 
     public function getArticleLink():string
     {
-        $link = $this->link ?? null;
-        if ($link === null || $link === '') {
-            return Str::slug($this->title, '-');
-        }
-
-        return  $link;
+        return $this->createLink($this->link, $this->title);
     }
 
     public function getMetaDescription():string
     {
-        $meta = $this->meta_description ?? null;
-        if ($meta === null || $meta === '') {
-            $meta = strip_tags($this->content);
-            $meta = str_replace(["\n", "\r", "\t"], ' ', $meta);
-            return preg_replace('/\s+?(\S+)?$/', '', substr($meta, 0, 150));
-        }
-
-        return $meta;
+        return $this->createMeta($this->meta_description, $this->description);
     }
 
     public function getTags():array

@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -23,8 +24,9 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      * @param Request $request
+     * @return JsonResponse
      */
-    public function index(Request $request)
+    public function index(Request $request): JsonResponse
     {
         if (auth()->user()->cannot('show categories')) {
             return $this->unAuthorized();

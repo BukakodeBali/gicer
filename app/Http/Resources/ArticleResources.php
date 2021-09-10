@@ -3,18 +3,20 @@
 namespace App\Http\Resources;
 
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ArticleResources extends JsonResource
 {
     protected $dimensions = [400, 600, 800];
+
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @return array
      */
-    public function toArray($request)
+    public function toArray($request): array
     {
         $images = [];
         if ($this->image) {
@@ -38,9 +40,7 @@ class ArticleResources extends JsonResource
             'meta_description' => $this->whenLoaded('link', function () {
                     return $this->link->meta_description;
                 }) ?? '',
-            'parent' => $this->whenLoaded('parent', function () {
-                return new CategoryResources($this->parent);
-            })
+            'categories' => ArticleCategoryResources::collection($this->whenLoaded('categories'))
         ];
     }
 }
