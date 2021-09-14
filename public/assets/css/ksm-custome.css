@@ -19,6 +19,9 @@
 .mt-10{
 	margin-top: 10px;
 }
+.mt-15{
+	margin-top: 15px;
+}
 .pt-15{
 	padding-top: 15px;
 }
@@ -119,8 +122,8 @@
     background: #6e84ab;
     border: 1px solid #274675;
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 90px;
     z-index: -1;
     display: none;
     cursor: pointer;
@@ -1848,6 +1851,7 @@
 }
 .module {
   	overflow: hidden;
+  	-webkit-overflow: hidden;
 }
 .module p {
   	margin: 0;
@@ -1911,7 +1915,7 @@
     font-size: 14px;
     color: #444;
     text-transform: capitalize;
-    margin: 0 0 10px 0;
+    margin: 0;
 }
 #berita .card-berita .text-container{
 	min-height: 73.5px;
@@ -2065,4 +2069,57 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 100% auto;
+}
+#wa_link {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#wa_link img {
+    width: 60px;
+}
+.tags-container {
+	margin-top: 20px;
+}
+.tags-container .uk-label.tag-title,
+.tags-container .uk-label:hover.tag-title,
+.tags-container .uk-label:focus.tag-title,
+.tags-container .uk-label:active.tag-title {
+	background: transparent;
+    color: #000;
+    padding: 2px 24px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.tags-container .uk-label {
+	padding: 4px 16px;
+    text-transform: capitalize;
+    background: #355688;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.tags-container .uk-label:hover,
+.tags-container .uk-label:focus,
+.tags-container .uk-label:active {
+	padding: 4px 16px;
+    text-transform: capitalize;
+    background: #284776;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.not-found {
+	height: calc(100vh - 80px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.not-found img {
+	max-width: 400px;
+}
+@media(max-width: 960px) {
+	.not-found img {
+		max-width: 300px;
+	}
 }

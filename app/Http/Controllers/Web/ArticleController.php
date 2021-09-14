@@ -28,7 +28,7 @@ class ArticleController extends Controller
 
     public function show($link)
     {
-        $article = Article::with(['image', 'link', 'categories', 'categories.link'])
+        $article = Article::with(['image', 'link', 'categories', 'categories.link', 'tags'])
             ->whereHas('link', function ($q) use ($link) {
                 $q->where('link', '=', $link);
             })->first();
@@ -44,7 +44,8 @@ class ArticleController extends Controller
             'article' => $article,
             'link' => 'berita/'.$article['link']['link'] ?? '',
             'meta_description' => $article['link']['meta_description'] ?? '',
-            'latestArticles' => $latestArticles
+            'latestArticles' => $latestArticles,
+            'tags' => $article['tags']
         ]);
     }
 
