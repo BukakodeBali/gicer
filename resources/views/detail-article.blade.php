@@ -34,13 +34,18 @@
                         {!! $article['content'] !!}
                     </div>
                     <!-- end content from editor -->
-                    <hr>
+                    <div class="tags-container">
+                        <span class="uk-label tag-title">Tags : </span>
+                        @foreach($tags as $tag)
+                            <span class="uk-label">{{ $tag['name'] }}</span>
+                        @endforeach
+                    </div>
+                    <hr class="mt-15">
                     <div class="uk-flex">
                         <p class="share-to">share to : </p>
-                        <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
-                        <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
-                        <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="youtube"></a>
-                        <a href="" class="uk-icon-button" uk-icon="instagram"></a>
+                        <a href="http://twitter.com/share?text={{ $article['title'] }}&url={{ url('/berita') }}/{{ $article['link']['link'] }}" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('/berita') }}/{{ $article['link']['link'] }}" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="facebook"></a>
+                        <a href="whatsapp://send?text={{ url('/berita') }}/{{ $article['link']['link'] }}" class="uk-icon-button" target="_blank" uk-icon="whatsapp"></a>
                     </div>
                     <hr>
                     <div class="mt-10"></div>
