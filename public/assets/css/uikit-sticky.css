@@ -1,0 +1,25 @@
+/*important sticky footer*/
+html, body {
+    height:100%;
+}
+#body-main {
+    min-height: 100vh;
+    margin-bottom: -380.46px;
+}
+#body-main:after {
+    content: "";
+    display: block;
+}
+#body-footer, #body-main:after {
+    height: 380.46px;
+}
+@media(max-width: 640px){
+	#body-main {
+	    min-height: auto;
+	    margin-bottom: 0;
+	}
+	#body-footer, #body-main:after {
+	    height: auto;
+	}
+}
+/*important sticky footer*/

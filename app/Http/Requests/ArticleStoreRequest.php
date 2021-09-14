@@ -5,7 +5,6 @@ namespace App\Http\Requests;
 use App\Models\Tag;
 use App\Traits\CreateLinkAndMetaTrait;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
 use Urameshibr\Requests\FormRequest;
 
 class ArticleStoreRequest extends FormRequest

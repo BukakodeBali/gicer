@@ -17,7 +17,7 @@ class ArticleUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        return auth()->user()->can('create article');
+        return auth()->user()->can('update article');
     }
 
     /**

@@ -100,10 +100,6 @@ class ArticleController extends Controller
 
     public function update(ArticleUpdateRequest $request, $id)
     {
-        if (auth()->user()->cannot('update article')) {
-            return $this->unAuthorized();
-        }
-
         $article = Article::find($id);
         if (!$article) {
             return $this->dataNotFound($this->module);
