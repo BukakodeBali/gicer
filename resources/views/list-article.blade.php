@@ -55,9 +55,9 @@
                                 <li><a href="{{ $articles['prev_page_url'] }}"><span uk-pagination-previous></span></a></li>
                                     @for($i = 1; $i <= $articles['last_page']; $i++)
                                         @if($i === $articles['current_page'])
-                                            <li class="uk-active"><a href="{{ url('berita?page='.$i) }}">{{ $i }}</a></li>
+                                            <li class="uk-active"><a href="{{ url($articles['path'].'?page='.$i) }}">{{ $i }}</a></li>
                                         @else
-                                            <li><a href="{{ url('berita?page='.$i) }}">{{ $i }}</a></li>
+                                            <li><a href="{{ url($articles['path'].'?page='.$i) }}">{{ $i }}</a></li>
                                         @endif
                                     @endfor
                                 <li><a href="{{ $articles['next_page_url'] }}"><span uk-pagination-next></span></a></li>

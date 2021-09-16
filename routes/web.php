@@ -18,6 +18,7 @@ $router->get('/layanan/{link}', [ 'as' => 'layanan', 'uses' => 'Web\ServiceContr
 $router->get('/kontak', [ 'as' => 'contact', 'uses'=> 'Web\ContactController@index']);
 $router->get('/berita/{link}', [ 'uses'=> 'Web\ArticleController@show']);
 $router->get('/berita', [ 'as' => 'article', 'uses'=> 'Web\ArticleController@index']);
+$router->get('/kategori/{link}', [ 'as' => 'category', 'uses'=> 'Web\ArticleController@category']);
 
 
 $router->group(['prefix' => 'api'], function () use ($router) {

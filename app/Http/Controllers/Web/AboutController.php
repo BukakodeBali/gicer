@@ -8,6 +8,9 @@ class AboutController extends Controller
 {
     public function index()
     {
-        return view('about');
+        return view('about', [
+            'title' => 'Tentang Kami',
+            'meta_description' => 'Karya Sinergi Manajemen merupakan lembaga penilaian kesesuaian untuk sistem manajemen internasional (ISO)'
+        ]);
     }
 }

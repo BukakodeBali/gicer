@@ -11,10 +11,3 @@
     </div>
     <!-- end 404 -->
 @endsection
-@push('menu')
-    @include('menu')
-@endpush
-
-@push('offcanvas')
-    @include('offcanvas')
-@endpush

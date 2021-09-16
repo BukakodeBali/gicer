@@ -25,7 +25,7 @@ class ClientUpdateRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->segment(2);
+        $id = $this->segment(3);
         return [
             'code'      => 'required|unique:clients,code,'.$id,
             'name'      => 'required',

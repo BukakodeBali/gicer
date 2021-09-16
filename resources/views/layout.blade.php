@@ -11,6 +11,9 @@
     <meta content='Indonesia' name='geo.placename' />
     <meta content='id' name='geo.country' />
     <meta name="description" content="{{ $meta_description ?? '' }}"/>
+    <meta property="og:title" content="{{ isset($title) ? $title." - Karya Sinergi Manajemen" : "Karya Sinergi Manajemen" }}"/>
+    <meta property="og:description" content="{{ $meta_description ?? '' }}"/>
+    <meta property="og:image" content="{{ $image ?? url('images/base/default-400.png') }}"/>
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/uikit.min.css')  }}" />

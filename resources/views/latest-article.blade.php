@@ -4,14 +4,14 @@
         <p class="hes" uk-scrollspy="cls: uk-animation-slide-top; delay: 300"><span>Search</span></p>
         <!-- <form class="uk-form-stacked"> -->
         <div class="uk-flex"  uk-scrollspy="cls: uk-animation-fade; delay: 600">
-            <div class="uk-form-controls search">
-                <input class="uk-input" type="text" placeholder="Search">
-            </div>
-            <a href="search-berita.html">
+            <form action="{{ url('berita') }}" class="search" method="GET">
+                <div class="uk-form-controls">
+                    <input class="uk-input" type="text" placeholder="Cari berita" name="keyword">
+                </div>
                 <button class="uk-button uk-button-primary btn-ksm-slider btn-search">
                     <span uk-icon="icon: search; ratio: 0.8"></span>
                 </button>
-            </a>
+            </form>
         </div>
         <!-- </form> -->
         <!-- end Search -->
