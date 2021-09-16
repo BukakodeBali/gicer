@@ -3,7 +3,7 @@
         <!-- Search -->
         <p class="hes" uk-scrollspy="cls: uk-animation-slide-top; delay: 300"><span>Search</span></p>
         <!-- <form class="uk-form-stacked"> -->
-        <div class="uk-flex"  uk-scrollspy="cls: uk-animation-fade; delay: 600">
+        <div class="form-search-btn"  uk-scrollspy="cls: uk-animation-fade; delay: 600">
             <form action="{{ url('berita') }}" class="search" method="GET">
                 <div class="uk-form-controls">
                     <input class="uk-input" type="text" placeholder="Cari berita" name="keyword">

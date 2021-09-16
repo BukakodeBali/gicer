@@ -2108,7 +2108,7 @@
     margin-bottom: 10px;
 }
 .not-found {
-	height: calc(100vh - 80px);
+	height: 100vh
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -2122,4 +2122,10 @@
 	.not-found img {
 		max-width: 300px;
 	}
+}
+.form-search-btn form {
+	display: flex;
+}
+.form-search-btn form .uk-form-controls {
+	width: 100%;
 }
