@@ -2,7 +2,7 @@
 @section('content')
     <div id="contact" class="uk-container-expand">
         <div id="app" class="uk-grid-match uk-child-width-1-2@m uk-grid-collapse" uk-grid>
-            <div class="left-bg">
+            <div class="left-bg" uk-scrollspy="cls: uk-animation-slide-left-medium; delay: 500">
                 <div class="uk-card uk-card-default uk-card-body info">
                     <p class="head blue">Informasi <br>Kontak</p>
                     <hr class="bar">
@@ -18,7 +18,7 @@
                     <p class="mt-0">info@ksmanajemen.com</p>
                 </div>
             </div>
-            <div class="right-bg" id="app">
+            <div class="right-bg" id="app" uk-scrollspy="cls: uk-animation-slide-right-medium; delay: 500">
                 <div class="uk-card uk-card-default uk-card-body info">
                     <p class="head white">Form <br>Kontak</p>
                     <hr class="bar white">
@@ -99,6 +99,6 @@
             crossorigin="anonymous">
     </script>
 
-    <script src="{{ asset('assets/js/contact.js') }}"></script>
+    <script src="{{ asset('assets/js/contact-updated.js') }}"></script>
 @endpush
 

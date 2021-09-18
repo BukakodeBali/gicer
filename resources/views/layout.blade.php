@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/overpass.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chivo.css') }}">
     <!-- Custome Styling -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ksm-custome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ksm-custome.css?v=1') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/uikit-sticky.css') }}">
     <!-- UIkit JS -->
     <script src="{{ asset('assets/js/uikit.min.js') }}"></script>

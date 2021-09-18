@@ -22,7 +22,7 @@
                         <p class="Overpass layanan-footer"><a href="{{ url('layanan/iso-50001-2018-sistem-manajemen-energi') }}">ISO 50001:2018</a></p>
                         <p class="Overpass layanan-footer"><a href="{{ url('layanan/iso-27001-2018-sistem-manajemen-keamanan-informasi') }}">ISO 27001:2018</a></p>
                         <p class="Overpass layanan-footer"><a href="{{ url('layanan/iso-37001-2016-sistem-manajemen-anti-suap') }}">ISO 37001:2016</a></p>
-                        <p class="Overpass layanan-footer"><a href="{{ url('layanan/iso-13485-2016-sistem-manajemen-peralatan-medis') }}#.html">ISO 13485:2016</a></p>
+                        <p class="Overpass layanan-footer"><a href="{{ url('layanan/iso-13485-2016-sistem-manajemen-peralatan-medis') }}">ISO 13485:2016</a></p>
                         <p class="Overpass layanan-footer"><a href="{{ url('layanan/iso-ts-16949-2009-sistem-manajemen-kualitas-otomotif') }}">ISO/TS 16949:2009</a></p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
     <div id="copyright">
         <div uk-grid>
             <div class="uk-width-expand uk-text-center">
-                <p class="Overpass copyright" style="padding-top: 0px;">{{ date('Y') }} &copy; Karya Sinergi Manajemen, All rights reserved</p>
+                <p class="Overpass copyright" style="padding-top: 0px;">&copy; Karya Sinergi Manajemen, All rights reserved</p>
             </div>
         </div>
     </div>

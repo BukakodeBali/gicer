@@ -238,7 +238,7 @@
     <!-- end of kenapa kami -->
 
     <!-- layanan -->
-    <div id="layanan">
+    <div id="layanan" class="pad-layanan">
         <div class="uk-container">
             <p class="global-title" uk-scrollspy="cls: uk-animation-fade; delay: 500">Layanan Kami</p>
             <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l grid-layanan uk-grid-large" uk-grid uk-scrollspy="cls: uk-animation-scale-up; target: .uk-card; delay: 300;">
@@ -294,7 +294,7 @@
                         </div>
                     </div>
                     <div id="note" uk-scrollspy="cls: uk-animation-slide-right-medium; delay: 500">
-                        <p class="description inversed">- Untuk mendapatkan id client dan password silahkan hubungi: <strong><a id="wa_link" target="_blank" href="kontak.html">kontak kami</a></strong>.</p>
+                        <p class="description inversed">- Untuk mendapatkan id client dan password silahkan hubungi: <strong><a target="_blank" href="{{ url('kontak') }}">kontak kami</a></strong>.</p>
                         <p class="mt-0 description inversed">- Untuk login via barcode silahkan scan barcode dengan aplikasi kamera smartphone. Jika aplikasi kamera tidak mendukung silahkan download aplikasi barcode scanner untuk android dan ios.</p>
                     </div>
                     <div id="note-bg" class="bg-blue"></div>

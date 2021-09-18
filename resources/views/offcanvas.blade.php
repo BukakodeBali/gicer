@@ -8,11 +8,11 @@
             <img src="{{ asset('assets/images/base/logo-nav.png') }}" alt="logo">
             <li class="uk-nav-divider"></li>
             <ul class="uk-nav uk-nav-default">
-                <li class="uk-active"><a href="index.html">Beranda</a></li>
-                <li><a href="tentang-kami.html">Tentang Kami</a></li>
-                <li><a href="alur-sertifikasi.html">Sertifikasi</a></li>
-                <li><a href="login.html">Verifikasi</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
+                <li class="{{ request()->routeIs('home') ? 'uk-active' : '' }}"><a href="{{ url('/') }}">Beranda</a></li>
+                <li class="{{ request()->routeIs('about') ? 'uk-active' : '' }}"><a href="{{ url('tentang-kami') }}">Tentang Kami</a></li>
+                <li class="{{ request()->routeIs('certification-process') ? 'uk-active' : '' }}"><a href="{{ url('alur-sertifikasi') }}">Sertifikasi</a></li>
+                <li><a href="https://client.ksmanajemen.com/login">Verifikasi</a></li>
+                <li class="{{ request()->routeIs('contact') ? 'uk-active' : '' }}"><a href="{{ url('kontak') }}">Kontak</a></li>
             </ul>
         </div>
     </div>

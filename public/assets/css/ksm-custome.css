@@ -1707,8 +1707,11 @@
 		margin: 0 auto;
 	}
 }
+.pad-layanan {
+    padding-bottom: 60px;
+}
 #layanan{
-	background: #fdfdfd
+	background: #fdfdfd;
 }
 #layanan .global-title{
 	margin: 0;
@@ -1775,11 +1778,17 @@
 	#layanan .card-layanan .image-height{
 		height: 200px;
 	}
+    .pad-layanan {
+        padding-bottom: 30px;
+    }
 }
 @media (max-width: 640px){
 	#layanan .card-layanan .image-height{
 		height: 300px;
 	}
+    .pad-layanan {
+        padding-bottom: 0px;
+    }
 }
 #absah-sertif .left-bg{    
 	background: url(../images/base/keabsahan-sertifikasi-bg.jpg);
@@ -2108,7 +2117,7 @@
     margin-bottom: 10px;
 }
 .not-found {
-	height: 100vh
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
