@@ -27,7 +27,8 @@ class ArticleController extends Controller
 
         return view('list-article', [
             'articles' => $articles,
-            'latestArticles' => $latestArticles
+            'latestArticles' => $latestArticles,
+            'section' => $keyword !== '' ? 'Hasil pencarian' : 'Berita terbaru',
         ]);
     }
 

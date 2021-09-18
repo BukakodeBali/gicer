@@ -8,7 +8,7 @@
                 <!-- berita -->
                 <div id="berita" class="transparent">
                     <div class="uk-container">
-                        <p class="hes" uk-scrollspy="cls: uk-animation-slide-top; delay: 300"><span>Berita Terbaru</span></p>
+                        <p class="hes" uk-scrollspy="cls: uk-animation-slide-top; delay: 300"><span>{{ $section ?? '' }}</span></p>
                         <div class="uk-child-width-1-2@s uk-child-width-1-2@m grid-berita uk-grid-small" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400;">
                             @foreach($articles['data'] as $article)
                                 <?php
