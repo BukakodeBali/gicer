@@ -9,7 +9,7 @@
                 'text_2' => 'Sistem Manajemen Mutu',
                 'text_3' => 'Dengan di sertifikasi ISO 9001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen mutu.',
                 'link' => url('layanan/iso-9001-2015-sistem-manajemen-mutu'),
-                'icon' => 'assets/images/banner/icon1.png'
+                'icon' => 'assets/images/banner/ico1.png'
             ];
 
             $slides[] = [
@@ -18,7 +18,7 @@
                 'text_2' => 'Sistem Manajemen Lingkungan',
                 'text_3' => 'Dengan di sertifikasi ISO 14001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen lingkungan.',
                 'link' => url('layanan/iso-14001-2015-sistem-manajemen-lingkungan'),
-                'icon' => 'assets/images/banner/icon2.png'
+                'icon' => 'assets/images/banner/ico2.png'
             ];
 
             $slides[] = [
@@ -27,7 +27,7 @@
                 'text_2' => 'Sistem Manajemen Kesehatan dan Keselamatan Kerja',
                 'text_3' => 'Dengan di sertifikasi ISO 45001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen kesehatan dan keselamatan kerja.',
                 'link' => url('layanan/iso-45001-2018-sistem-manajemen-kesehatan-keselamatan-kerja'),
-                'icon' => 'assets/images/banner/icon3.png'
+                'icon' => 'assets/images/banner/ico3.png'
             ];
 
             $slides[] = [
@@ -36,7 +36,7 @@
                 'text_2' => 'Sistem Manajemen Kesehatan dan Keselamatan Kerja',
                 'text_3' => 'Dengan di sertifikasi OHSAS 18001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen kesehatan dan keselamatan kerja.',
                 'link' => url('layanan/ohsas-18001-2007-sistem-manajemen-kesehatan-keselamatan-kerja'),
-                'icon' => 'assets/images/banner/icon4.png'
+                'icon' => 'assets/images/banner/ico4.png'
             ];
 
             $slides[] = [
@@ -45,7 +45,7 @@
                 'text_2' => 'Sistem Manajemen Keamanan Pangan',
                 'text_3' => 'Dengan di sertifikasi ISO 22000, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen keamanan pangan.',
                 'link' => url('layanan/iso-22000-2018-sistem-manajemen-keamanan-pangan'),
-                'icon' => 'assets/images/banner/icon5.png'
+                'icon' => 'assets/images/banner/ico5.png'
             ];
 
             $slides[] = [
@@ -54,7 +54,7 @@
                 'text_2' => 'Sistem Manajemen Energi',
                 'text_3' => 'Dengan di sertifikasi ISO 50001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen energi.',
                 'link' => url('layanan/iso-50001-2018-sistem-manajemen-energi'),
-                'icon' => 'assets/images/banner/icon6.png'
+                'icon' => 'assets/images/banner/ico6.png'
             ];
 
             $slides[] = [
@@ -63,16 +63,16 @@
                 'text_2' => 'Sistem Manajemen Keamanan Informasi',
                 'text_3' => 'Dengan di sertifikasi ISO 27001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen keamanan informasi.',
                 'link' => url('layanan/iso-27001-2018-sistem-manajemen-keamanan-informasi'),
-                'icon' => 'assets/images/banner/icon7.png'
+                'icon' => 'assets/images/banner/ico7.png'
             ];
 
             $slides[] = [
                 'image' => 'assets/images/banner/slider8.jpg',
                 'text_1' => 'ISO 37001:2016',
-                'text_2' => 'Sistem Manajemen Anti Suap',
-                'text_3' => 'Dengan di sertifikasi ISO 37001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen anti suap.',
-                'link' => url('layanan/iso-37001-2016-sistem-manajemen-anti-suap'),
-                'icon' => 'assets/images/banner/icon8.png'
+                'text_2' => 'Sistem Manajemen Anti Penyuapan',
+                'text_3' => 'Dengan di sertifikasi ISO 37001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen anti penyuapan.',
+                'link' => url('layanan/iso-37001-2016-sistem-manajemen-anti-penyuapan'),
+                'icon' => 'assets/images/banner/ico8.png'
             ];
 
             $slides[] = [
@@ -81,7 +81,7 @@
                 'text_2' => 'Sistem Manajemen Peralatan Medis',
                 'text_3' => 'Dengan di sertifikasi ISO 13485, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen peralatan medis.',
                 'link' => url('layanan/iso-13485-2016-sistem-manajemen-peralatan-medis'),
-                'icon' => 'assets/images/banner/icon9.png'
+                'icon' => 'assets/images/banner/ico9.png'
             ];
 
             $slides[] = [
@@ -90,7 +90,7 @@
                 'text_2' => 'Sistem Manajemen Kualitas Otomotif',
                 'text_3' => 'Dengan di sertifikasi ISO/TS 16949, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen kualitas otomotif.',
                 'link' => url('layanan/iso-ts-16949-2009-sistem-manajemen-kualitas-otomotif'),
-                'icon' => 'assets/images/banner/icon10.png'
+                'icon' => 'assets/images/banner/ico10.png'
             ];
         ?>
 
@@ -255,8 +255,8 @@
                                     <p class="code-layanan">{{ $slide['text_1'] }}</p>
                                     <p class="desc-layanan">{{ $slide['text_2'] }}</p>
                                 </div>
-                                <div class="uk-card-body logo-container-layanan">
-                                    <img class="icon-layanan" src="{{ $slide['icon'] }}" alt="{{ $slide['text_1'] }}">
+                                <div class=" icon-layanan-container uk-card-body">
+                                    <img class="float-icon-layanan" src="{{ $slide['icon'] }}" alt="{{ $slide['text_1'] }}">
                                 </div>
                             </div>
                         </a>
@@ -396,15 +396,17 @@
 
 @push('page-script')
     <script type="text/javascript">
-        //custome overlaping background height (solid color only)
-        var visi = document.getElementById("bg-blue-height");
-        document.getElementById("bg-blue-misi").style.height = visi.offsetHeight+'px';
-        var absah = document.getElementById("note");
-        document.getElementById("note-bg").style.height = absah.offsetHeight+'px';
-        window.addEventListener('resize', function(event) {
+        window.addEventListener("load", function(){
+            //custome overlaping background height (solid color only)
+            var visi = document.getElementById("bg-blue-height");
             document.getElementById("bg-blue-misi").style.height = visi.offsetHeight+'px';
+            var absah = document.getElementById("note");
             document.getElementById("note-bg").style.height = absah.offsetHeight+'px';
-        }, true);
+            window.addEventListener('resize', function(event) {
+                document.getElementById("bg-blue-misi").style.height = visi.offsetHeight+'px';
+                document.getElementById("note-bg").style.height = absah.offsetHeight+'px';
+            }, true);
+        });
         //animate counter script
         function animate(obj, initVal, lastVal, duration) {
 
@@ -445,7 +447,7 @@
 
         const load = () => {
             animate(text1, 0, 57, 5000);
-            animate(text2, 0, 378, 5000);
+            animate(text2, 0, 171, 5000);
         }
         //check elemen is visible or not
         function isInViewport(el) {

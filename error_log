@@ -1,0 +1,1 @@
+[18-Sep-2021 12:59:39 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.30. in /home/ksmanaje/public_html/main/vendor/composer/platform_check.php on line 24
