@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CertificateStoreRequest;
 use App\Http\Requests\CertificateUpdateRequest;
+use App\Http\Resources\CertificateExpiredResources;
 use App\Http\Resources\CertificateResources;
 use App\Models\Certificate;
 use App\Models\CertificateDetail;
@@ -130,7 +131,7 @@ class CertificateController extends Controller
         $nowAddMonth    = Carbon::now()->addMonth()->toDateString();
         $total          = Certificate::all()->count();
         $active         = Certificate::where('status', 'Active')->get()->count();
-        $expired        = Certificate::where('status', 'Expired')->get()->count();
+        $expired        = Certificate::where('status', 'Non Active')->get()->count();
         $willExpired    = Certificate::whereBetween('expired', [$now, $nowAddMonth])->get()->count();
 
         return response()->json([
@@ -139,6 +140,22 @@ class CertificateController extends Controller
             'expired'       => $expired,
             'will_expired'  => $willExpired
         ], 200);
+    }
+
+    public function willExpired()
+    {
+        $now            = Carbon::now()->toDateString();
+        $nowAddMonth    = Carbon::now()->addMonth()->toDateString();
+        $willExpireds   = Certificate::with(['client'])->whereBetween('expired', [$now, $nowAddMonth])->get();
+        return CertificateExpiredResources::collection($willExpireds);
+    }
+
+    public function expired()
+    {
+        $now            = Carbon::now()->toDateString();
+        $monthBefore    = Carbon::now()->subMonth()->toDateString();
+        $expireds       = Certificate::with(['client'])->whereBetween('expired', [$monthBefore, $now])->get();
+        return CertificateExpiredResources::collection($expireds);
     }
 
     public function buildDetail(Array $data)

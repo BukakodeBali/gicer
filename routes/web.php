@@ -95,6 +95,8 @@ $router->group(['prefix' => 'api'], function () use ($router) {
             $router->delete('/{id}', 'CertificateController@destroy');
 
             $router->get('/dashboard/count', 'CertificateController@dashboard');
+            $router->get('/dashboard/will-expired', 'CertificateController@willExpired');
+            $router->get('/dashboard/expired', 'CertificateController@expired');
             $router->get('/download/excel', 'CertificateController@generateExcel');
         });
 
