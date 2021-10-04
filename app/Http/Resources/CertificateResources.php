@@ -25,6 +25,7 @@ class CertificateResources extends JsonResource
             'product_period'=> $this->product->period,
             'status_id'     => $this->status_app->id,
             'status_name'   => $this->status_app->name,
+            'original_date' => $this->original_date,
             'issue_date'    => $this->issue_date,
             'expired'       => $this->expired,
             'status'        => $this->status,

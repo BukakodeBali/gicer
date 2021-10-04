@@ -74,6 +74,7 @@ class CertificateController extends Controller
             $data['user_id']    = Auth::id();
             $data['expired']    = Carbon::parse($request->issue_date)->addYear()->toDateString();
             $data['status_id']  = $request->has('status_id') && $request->status_id != '' ? $request->status_id:$status->id;
+            $data['original_date'] = $data['issue_date'];
 
             $certificate        = Certificate::create($data);
 
