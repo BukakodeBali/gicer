@@ -185,6 +185,38 @@ class CertificateController extends Controller
         return $details;
     }
 
+    public function updateIssueDateDetail(Request $request)
+    {
+        $this->validate($request, [
+            'detail_id' => 'required|exists:certificates_details,id',
+            'issue_date' => 'required|date'
+        ]);
+
+        $detailId = $request->detail_id;
+        $issueDate = Carbon::parse($request->issue_date);
+
+        $detail = CertificateDetail::find($detailId);
+        $detail->issue_date = $issueDate->toDateString();
+        $detail->save();
+
+        // UPDATE DETAIL (OTHER)
+        $details = CertificateDetail::query()
+            ->with('status')
+            ->where('id', '>', $detail->id)
+            ->where('certificate_id', '=', $detail->certificate_id)
+            ->orderBy('status_id', 'asc')
+            ->get();
+
+        $period = 0;
+        foreach ($details as $detail) {
+            $period = $period + $detail->status->period;
+            $detail->issue_date = $issueDate->copy()->addMonths($period)->toDateString();
+            $detail->save();
+        }
+
+        return $this->updateTrue('Detail sertifikat');
+    }
+
     public function generateExcel(Request $request)
     {
         $keyword    = $request->keyword;
