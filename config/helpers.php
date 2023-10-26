@@ -12,11 +12,12 @@ if (!function_exists('urlGenerator')) {
 if (!function_exists('asset')) {
     /**
      * @param $path
-     * @param bool $secured
      *
      * @return string
      */
-    function asset($path, $secured = true) {
+    function asset($path) {
+        $secured = env('SECURE_ASSET', true);
+
         return urlGenerator()->asset($path, $secured);
     }
 }
