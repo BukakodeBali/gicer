@@ -27,7 +27,7 @@
                     <div class="uk-container uk-container-small-x">
                         <div id="visi-misi" class="pt-35">
                             <h3>Visi :</h3>
-                            <p class="visi description"><strong>PT. Karya Sinergi Manajemen</strong> ingin menjadi lembaga penilaian kesesuaian <strong>terdepan dan nomer 1 (satu) di indonesia</strong> dengan memberikan kualitas pelayanan penilaian kesesuaian sistem manajemen yang profesional, kompeten dan berpengalaman.</p>
+                            <p class="visi description"><strong>PT. Karya Sinergi Manajemen</strong> ingin menjadi lembaga penilaian kesesuaian <strong>terdepan dan nomor 1 (satu) di indonesia</strong> dengan memberikan kualitas pelayanan penilaian kesesuaian sistem manajemen yang profesional, kompeten dan berpengalaman.</p>
                             <h3>Misi :</h3>
                             <ul class="uk-list uk-list-disc">
                                 <li>Menerapkan, memelihara dan mengembangkan sistem sesuai ISO/IEC 17021.1:2015 sebagai acuan lembaga penilaian kesesuaian.</li>

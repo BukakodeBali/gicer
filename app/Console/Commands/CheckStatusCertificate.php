@@ -36,9 +36,17 @@ class CheckStatusCertificate extends Command
     public function handle()
     {
         $today = Carbon::now()->toDateString();
-        $details = CertificateDetail::where('issue_date', '<=', $today)->where('is_active', '=', '0')->get();
+        Log::info($today);
+        $details = CertificateDetail::with(['certificate'])
+            ->where('issue_date', '<=', $today)
+            ->where('is_active', '=', '0')
+            ->get();
         Log::info($details);
         foreach ($details as $detail) {
+            $detail->certificate->update([
+                'status_id' => $detail->status_id
+            ]);
+
             $detail->update([
                 'is_active' => '1'
             ]);

@@ -73,7 +73,7 @@ class CertificateController extends Controller
             $status             = Status::oldest()->first();
             $data['user_id']    = Auth::id();
             $data['expired']    = Carbon::parse($request->issue_date)->addYear()->toDateString();
-            $data['status_id']  = $request->has('status_id') && $request->status_id != '' ? $request->status_id:$status->id;
+            $data['status_id']  = $request->has('status_id') && $request->filled('status_id') ? $request->status_id:$status->id;
             $data['original_date'] = $data['issue_date'];
 
             $certificate        = Certificate::create($data);
@@ -200,19 +200,19 @@ class CertificateController extends Controller
         $detail->save();
 
         // UPDATE DETAIL (OTHER)
-        $details = CertificateDetail::query()
-            ->with('status')
-            ->where('id', '>', $detail->id)
-            ->where('certificate_id', '=', $detail->certificate_id)
-            ->orderBy('status_id', 'asc')
-            ->get();
-
-        $period = 0;
-        foreach ($details as $detail) {
-            $period = $period + $detail->status->period;
-            $detail->issue_date = $issueDate->copy()->addMonths($period)->toDateString();
-            $detail->save();
-        }
+//        $details = CertificateDetail::query()
+//            ->with('status')
+//            ->where('id', '>', $detail->id)
+//            ->where('certificate_id', '=', $detail->certificate_id)
+//            ->orderBy('status_id', 'asc')
+//            ->get();
+//
+//        $period = 0;
+//        foreach ($details as $detail) {
+//            $period = $period + $detail->status->period;
+//            $detail->issue_date = $issueDate->copy()->addMonths($period)->toDateString();
+//            $detail->save();
+//        }
 
         return $this->updateTrue('Detail sertifikat');
     }
