@@ -15,6 +15,10 @@ class HomeController extends Controller
             ->orderByDesc('id')
             ->get()
             ->toArray();
-        return view('index', compact('articles'));
+
+        $clientCount = 0;
+        $certificateCount = 0;
+
+        return view('index', compact('articles', 'clientCount', 'certificateCount'));
     }
 }
