@@ -29,6 +29,7 @@ class CertificateResources extends JsonResource
             'issue_date'    => $this->issue_date,
             'expired'       => $this->expired,
             'status'        => $this->status,
+            'reset_detail' => 0,
             'issue_date_name' => Carbon::parse($this->issue_date)->format('d F Y'),
             'issue_date_human' => Carbon::parse($this->issue_date)->diffForHumans(['parts' => 2]),
             'expired_date_name' => Carbon::parse($this->expired)->format('d F Y'),
