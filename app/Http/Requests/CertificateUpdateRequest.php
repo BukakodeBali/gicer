@@ -29,7 +29,8 @@ class CertificateUpdateRequest extends FormRequest
             'client_id' => 'required|exists:clients,id',
             'issue_date'=> 'required|date',
             'status_id' => 'required|exists:status,id',
-            'status'    => 'required'
+            'status'    => 'required',
+            'reset_detail' => 'required|boolean'
         ];
     }
 

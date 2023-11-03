@@ -38,8 +38,8 @@ class CheckStatusCertificate extends Command
         $today = Carbon::now()->toDateString();
         Log::info($today);
         $details = CertificateDetail::with(['certificate'])
-            ->where('issue_date', '<=', $today)
-            ->where('is_active', '=', '0')
+            ->where('issue_date', '=', $today)
+//            ->where('is_active', '=', '0')
             ->get();
         Log::info($details);
         foreach ($details as $detail) {

@@ -15,6 +15,7 @@ use App\Traits\ExcelStyle;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -94,7 +95,7 @@ class CertificateController extends Controller
             if ($certificate) {
                 $data = $request->all();
 
-                if ($certificate->isssue_date <> Carbon::parse($request->issue_date)->toDateString()) {
+                if ($request->reset_detail) {
                     CertificateDetail::where('certificate_id', $id)->delete();
 
                     $certificateDetail = $this->buildDetail($data);
