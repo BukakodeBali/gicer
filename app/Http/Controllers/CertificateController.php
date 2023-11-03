@@ -96,13 +96,11 @@ class CertificateController extends Controller
                 $data = $request->all();
 
                 if ($request->reset_detail) {
-                    if ($certificate->isssue_date <> Carbon::parse($request->issue_date)->toDateString()) {
-                        CertificateDetail::where('certificate_id', $id)->delete();
+                    CertificateDetail::where('certificate_id', $id)->delete();
 
-                        $certificateDetail = $this->buildDetail($data);
+                    $certificateDetail = $this->buildDetail($data);
 
-                        $certificate->details()->saveMany($certificateDetail);
-                    }
+                    $certificate->details()->saveMany($certificateDetail);
                 }
 
                 return $certificate->update($data) ? $this->updateTrue('sertifikat') : $this->updateFalse('sertifikat');
