@@ -59,10 +59,10 @@
 
         $slides[] = [
             'image' => 'assets/images/banner/slider7.jpg',
-            'text_1' => 'ISO 27001:2018',
+            'text_1' => 'ISO 27001:2022',
             'text_2' => 'Sistem Manajemen Keamanan Informasi',
             'text_3' => 'Dengan di sertifikasi ISO 27001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen keamanan informasi.',
-            'link' => url('layanan/iso-27001-2018-sistem-manajemen-keamanan-informasi'),
+            'link' => url('layanan/iso-27001-2022-sistem-manajemen-keamanan-informasi'),
             'icon' => 'assets/images/banner/ico7.png'
         ];
 
