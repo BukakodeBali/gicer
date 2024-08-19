@@ -30,7 +30,10 @@ class CertificateUpdateRequest extends FormRequest
             'issue_date'=> 'required|date',
             'status_id' => 'required|exists:status,id',
             'status'    => 'required',
-            'reset_detail' => 'required|boolean'
+            'reset_detail' => 'required|boolean',
+            'e_code' => 'required|max:10',
+            'nace_code' => 'required|max:10',
+            'scope_name' => 'required|max:255'
         ];
     }
 
@@ -47,7 +50,13 @@ class CertificateUpdateRequest extends FormRequest
             'issue_date.required'   => 'Issue date wajib isi',
             'issue_date.date'       => 'Issue date tidak valid',
             'status_id.required'    => 'Application status wajib isi',
-            'status.required'       => 'Status wajib isi'
+            'status.required'       => 'Status wajib isi',
+            'e_code.required'       => 'Code wajib isi',
+            'e_code.max'            => 'Code maksimal 10 karakter',
+            'nace_code.required'    => 'NACE code wajib isi',
+            'nace_code.max'         => 'NACE code maksimal 10 karakter',
+            'scope_name.required'   => 'Scope name wajib isi',
+            'scope_name.max'        => 'Scope name tidak boleh lebih dari 255',
         ];
     }
 }

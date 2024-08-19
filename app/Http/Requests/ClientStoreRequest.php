@@ -28,7 +28,6 @@ class ClientStoreRequest extends FormRequest
         return [
             'code'  => 'required|unique:clients,code',
             'name'  => 'required',
-            'scope_id' => 'required|exists:scopes,id',
             'email' => 'required|email|unique:clients,email'
         ];
     }
@@ -44,8 +43,6 @@ class ClientStoreRequest extends FormRequest
             'code.required' => 'No Registrasi wajib isi',
             'code.unique'   => 'No Registrasi sudah digunakan',
             'name.required' => 'Nama perusahaan wajib isi',
-            'scope_id.required' => 'Scope wajib isi',
-            'scope_id.exists' => 'Scope tidak ditemukan',
             'email.required' => 'Email wajib isi',
             'email.unique' => 'Email sudah digunakan'
         ];

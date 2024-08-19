@@ -32,7 +32,8 @@ class ClientController extends Controller
             $keyword = $request->keyword;
             $perPage = $request->per_page;
 
-            $clients = Client::with('scope')->when($keyword <> '', function ($q) use ($keyword) {
+            $clients = Client::query()
+                ->when($keyword <> '', function ($q) use ($keyword) {
                 return $q->where('name', 'like', "%{$keyword}%")
                             ->orWhere('code', 'like', "%{$keyword}%")
                             ->orWhere('phone', 'like', "%{$keyword}%")
@@ -109,7 +110,7 @@ class ClientController extends Controller
     public function edit($id)
     {
         if ($this->user->can('edit client')):
-            $client = Client::with('scope')->find($id);
+            $client = Client::query()->find($id);
 
             if ($client) {
                 return new ClientDetailResources($client);

@@ -36,7 +36,10 @@ class CertificateResources extends JsonResource
             'expired_date_human' => Carbon::parse($this->expired)->diffForHumans(['parts' => 2]),
             'original_date_name' => Carbon::parse($this->original_date)->format('d F Y'),
             'original_date_human' => Carbon::parse($this->original_date)->diffForHumans(['parts' => 2]),
-            'details'       => CertificateDetailsResources::collection($this->whenLoaded('details'))
+            'details'       => CertificateDetailsResources::collection($this->whenLoaded('details')),
+            'e_code' => $this->e_code,
+            'nace_code' => $this->nace_code,
+            'scope_name' => $this->scope_name,
         ];
     }
 }
