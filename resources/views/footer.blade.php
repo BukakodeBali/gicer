@@ -28,10 +28,9 @@
                 </div>
                 <div class="uk-width-expand@m">
                     <p class="Overpass title">INFORMASI KONTAK</p>
-                    <p class="Overpass kontak-info"><span>Legality Office</span> |  Jl. Astina Timur No. 88 – Bali</p>
-                    <p class="Overpass kontak-info"><span>Operation Office</span> |  Jl. Perum. Puri Chandra Asri A 18 – Dentim, Bali</p>
-                    <p class="Overpass kontak-info">telp : (0361) 4764163</p>
-                    <p class="Overpass kontak-info">email : info@ksmanajemen.com</p>
+                    <p class="Overpass kontak-info"><span>Office</span> | Jl. Jepun Pipil Gg.XI No.18, Denpasar Timur, Denpasar - Bali</p>
+                    <p class="Overpass kontak-info">Telp : +6282340165863</p>
+                    <p class="Overpass kontak-info">Email : info@ksmanajemen.com</p>
                 </div>
             </div>
         </div>

@@ -9,11 +9,10 @@
                     <p class="note">Anda dapat menghubungi kami apabila ada pertanyaan terkait dengan layanan kami, melalui form dan informasi kontak yg tersedia</p>
                     <p class="mb-5 mt-0"><STRONG>Alamat</STRONG></p>
                     <p class="mt-0">
-                        <span>Legality Office</span> | Jl. Astina Timur No. 88 – Bali <br>
-                        <span>Operation Office</span> | Jl. Perum. Puri Chandra Asri A 18 – Dentim, Bali
+                        <span>Office</span> | Jl. Jepun Pipil Gg.XI No.18, Denpasar Timur, Denpasar - Bali <br>
                     </p>
                     <p class="mb-5 mt-0"><STRONG>Telephone</STRONG></p>
-                    <p class="mt-0">(0361) 4764163</p>
+                    <p class="mt-0">+6282340165863</p>
                     <p class="mb-5 mt-0"><STRONG>Email</STRONG></p>
                     <p class="mt-0">info@ksmanajemen.com</p>
                 </div>

@@ -32,8 +32,8 @@ class CertificateStoreRequest extends FormRequest
             'status_id' => 'required|exists:status,id',
             'status'    => 'required',
             'e_code'    => 'required|max:10',
-            'nace_code' => 'required|max:10',
-            'scope_name'=> 'required|max:255'
+            'nace_code' => 'nullable|max:10',
+            'scope_name'=> 'required'
         ];
     }
 
@@ -55,7 +55,6 @@ class CertificateStoreRequest extends FormRequest
             'status.required'       => 'Status wajib isi',
             'e_code.required'       => 'Code wajib isi',
             'e_code.max'            => 'Code maksimal 10 karakter',
-            'nace_code.required'    => 'NACE code wajib isi',
             'nace_code.max'         => 'NACE code maksimal 10 karakter',
             'scope_name.required'   => 'Scope name wajib isi',
             'scope_name.max'         => 'Scope name tidak boleh lebih dari 255',

@@ -19,7 +19,7 @@
 </div>
 <!-- end of offcanvas -->
 <!-- end of wabtn -->
-<a id="wa_link" target="_blank" href="https://api.whatsapp.com/send?phone=6281916625077">
+<a id="wa_link" target="_blank" href="https://api.whatsapp.com/send?phone=6282340165863">
     <img class="img-circle wa-icon" alt="wa-icon" src="{{ asset('assets/images/base/whatsapp-logo.png') }}">
 </a>
 <!-- end of wabtn -->
