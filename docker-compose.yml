@@ -6,8 +6,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: lumen-app
-    container_name: ksmanajemen-app
+    image: gicer-app
+    container_name: gicer-app
     restart: unless-stopped
     tty: true
     environment:
@@ -23,11 +23,11 @@ services:
   #Nginx Service
   webserver:
     image: nginx:alpine
-    container_name: ksmanajemen-webserver
+    container_name: gicer-webserver
     restart: unless-stopped
     tty: true
     ports:
-      - "8003:80"
+      - "8004:80"
       - "443:443"
     volumes:
       - ./:/var/www
