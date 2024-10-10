@@ -8,7 +8,7 @@ new Vue({
                 name: '',
                 message: ''
             },
-            base: 'https://ksmanajemen.com/api',
+            base: 'https://gicer.id/api',
             errors: {},
             loading: false,
         }
