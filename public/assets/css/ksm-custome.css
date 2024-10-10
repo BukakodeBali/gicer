@@ -121,13 +121,19 @@ html {
     border-top: 1px solid #ccc;
 }
 .section-footer{
-	padding: 30px 0px;
+	padding: 100px 0px;
+}
+.section-footer {
+    font-family: 'Work Sans';
 }
 .br-1{
 	border-right: 1px solid;
 }
 .bg-footer{
-	background: #3C3D41
+	background: #0b0105
+}
+.section-footer .logo-icon {
+    width: 40px;
 }
 .section-footer .name{
 	color: #fff;
@@ -159,6 +165,9 @@ html {
 	.br-1{
 		border-right: 0px solid
 	}
+    .section-footer{
+        padding: 60px 0px;
+    }
 }
 .section-footer .title{
 	color: #fff;
@@ -174,31 +183,33 @@ html {
 	padding-left: 7px;
 }
 .to-top-btn{
-	width: 30px;
+    width: 50px;
     height: 30px;
-    background: #888;
-    border: 1px solid #0872BA;
+    background: #72d19b;
+    border: 1px solid #0b0105;
     position: fixed;
     bottom: 20px;
     right: 90px;
     z-index: -1;
     display: none;
-    cursor: po'Work Sans';
+    cursor: pointer;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
 }
 .to-top-btn svg {
-    margin: 10px 7px;
-    color: #0872BA;
+    color: #0b0105;
 }
 .to-top-btn:hover,
 .to-top-btn:focus{
-    background: #0872BA;
+    background: rgb(11 161 75);
 }
 .to-top-btn:hover svg {
-    color: #fff;
+    color: #0b0105;
 }
 .show-btn {
     z-index: 1;
-    display: block;
+    display: flex;
 }
 .kontak-info{
 	margin: 4px 0px;
@@ -262,18 +273,17 @@ html {
 	padding-top: 70px;
 }
 .input-form{
-	padding: 0px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 2px solid #0872BA;
-    color: #0872BA;
+    background: #f5f5f5;
+    color: #0b0105;
+    border: 1px solid #0872ba;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 .input-form:focus{
     border-color: #0872BA;
 }
 .input-form.error{
-	border-bottom: 2px solid #dc0000;
+	border-bottom: 1px solid #dc0000;
     color: #dc0000;
 }
 .input-form:focus.error{
@@ -720,89 +730,42 @@ html {
 		padding:0px;
 	}
 }
-#contact .left-bg{
-    display: flex;
-    flex-direction: row-reverse;
+#contact .title {
+    font-family: 'Work Sans';
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 32px;
+    margin: 0;
+    line-height: normal;
+    color: #0b0105;
+    margin-bottom: 0;
+}
+#contact .card-outer {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+}
+#contact .info {
     background: url(../images/base/contact-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-#contact .right-bg{
-	background: #336699
+#contact {
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
-#contact .left-bg .info,
-#contact .right-bg .info{
-	background: none;
-	padding: 60px 0px;
-    box-shadow: 0 0 black;
-    max-width: 600px;
+@media(max-width: 959px){
+    #contact {
+        padding-bottom: 40px;
+    }
 }
-#contact .right-bg .info{
-	padding-left: 70px;
-}
-#contact .head{
-	font-size: 32px;
-    font-family: 'Work Sans';
-    font-weight: 600;
-    margin-bottom: 0px;
-}
-#contact .head.blue{
-    color: #0872BA;
-}
-#contact .head.white{
-    color: #fff;
-}
-#contact .bar{
-	width: 110px;
-    border-top: 4px solid #20703b;
-    margin-top: 0px;
-}
-#contact .bar.white{
-    border-top: 4px solid #fff;
-}
-#contact p{
-	font-family: 'Work Sans';
-	font-size: 14px;
-}
-#contact strong{
-	font-family: 'Work Sans';
-	color: #0872BA;
-}
-#contact span{
-	font-weight: 700;
-	color: #20703b
-}
-#contact .left-bg .info .note{
-	width: 270px;
-}
-@media(max-width: 1279px){
-	#contact .left-bg .info,
-	#contact .right-bg .info{
-	    max-width: 460px;
-	}
-	#contact .right-bg .info{
-		padding-left: 40px;
-	}
-}
-@media(max-width: 990px){
-	#contact .left-bg .info,
-	#contact .right-bg .info{
-	    max-width: 440px;
-	}
-	#contact .left-bg .info{
-	    padding-right: 30px;
-	}
-	#contact .right-bg .info{
-		padding-left: 30px;
-	}
-}
-@media(max-width: 989px){
-	#contact .left-bg .info,
-	#contact .right-bg .info{
-		max-width: 1200px;
-	    padding: 15px;
-	}
+#layanan .layanan-image {
+    border-radius: 20px;
+    min-height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 60px;
 }
 #layanan-info{
 	padding-top: 60px;
@@ -813,6 +776,9 @@ html {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+    #layanan .layanan-image {
+        margin-top: 30px;
+    }
 }
 #layanan-info hr{
 	margin-top: 8px;
@@ -825,13 +791,13 @@ html {
 	font-size: 16px;
     font-family: 'Work Sans';
     font-weight: 600;
-    color: #0BA14B;
+    color: #0872ba;
     margin-bottom: 0px;
 }
 #layanan-info .head{
 	font-family: 'Work Sans';
     font-size: 32px;
-    color: #0872BA;
+    color: #0b0105;
     font-weight: 500;
     margin-top: 0px;
 }
@@ -854,43 +820,16 @@ html {
 	}
 }
 @media(min-width: 959px){
-	#layanan-info {
-	    padding-left: 40px
-	}
 }
 .bg-mandala-container{
-	background: url(../images/base/mandala-opc.png);
-    background-repeat: no-repeat;
-    background-position: -500px 80px;
-    background-size: 80%;
     padding-top: 25px;
     padding-bottom: 60px;
-}
-@media(max-width: 1200px){
-	.bg-mandala-container{
-	    background-position: -250px 100px;
-	    background-size: 80%;
-	}
-}
-@media(max-width: 960px){
-	.bg-mandala-container{
-	    background-position: -200px 100px;
-	    background-size: 80%;
-	}
-}
-@media(max-width: 599px){
-	.bg-mandala-container{
-	    background-position: -200px 80px;
-	    background-size: 120%;
-	    padding-top: 10px;
-	    padding-bottom: 30px;
-	}
+    background-color: #efefef;
+    background-image: linear-gradient(#efefef, #ffffff);
 }
 .bg-dots-container{
-	background: url(../images/base/dots.png);
-    background-repeat: no-repeat;
-    background-position: 0px 80px;
-    background-size: 100%;
+    background-color: #efefef;
+    background-image: linear-gradient(#efefef, #ffffff);
     padding-top: 60px;
     padding-bottom: 100px;
 }
@@ -898,11 +837,14 @@ html {
     padding-bottom: 80px;
 }
 #visi-misi h3{
-	font-family: 'Work Sans';
-    font-weight: 600;
-    font-size: 28px;
-    color: #0872BA;
-    margin-bottom: 5px;
+    font-family: 'Work Sans';
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    line-height: normal;
+    color: #0b0105;
+    padding-bottom: 30px;
 }
 #visi-misi hr{
 	width: 140px;
@@ -929,14 +871,15 @@ html {
     color: #fff;
 }
 @media(max-width: 1200px){
-	.bg-dots-container {
-	    background-position: 40px 120px;
-	    background-size: calc(100% - 90px);
+	#visi-misi h3 {
+	    font-size: 28px;
+        padding-bottom: 15px;
 	}
 }
 @media(max-width: 960px){
 	#visi-misi h3 {
-	    font-size: 20px;
+	    font-size: 24px;
+        padding-bottom: 15px;
 	}
 	#visi-misi .visi,
 	#visi-misi ul {
@@ -971,8 +914,8 @@ html {
 }
 #keterangan li a{
 	font-family: 'Work Sans';
-    font-weight: 700;
-    color: #0872BA;
+    font-weight: 600;
+    color: #0b0105;
 }
 #keterangan li p{
 	font-family: 'Work Sans';
@@ -1088,15 +1031,19 @@ html {
     width: 20px;
 }
 .tabs-title a{
+    font-family: 'Work Sans';
 	text-transform: capitalize;
-    font-weight: 500;
-    color: #0872BA;
+    font-weight: 600;
+    color: #0b0105;
     font-size: 14px;
-    border-bottom: 4px solid transparent
+    border: 1px solid transparent;
+    padding: 6px 10px;
 }
 .uk-tab .tabs-title.uk-active a {
-    color: #0872BA;
-    border-color: #0872BA;
+    border: 1px solid #0c72b4;
+    color: #0c72b4;
+    padding: 6px 10px;
+    border-radius: 20px;
 }
 @media(min-width: 1024px){
 	.tabs-title a{
@@ -1182,129 +1129,65 @@ html {
 	    padding: 15px;
 	}
 }
-#quick-contact .left-bg{
-    background: url(../images/base/quick-contact-bg.jpg);
-    background-size: cover;
+#quick-contact {
+    background: #fff;
+    position: relative;
+}
+#quick-contact > .uk-container {
+    background: #0872ba;
+    border-radius: 20px;
+    background-image: url(/assets/images/base/logo-blue.png);
     background-repeat: no-repeat;
-    background-position: 40% 100%;
-    flex-direction: row-reverse;
+    background-position-x: right;
+    background-position-y: top;
+    background-size: 50%;
+    position: relative;
+    z-index: 10;
 }
-#quick-contact .right-bg{
-	background: url(../images/base/gear-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 20% 100%;
-}
-#quick-contact .logo-icon{
-	position: absolute;
-    bottom: 25px;
-    width: 50px;
-}
-#quick-contact .left-bg .uk-card,
-#quick-contact .right-bg .uk-card,
-#visi .left-bg .uk-card,
-#visi .right-bg .uk-card{
-    box-shadow: none;
-}
-#quick-contact .gradient-bar{
-	position: absolute;
-    height: 15px;
+#quick-contact .overlay-bg{
+    position: absolute;
+    height: 50px;
     width: 100%;
-    background: linear-gradient(52deg, rgba(48,99,63,1) 0%, rgba(42,69,91,1) 100%);
+    background: #0b0105;
+    bottom: 0;
+    left: 0;
 }
 #quick-contact .title{
 	font-family: 'Work Sans';
+    text-transform: capitalize;
     font-weight: 500;
-    font-size: 28px;
-    color: #ffffff;
-    margin-bottom: 35px;
-}
-#quick-contact .btn-adjs{
-	padding: 0 5px;
-	min-width: 120px;
+    font-size: 36px;
+    margin: 0;
+    line-height: normal;
+    color: #fff;
 }
 #quick-contact .container-info{
-	max-width: 320px;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px 0;
+    max-width: 500px;
 }
-.overlaping-container{
-	padding: 0px;
-	max-width: calc((100% - ((100vw - 1200px) / 2)) + 48px);
-	background: transparent;
+#quick-contact .cta-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
 }
-.overlaping-container.left{
-	padding-left: 40px;
-	padding-right: 30px;
-}
-.overlaping-container.right{
-	padding-left: 30px;
-	padding-right: 40px;
+#quick-contact .cta-section a {
+    color: #fff;
 }
 @media (max-width: 960px){
-	.overlaping-container.left,
-	.overlaping-container.right{
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+    #quick-contact > .uk-container {
+        background-size: 80%;
+    }
 }
 @media (max-width: 640px){
-	.overlaping-container.left,
-	.overlaping-container.right{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-}
-@media (min-width: 360px){
-	#quick-contact .btn-adjs{
-		padding: 0 25px;
-		min-width: 150px;
-	}
-}
-@media (min-width: 960px){
-	#quick-contact .title{
-	    font-size: 24px;
-	}
-	#quick-contact .btn-adjs{
-		padding: 0px;
-		min-width: 120px;
-	}
-	#quick-contact .left-bg{
-	    background-position: 40% 100%;
-	}
-	#quick-contact .right-bg{
-	    background-position: 20% 100%;
-	}
-}
-@media (min-width: 1024px){
-	#quick-contact .btn-adjs{
-		padding: 0 15px;
-		min-width: 130px;
-	}
-}
-@media (min-width: 1200px){
-	#quick-contact .title{
-	    font-size: 28px;
-	}
-	#quick-contact .btn-adjs{
-		padding: 0 25px;
-		min-width: 140px;
-	}
-	#quick-contact .left-bg{
-	    background-position: 100% 100%;
-	}
-	#quick-contact .right-bg{
-	    background-position: 0 100%;
-	}
-}
-@media (min-width: 1800px){
-	#quick-contact .left-bg{
-	    background-position: 100% 80%;
-	}
-	#quick-contact .right-bg{
-		width: 45%;
-	}
+    #quick-contact > .uk-container {
+        background-position-x: left;
+        background-position-y: bottom;
+        background-size: 170%;
+    }
 }
 .m-h-350{
 	min-height: 350px;
@@ -1317,6 +1200,11 @@ html {
 }
 .flo-l{
 	float: left;
+}
+#layanan,
+#contact {
+    background-color: #efefef;
+    background-image: linear-gradient(#efefef, #ffffff);
 }
 #layanan .left-bg{
     background-size: cover !important;
@@ -1366,14 +1254,38 @@ html {
     box-shadow: none;
 }
 #layanan [class*=uk-list]>::before {
-    font-size: 28px;
+    font-size: 16px;
     vertical-align: middle;
-    line-height: 18px;
-    color: #0872BA;
+    color: #fff;
 }
 #layanan ul {
     font-size: 14px;
     font-family: 'Work Sans';
+    counter-reset: list-counter;
+}
+#layanan ul > li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+}
+#layanan ul > li::before {
+    list-style-type: disc;
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #72d19b;
+    color: #0b0105;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
 }
 #layanan ul li strong {
     color: #0872BA;
@@ -1659,7 +1571,7 @@ html {
 	overflow: hidden;
 }
 .pad-layanan {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 #layanan .title-section {
     display: flex;
@@ -1668,7 +1580,7 @@ html {
 }
 #layanan .global-title{
 	margin-bottom: 0px;
-    max-width: 600px;
+    max-width: 680px;
     padding-right: 20px;
 }
 #layanan .flicking-nav-button {
@@ -1753,8 +1665,12 @@ html {
 
 }
 @media (max-width: 640px){
+    .pad-layanan {
+        padding-bottom: 25px;
+    }
     #layanan .global-title{
         padding-right: 0;
+        font-size: 20px;
     }
     #layanan .service-card {
         width: calc(100% - 30px);
@@ -1774,65 +1690,69 @@ html {
 	flex-direction: row-reverse;
 }
 #absah-sertif {
-    overflow: hidden;
+    background: #fff;
+    padding: 40px 0;
 }
-#absah-sertif .overlaping-container.right {
-    box-shadow: none;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-#absah-sertif .bg-blue{
-	width: 100vw;
-    background: #284776;
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    z-index: -1;
-}
-#absah-sertif ul{
-	font-size: 14px;
-    font-family: 'Work Sans';
-    font-weight: 300;
-}
-#absah-sertif .uk-list>*>ul,
-#absah-sertif .uk-list>:nth-child(n+2) {
-    margin-top: 5px;
-}
-#absah-sertif [class*=uk-list]>::before {
-    font-size: 28px;
-    vertical-align: middle;
-    line-height: 18px;
-    color: #0872BA;
+#absah-sertif .title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 #absah-sertif .global-title{
-	margin-bottom: 50px
+	margin-bottom: 0px;
+    max-width: 600px;
+    padding-right: 20px;
 }
-#absah-sertif #note{
-	padding: 5px 0;
+#absah-sertif .icon-check img{
+	max-width: 160px;
 }
-#absah-sertif #note p{
-	margin-bottom: 0px !important
+#absah-sertif .custom-list,
+#tentang-kami .custom-list,
+#keterangan .custom-list {
+    counter-reset: list-counter;
 }
-#absah-sertif .absah-content{
-	margin-bottom: 30px;
+#absah-sertif .custom-list li,
+#tentang-kami .custom-list li,
+#keterangan .custom-list li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
 }
-#absah-sertif .absah-content li strong{
-	font-weight: bold !important
+#absah-sertif .custom-list li::before,
+#tentang-kami .custom-list li::before,
+#keterangan .custom-list li::before {
+    list-style-type: disc;
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #72d19b;
+    color: #0b0105;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+#absah-sertif .description {
+    margin-bottom: 0;
+}
+#absah-sertif .bottom-spacing {
+    margin-bottom: 40px;
+}
+#absah-sertif #note p {
+    font-size: 13px;
 }
 @media (max-width: 640px){
-	#absah-sertif .global-title {
-	    margin-bottom: 15px;
-	}
-	#absah-sertif .overlaping-container.right {
-	    padding-top: 30px;
-	    padding-bottom: 30px;
-	}
-	#absah-sertif .bg-blue{
-	    bottom: 30px;
-	}
-	#absah-sertif .absah-content {
-	    margin-bottom: 15px;
-	}
+    #absah-sertif .top-spacing {
+        margin-top: 30px;
+    }
 }
 .module {
   	overflow: hidden;
@@ -2012,28 +1932,6 @@ html {
 	margin: 0px;
     padding: 5px 20px 5px 5px;
 }
-#klien-kami .number-count{
-	font-family: 'Work Sans';
-    font-weight: 600;
-    font-size: 75px;
-    color: #0872BA;
-    text-transform: capitalize;
-    margin: 0;
-}
-#klien-kami .desc{
-	margin: 0px;
-    font-size: 14px;
-    color: #333;
-    font-family: 'Work Sans';
-}
-#klien-kami .container-counter{
-	padding: 60px 0px
-}
-@media(max-width: 950px){
-	#klien-kami .container-counter{
-		padding: 30px 0px
-	}
-}
 .sertif-card{
 	padding: 0px;
 	background-color: #fff;
@@ -2122,4 +2020,14 @@ html {
     bottom: 130px;
     right: 15px;
     width: 100px;
+}
+#tentang-kami .content-container {
+    touch-action: pan-y pinch-zoom;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    padding: 30px;
+}
+#tentang-kami .uk-tab::before {
+    border-bottom: 0;
 }
