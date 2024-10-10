@@ -14,7 +14,7 @@
                 <li class="{{ request()->routeIs('contact') ? 'uk-active' : '' }}"><a href="{{ url('kontak') }}">Kontak</a></li>
             </ul>
             <div class="stick-on-bottom">
-                <a href="https://client.ksmanajemen.com/login">
+                <a href="https://client.gicer.id/login">
                     <div class="pills-button">Verifikasi</div>
                 </a>
             </div>

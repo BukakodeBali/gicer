@@ -14,7 +14,7 @@
                     <p class="mb-5 mt-0"><STRONG>Telephone</STRONG></p>
                     <p class="mt-0">+6282340165863</p>
                     <p class="mb-5 mt-0"><STRONG>Email</STRONG></p>
-                    <p class="mt-0">info@ksmanajemen.com</p>
+                    <p class="mt-0">info@gicer.id</p>
                 </div>
             </div>
             <div class="right-bg" id="app" uk-scrollspy="cls: uk-animation-slide-right-medium; delay: 500">

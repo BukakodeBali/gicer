@@ -20,7 +20,7 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m">
                     <li>
-                        <a href="https://client.ksmanajemen.com/login">
+                        <a href="https://client.gicer.id/login">
                             <div class="pills-button">Verifikasi</div>
                         </a>
                     </li>

@@ -97,7 +97,7 @@
 						</span>
                     <br>
                     <span>
-							ksmanajamen.com &copy; {{ date('Y') }}
+							gicer.id &copy; {{ date('Y') }}
 						</span>
                 </div>
             </div>

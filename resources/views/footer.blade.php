@@ -4,11 +4,11 @@
         <div class="uk-container">
             <div uk-grid>
                 <div class="uk-width-1-3@m uk-width-1-4@l br-1">
-                    <p class="Overpass name">PT Karya Sinergi <br><span>Manajemen</span></p>
+                    <p class="Overpass name">PT Global Improvement <br><span>Certification</span></p>
                     <div class="social-icon">
-                        <a href="https://www.facebook.com/KSManajemen/" target="_blank"><div class="box"><span uk-icon="icon: facebook; ratio: 1.7"></span></div></a>
-                        <a href="https://www.youtube.com/" target="_blank"><div class="box"><span uk-icon="icon: youtube; ratio: 1.7"></span></div></a>
-                        <a href="https://www.instagram.com/ksmanajemen/" target="_blank"><div class="box"><span uk-icon="icon: instagram; ratio: 1.7"></span></div></a>
+                        <a href="#" target="_blank"><div class="box"><span uk-icon="icon: facebook; ratio: 1.7"></span></div></a>
+                        <a href="#" target="_blank"><div class="box"><span uk-icon="icon: youtube; ratio: 1.7"></span></div></a>
+                        <a href="#" target="_blank"><div class="box"><span uk-icon="icon: instagram; ratio: 1.7"></span></div></a>
                     </div>
                 </div>
                 <div class="uk-width-1-3@m uk-width-1-4@l br-1 pad-right-footer-center">
@@ -30,7 +30,7 @@
                     <p class="Overpass title">INFORMASI KONTAK</p>
                     <p class="Overpass kontak-info"><span>Office</span> | Jl. Jepun Pipil Gg.XI No.18, Denpasar Timur, Denpasar - Bali</p>
                     <p class="Overpass kontak-info">Telp : +6282340165863</p>
-                    <p class="Overpass kontak-info">Email : info@ksmanajemen.com</p>
+                    <p class="Overpass kontak-info">Email : info@gicer.id</p>
                 </div>
             </div>
         </div>
