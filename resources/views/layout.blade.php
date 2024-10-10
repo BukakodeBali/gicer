@@ -19,12 +19,18 @@
     <link rel="stylesheet" href="{{ asset('assets/css/uikit.min.css')  }}" />
     <!-- fonts -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/work-sans.css') }}">
-    <!-- Custome Styling -->
+    <!-- Custom Styling -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ksm-custome.css?v=0.0.1') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/uikit-sticky.css') }}">
+    <!-- Flicking -->
+    <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking-inline.css" crossorigin="anonymous" />
     <!-- UIkit JS -->
     <script src="{{ asset('assets/js/uikit.min.js') }}"></script>
     <script src="{{ asset('assets/js/uikit-icons.min.js') }}"></script>
+    <!-- Flicking -->
+    <script src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
     <script src="{{ asset('assets/js/uikit-custome.js') }}"></script>
 </head>
 <body>

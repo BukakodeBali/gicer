@@ -139,14 +139,14 @@
             @endforeach
         </ul>
         <div class="control-slideshow-container">
-            <a class="uk-position-center-left uk-position-small navy-btn" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small navy-btn" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            <a class="uk-position-center-left uk-position-small navy-btn" href="#" uk-slideshow-item="previous" uk-icon="icon: arrow-left; ratio: 2"></a>
+            <a class="uk-position-center-right uk-position-small navy-btn" href="#" uk-slideshow-item="next" uk-icon="icon: arrow-right; ratio: 2"></a>
         </div>
     </div>
     <!-- end banner -->
 
     <!-- about us -->
-    <div id="about-us" uk-scrollspy="cls: uk-animation-fade; delay: 200">
+    <div id="about-us" uk-scrollspy="cls: uk-animation-fade; delay: 300">
         <div class="uk-container">
             <div class="about-card">
                 <div class="uk-grid-collapse uk-grid-match" uk-grid>
@@ -201,30 +201,41 @@
     <!-- end about us -->
 
     <!-- layanan -->
-    <div id="layanan" class="pad-layanan">
+    <div id="layanan" class="pad-layanan" uk-scrollspy="cls: uk-animation-fade; delay: 300">
         <div class="uk-container">
-            <p class="global-title" uk-scrollspy="cls: uk-animation-fade; delay: 500">Layanan Sertifikasi ISO, OHSAS, dan ISO/TS.</p>
-            <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l grid-layanan uk-grid-column-medium uk-grid-row-small" uk-grid uk-scrollspy="cls: uk-animation-scale-up; target: .uk-card; delay: 300;">
-                @foreach($slides as $slide)
-                    <div class="translated">
-                        <a href="{{ $slide['link'] }}">
-                            <div class="uk-card uk-card-small card-layanan">
-                                <div class="uk-card-media-top">
-                                    <div class="uk-cover-container image-height">
-                                        <img src="{{ asset($slide['image']) }}" alt="ISO 9001:2015" uk-cover>
-                                    </div>
+            <div class="title-section">
+                <p class="global-title">Layanan Sertifikasi ISO, OHSAS, dan ISO/TS.</p>
+                <div class="slider-controller">
+                    <button class="flicking-nav-button prev">
+                        <span uk-icon="icon: arrow-left; ratio: 1"></span>
+                    </button>
+                    <button class="flicking-nav-button next">
+                        <span uk-icon="icon: arrow-right; ratio: 1"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="services" class="flicking-viewport">
+                <div class="flicking-camera">
+                    @foreach($slides as $slide)
+                        <div class="panel service-card">
+                            <a href="{{ $slide['link'] }}" draggable="false">
+                                <div class="top">
+                                    <p class="sub-title">{{ $slide['text_1'] }}</p>
+                                    <p class="title">{{ $slide['text_2'] }}</p>
                                 </div>
-                                <div class="uk-card-body text-container">
-                                    <p class="code-layanan">{{ $slide['text_1'] }}</p>
-                                    <p class="desc-layanan">{{ $slide['text_2'] }}</p>
+                                <div class="uk-cover-container uk-transition-toggle featured-image">
+                                    <img src="{{ asset($slide['image']) }}" alt="{{ $slide['text_1'] }}" uk-cover draggable="false">
+                                    <canvas width="100%" height="200"></canvas>
                                 </div>
-                                <div class=" icon-layanan-container uk-card-body">
-                                    <img class="float-icon-layanan" src="{{ $slide['icon'] }}" alt="{{ $slide['text_1'] }}">
+                                <div class="bottom">
+                                    <p class="note">*klik di pada card ini untuk melihat detail dari fasilitas cabana</p>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -359,82 +370,78 @@
 
 @push('page-script')
     <script type="text/javascript">
-        window.addEventListener("load", function(){
-            //custome overlaping background height (solid color only)
-            var visi = document.getElementById("bg-blue-height");
-            document.getElementById("bg-blue-misi").style.height = visi.offsetHeight+'px';
-            var absah = document.getElementById("note");
-            document.getElementById("note-bg").style.height = absah.offsetHeight+'px';
-            window.addEventListener('resize', function(event) {
-                document.getElementById("bg-blue-misi").style.height = visi.offsetHeight+'px';
-                document.getElementById("note-bg").style.height = absah.offsetHeight+'px';
-            }, true);
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector("#layanan > .uk-container > .title-section");
+
+            if (!container) {
+                return;
+            }
+
+            function calculateMargins() {
+                const containerWidth = container.offsetWidth;
+                const windowWidth = window.innerWidth;
+                const margin = (windowWidth - containerWidth) / 2;
+                console.log(containerWidth);
+                console.log(windowWidth);
+                console.log(margin);
+
+                if (windowWidth > 640) {
+                    return margin - 6;
+                } else {
+                    return margin;
+                }
+            }
+
+            function updateNavButtons(flicking) {
+                const prevButton = document.querySelector(".flicking-nav-button.prev");
+                const nextButton = document.querySelector(".flicking-nav-button.next");
+
+                const firstPanel = flicking.getPanel(0);
+                const lastPanel = flicking.panels[flicking.panels.length - 1];
+
+                if (flicking.camera.position <= firstPanel.position) {
+                    prevButton.setAttribute("disabled", "true");
+                } else {
+                    prevButton.removeAttribute("disabled");
+                }
+
+                if (flicking.camera.position >= lastPanel.position) {
+                    nextButton.setAttribute("disabled", "true");
+                } else {
+                    nextButton.removeAttribute("disabled");
+                }
+            }
+
+            function initializeFlicking() {
+                const margin = calculateMargins();
+
+                const flicking = new Flicking("#services", {
+                    defaultIndex: 0,
+                    bound: false,
+                    align: { camera: `${margin}px`, panel: "0px" },
+                    inputType: ["touch", "mouse"],
+                    moveType: ["strict", { count: 1 }],
+                });
+
+                const prevButton = document.querySelector(".flicking-nav-button.prev");
+                const nextButton = document.querySelector(".flicking-nav-button.next");
+
+                prevButton.addEventListener("click", () => flicking.prev());
+                nextButton.addEventListener("click", () => flicking.next());
+
+                updateNavButtons(flicking);
+
+                flicking.on("moveEnd", () => updateNavButtons(flicking));
+
+                return flicking;
+            }
+
+            let flicking = initializeFlicking();
+
+            window.addEventListener("resize", function () {
+                flicking.destroy();
+                flicking = initializeFlicking();
+            });
         });
-        //animate counter script
-        // function animate(obj, initVal, lastVal, duration) {
-
-        //     let startTime = null;
-
-        //     //get the current timestamp and assign it to the currentTime variable
-        //     let currentTime = Date.now();
-
-        //     //pass the current timestamp to the step function
-        //     const step = (currentTime ) => {
-
-        //         //if the start time is null, assign the current time to startTime
-        //         if (!startTime) {
-        //             startTime = currentTime ;
-        //         }
-
-        //         //calculate the value to be used in calculating the number to be displayed
-        //         const progress = Math.min((currentTime  - startTime) / duration, 1);
-
-        //         //calculate what to be displayed using the value gotten above
-        //         obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
-
-        //         //checking to make sure the counter does not exceed the last value (lastVal)
-        //         if (progress < 1) {
-        //             window.requestAnimationFrame(step);
-        //         }
-        //         else{
-        //             window.cancelAnimationFrame(window.requestAnimationFrame(step));
-        //         }
-        //     };
-
-        //     //start animating
-        //     window.requestAnimationFrame(step);
-        // }
-
-        // let text1 = document.getElementById('number-klien');
-        // let text2 = document.getElementById('number-sertif');
-
-        // const load = () => {
-        //     animate(text1, 0, {{ $clientCount }}, 5000);
-        //     animate(text2, 0, {{ $certificateCount }}, 5000);
-        // }
-        //check elemen is visible or not
-        // function isInViewport(el) {
-        //     const rect = el.getBoundingClientRect();
-        //     return (
-        //         rect.top >= 0 &&
-        //         rect.left >= 0 &&
-        //         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        //         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
-        //     );
-        // }
-        // //to check sroll and if klient kami is on viewport run load animation
-        // var numberCount = document.getElementById("number-count");
-        // var counter = 0;
-        // document.addEventListener('scroll', function () {
-        //     if (counter === 0) {
-        //         if (isInViewport(numberCount)) {
-        //             load();
-        //             counter = 1;
-        //         }
-        //     }
-        // }, {
-        //     passive: true
-        // });
     </script>
 @endpush
