@@ -13,6 +13,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use LaravelQRCode\Facades\QRCode;
@@ -95,6 +96,7 @@ class ClientController extends Controller
                 return $this->storeTrue('perusahaan');
             } catch (\Exception $e) {
                 DB::rollBack();
+                Log::info($e->getMessage());
                 return $this->storeFalse('perusahaan');
             }
         else:
