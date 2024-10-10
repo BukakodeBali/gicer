@@ -158,7 +158,7 @@
                                     <canvas width="100%" height="200"></canvas>
                                 </div>
                                 <div class="bottom">
-                                    <p class="note">*klik di pada card ini untuk melihat detail dari layanan sertifikasi</p>
+                                    <p class="note">*klik card ini untuk melihat detail dari layanan sertifikasi</p>
                                 </div>
                             </a>
                         </div>
