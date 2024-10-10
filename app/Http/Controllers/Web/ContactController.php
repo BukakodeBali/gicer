@@ -8,7 +8,7 @@ class ContactController
     {
         return view('contact-page', [
             'title' => 'Kontak',
-            'meta_description' => 'Dapatkan informasi mengenai ISO, biaya sertifikasi ISO, Karya Sinergi Manajemen siap melayani'
+            'meta_description' => 'Dapatkan informasi mengenai ISO, biaya sertifikasi ISO, Global Improvement Certification siap melayani'
         ]);
     }
 }

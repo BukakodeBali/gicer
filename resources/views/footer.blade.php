@@ -38,7 +38,7 @@
     <div id="copyright">
         <div uk-grid>
             <div class="uk-width-expand uk-text-center">
-                <p class="Overpass copyright" style="padding-top: 0px;">&copy; Karya Sinergi Manajemen, All rights reserved</p>
+                <p class="Overpass copyright" style="padding-top: 0px;">&copy; Global Improvement Certification, All rights reserved</p>
             </div>
         </div>
     </div>
