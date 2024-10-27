@@ -13,6 +13,8 @@
                     <p class="title">Layanan Kami</p>
                     <div id="jam-kerja">
                         <p class="layanan-footer"><a href="{{ url('layanan/iso-9001-2015-sistem-manajemen-mutu') }}">ISO 9001:2015</a></p>
+                        <p class="layanan-footer"><a href="{{ url('layanan/iso-14001-2015-sistem-manajemen-lingkungan') }}">ISO 14001:2015</a></p>
+                        <p class="layanan-footer"><a href="{{ url('layanan/iso-45001-2018-sistem-manajemen-kesehatan-keselamatan-kerja') }}">ISO 45001:2018</a></p>
                         <p class="layanan-footer"><a href="{{ url('layanan/iso-37001-2016-sistem-manajemen-anti-penyuapan') }}">ISO 37001:2016</a></p>
                     </div>
                 </div>
