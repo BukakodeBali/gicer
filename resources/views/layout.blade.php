@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="{{ request()->routeIs('home') ? '' : 'global-gradient-background' }}">
 <head>
     <title>{{ isset($title) ? $title." - " : "" }}Global Improvement Certification</title>
     <!-- meta and the others -->

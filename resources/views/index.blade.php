@@ -13,6 +13,24 @@
         ];
 
         $slides[] = [
+            'image' => 'assets/images/banner/slider2.jpg',
+            'text_1' => 'ISO 14001:2015',
+            'text_2' => 'Sistem Manajemen Lingkungan',
+            'text_3' => 'Dengan di sertifikasi ISO 14001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen lingkungan.',
+            'link' => url('layanan/iso-14001-2015-sistem-manajemen-lingkungan'),
+            'icon' => 'assets/images/banner/ico2.png'
+        ];
+
+        $slides[] = [
+            'image' => 'assets/images/banner/slider3.jpg',
+            'text_1' => 'ISO 45001:2018',
+            'text_2' => 'Sistem Manajemen Kesehatan dan Keselamatan Kerja',
+            'text_3' => 'Dengan di sertifikasi ISO 45001, berarti organiasi anda telah mendapatkan sertifikasi yang diakui secara global dalam bidang sistem manajemen kesehatan dan keselamatan kerja.',
+            'link' => url('layanan/iso-45001-2018-sistem-manajemen-kesehatan-keselamatan-kerja'),
+            'icon' => 'assets/images/banner/ico3.png'
+        ];
+
+        $slides[] = [
             'image' => 'assets/images/banner/slider8.jpg',
             'text_1' => 'ISO 37001:2016',
             'text_2' => 'Sistem Manajemen Anti Penyuapan',
@@ -86,7 +104,7 @@
                     <div class="uk-width-expand@m right-bg">
                         <div>
                             <p class="description margin-responsive">
-                                <strong>Global Improvement Certification</strong> merupakan lembaga penilaian kesesuaian untuk sistem manajemen internasional (ISO) yang berdiri atas dasar komitmen dan kesadaran akan pentingnya penerapan sistem manajemen dalam organisasi atau perusahaan. Lembaga ini hadir untuk membantu menilai kesesuaian sistem manajemen melalui dukungan sumber daya manusia yang profesional, berkompeten, dan berpengalaman di bidangnya.
+                                <strong>Global Improvement Certification (GIC)</strong> Lembaga sertifikasi independen, yang tidak bekerjasama dengan perusahaan atau organisasi apapun, yang berkedudukan di Jakarta. Lembaga ini bertujuan untuk mendukung penilaian kesesuaian sistem manajemen dengan menyediakan sumber daya manusia yang profesional, kompeten, dan berpengalaman dalam bidangnya.
                             </p>
                             <a href="{{ url('tentang-kami') }}">
                                 <button class="uk-button uk-button-primary btn-about-more">
@@ -129,7 +147,7 @@
     <!-- end about us -->
 
     <!-- layanan -->
-    <div id="layanan" class="pad-layanan" uk-scrollspy="cls: uk-animation-fade; delay: 300">
+    <div id="layanan" class="pad-layanan" style="background-color: transparent;background-image: none;" uk-scrollspy="cls: uk-animation-fade; delay: 300">
         <div class="uk-container">
             <div class="title-section">
                 <p class="global-title">Layanan Sertifikasi ISO (International Organization of Standardization)</p>
@@ -192,7 +210,7 @@
                 <div class="uk-width-expand@m">
                     <p class="description top-spacing">Dengan login menggunakan ID client dan Password pada website : </p>
                     <ul class="uk-list uk-list-disc custom-list">
-                        <li>Buka website <strong>www.gicer.id</strong></li>
+                        <li>Buka website <strong>www.certificationimprovement.com</strong></li>
                         <li>Klik menu <strong>VERIFIKASI</strong></li>
                         <li>Masukkan <strong>ID client</strong></li>
                         <li>Masukkan <strong>password</strong></li>
@@ -212,8 +230,15 @@
     @if($articles && count($articles) > 0 && !empty($articles[0]['categories']) && !empty($articles[0]['image']['name']))
         <div id="berita" uk-scrollspy="cls: uk-animation-fade; delay: 300">
             <div class="uk-container">
-                <p class="global-title" uk-scrollspy="cls: uk-animation-fade; delay: 300">Berita Terbaru</p>
-                <div class="uk-child-width-1-2@s uk-child-width-1-3@m grid-berita uk-grid-large" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400;">
+                <div class="global-title">
+                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                        <p class="global-title" style="padding: 0px !important;">Berita Terbaru</p>
+                        <a href="{{ url('berita') }}">
+                            <button class="uk-button uk-button-primary btn-ksm">Semua Berita</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="uk-child-width-1-2@s uk-child-width-1-3@m grid-berita uk-grid-large" uk-grid>
                     @foreach($articles as $article)
                             <?php
                             $gambar = $article['image']['name'] ?? null;
@@ -229,34 +254,26 @@
                                         </div>
                                     </div>
                                     <div class="uk-card-body text-container">
+                                        <div class="uk-flex category-tag">
+                                            <p class="mr-10">
+                                                @foreach($categories as $category)
+                                                    <?php
+                                                        $link = $category['link']['link'] ?? '';
+                                                    ?>
+                                                    <a href="{{ url('kategori/'.$link) }}">{{ $category['name'] }}</a>
+                                                @endforeach
+                                            </p>
+                                            <p>{{ $article['formatted_published_at'] }}</p>
+                                        </div>
                                         <p class="code-berita">{{ $article['title'] }}</p>
                                         <div class="module line-clamp">
                                             <p class="desc-berita">{{ substr(strip_tags($article['content']), 0, 120) }}</p>
                                         </div>
-                                        <table class="berita-info">
-                                            <td class="left">
-                                                @foreach($categories as $category)
-                                                        <?php
-                                                        $link = $category['link']['link'] ?? '';
-                                                        ?>
-                                                    <span uk-icon="icon: list; ratio: 0.8"></span> <a href="{{ url('kategori/'.$link) }}">{{ $category['name'] }}</a>
-                                                @endforeach
-                                            </td>
-                                            <td class="right">
-                                                <span uk-icon="icon: calendar; ratio: 0.8"></span>
-                                                {{ $article['formatted_published_at'] }}
-                                            </td>
-                                        </table>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     @endforeach
-                </div>
-                <div class="global-title">
-                    <a href="{{ url('berita') }}">
-                        <button class="uk-button uk-button-primary btn-ksm" uk-scrollspy="cls: uk-animation-fade; delay: 600">Semua Berita</button>
-                    </a>
                 </div>
             </div>
         </div>

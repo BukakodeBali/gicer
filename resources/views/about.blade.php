@@ -14,11 +14,27 @@
                 <li>
                     <!-- tentang kami -->
                     <div class="uk-container">
-                        <p class="description"><strong>Global Improvement Certification</strong> merupakan <strong>lembaga penilaian kesesuaian untuk sistem manajemen internasional (ISO)</strong>. Berdirinya Global Improvement Certification berawal dari komitmen dan kesadaran pentingnya penerapan sistem manajemen pada suatu organisasi/perusahaan, sehingga mendorong <strong>Global Improvement Certification</strong> untuk membantu melakukan penilaian kesesuaian sistem manajemen yang didukung oleh sumber daya manusia yang professional, berkompeten, dan berpengalaman di bidang sistem manajemen.</p>
-                        <p class="description">Dalam proses penilaian kesesuaian <strong>Global Improvement Certification</strong> telah menerapkan dan memelihara <strong>ISO/IEC 17021-1:2015</strong> sebagai standar lembaga penilai kesesuaian untuk memastikan bahwa <strong>Global Improvement Certification</strong> tidak memihak dan memberikan hasil yang konsisten.</p>
-                        <p class="description">Penilaian kesesuaian yang dilakukan oleh <strong>Global Improvement Certification ISO 17021</strong> dengan harapan memberikan nilai tambah bagi perusahaan, bagi pelanggan, dan bagi pihak berkepentingan lainnya dengan meyakinkan bahwa nilai sertifikat yang dikeluarkan akan diakui oleh semua pihak.</p>
-                        <p class="description"><strong>ISO/IEC 17021</strong> berisi prinsip dan persyaratan untuk kompetensi, konsistensi, dan ketidakberpihakan audit dan sertifikasi sistem manajemen dari semua jenis sistem manajemen dan badan-badan lain yang menyediakan kegiatan ini.</p>
-                        <p class="description">Tujuan menerapkan standar <strong>ISO 17021</strong> ini adalah agar <strong>Global Improvement Certification</strong> memiliki tanggungjawab kepada pihak yang berkepentingan, termasuk kepada klien mereka dan pelanggan organisasi yang memiliki sistem manajemen bersertifikat untuk memastikan bahwa hanya auditor berkompetensi relevan yang diizinkan untuk melakukan audit. Maksudnya adalah semua auditor dan personil lain yang terlibat dalam fungsi sertifikasi memiliki kompetensi sama seperti yang disyaratkan dalam <strong>ISO/IEC 17021</strong>.</p>
+                        <p class="description"><strong>Global Improvement Certification (GIC)</strong> Lembaga sertifikasi independen, yang tidak bekerjasama dengan perusahaan atau organisasi apapun, yang berkedudukan di Jakarta. Lembaga ini bertujuan untuk mendukung penilaian kesesuaian sistem manajemen dengan menyediakan sumber daya manusia yang profesional, kompeten, dan berpengalaman dalam bidangnya.</p>
+                        <div id="visi-misi">
+                            <h3>Kebijakan :</h3>
+                            <ul class="uk-list uk-list-disc custom-list">
+                                <li>PT Global Improvement Certification berkomitmen untuk memberikan layanan sertifikasi yang berkualitas, objektif, dan profesional.</li>
+                                <li>PT Global Improvement Certification memastikan setiap proses audit dan penilaian dilakukan secara transparan dan akuntabel, dengan memberikan informasi yang jelas dan dapat dipertanggungjawabkan kepada klien.</li>
+                                <li>PT Global Improvement Certification membantu organisasi dalam meningkatkan efektivitas sistem manajemen mereka melalui layanan sertifikasi yang komprehensif dan sesuai dengan kebutuhan bisnis.</li>
+                                <li>PT Global Improvement Certification selalu mematuhi regulasi dan standar yang berlaku. PT Global Improvement Certification mengikuti pedoman yang ditetapkan oleh lembaga terkait untuk menjaga kredibilitas dan integritas setiap proses sertifikasi yang kami lakukan.</li>
+                                <li>PT Global Improvement Certification memprioritaskan integritas dalam seluruh kegiatan bisnis. Tidak ada toleransi terhadap konflik kepentingan, dan kami memastikan setiap tindakan yang diambil oleh tim auditor kami didasarkan pada prinsip kejujuran dan profesionalisme.</li>
+                                <li>PT Global Improvement Certification berkomitmen untuk terus berinovasi dalam menyediakan layanan sertifikasi, termasuk dalam pengembangan teknologi yang mempermudah proses sertifikasi dan audit.</li>
+                            </ul>
+                            <h3>Sasaran :</h3>
+                            <ul class="uk-list uk-list-disc custom-list">
+                                <li>Meningkatkan Kepuasan Klien: Mencapai tingkat kepuasan klien minimal 90% melalui audit yang objektif, tepat waktu, dan layanan yang responsif.</li>
+                                <li>Pengembangan Kompetensi Auditor: Menyediakan pelatihan tahunan bagi auditor untuk memastikan pemahaman mendalam terkait perubahan regulasi ISO 9001 dan ISO 37001, serta peningkatan kemampuan teknis.</li>
+                                <li>Peningkatan Jumlah Sertifikasi: Meningkatkan jumlah perusahaan yang tersertifikasi hingga 15% setiap tahun untuk ISO 9001 dan ISO 37001 dengan mempertahankan kualitas proses sertifikasi.</li>
+                                <li>Kepatuhan terhadap Standar: Memastikan 100% proses sertifikasi sesuai dengan pedoman ISO/IEC 17021 untuk menjaga akurasi, objektivitas, dan transparansi.</li>
+                                <li>Integritas dan Etika: Mengimplementasikan kebijakan “zero tolerance” terhadap konflik kepentingan dan pelanggaran etika dalam proses audit dan sertifikasi, dengan pencapaian 100% kepatuhan.</li>
+                                <li>Inovasi Layanan Sertifikasi: Mengembangkan platform digital untuk memfasilitasi proses audit dan sertifikasi yang lebih efisien dan transparan, dengan target implementasi penuh dalam waktu dua tahun.</li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- end of tentang kami -->
                 </li>
@@ -27,14 +43,9 @@
                     <div class="uk-container">
                         <div id="visi-misi">
                             <h3>Visi :</h3>
-                            <p class="visi description"><strong>PT. Global Improvement Certification</strong> ingin menjadi lembaga penilaian kesesuaian <strong>terdepan dan nomor 1 (satu) di indonesia</strong> dengan memberikan kualitas pelayanan penilaian kesesuaian sistem manajemen yang profesional, kompeten dan berpengalaman.</p>
+                            <p class="visi description">Menjadi lembaga penilaian kesesuaian terdepan dan terpercaya di tingkat nasional maupun internasional, yang berkontribusi pada peningkatan standar mutu dan integritas di berbagai sektor industry.</p>
                             <h3>Misi :</h3>
-                            <ul class="uk-list uk-list-disc custom-list">
-                                <li>Menerapkan, memelihara dan mengembangkan sistem sesuai ISO/IEC 17021.1:2015 sebagai acuan lembaga penilaian kesesuaian.</li>
-                                <li>Menyediakan sumber daya manusia yang profesional, berkompeten dan berpengalaman dibidangnya.</li>
-                                <li>Memahami kebutuhan pelanggan demi memberikan hasil yang terbaik, optimal, terpercaya dan dapat memberikan nilai tambah terhadap pelanggan.</li>
-                                <li>Berkomitmen memberikan layanan standarisasi bertaraf internasional untuk segala jenis organisasi atau perusahaan.</li>
-                            </ul>
+                            <p class="visi description">Memberikan pelayanan penilaian kesesuaian yang berkualitas, objektif, transparan, integritas dan professional serta mendukung peningkatan kompetensi dan kesadaran perusahaan dalam memenuhi standar kualitas dan keberlanjutan.</p>
                         </div>
                     </div>
                     <!-- end of visi & misi -->
@@ -42,7 +53,7 @@
                 <li>
                     <!-- struktur organisasi -->
                     <div class="uk-container">
-                        <div id="visi-misi">
+                        <div id="visi-misi" class="uk-text-center">
                             <img src="{{ asset('assets/images/base/struktur-organisasi.png') }}" class="pt-15" alt="struktur-organisasi">
                         </div>
                     </div>
@@ -52,26 +63,15 @@
                     <!-- ketidakberpihakan -->
                     <div class="uk-container">
                         <div id="visi-misi">
-                            <p class="description"><strong>Komitmen ketidak berpihakan</strong></p>
+                            <p class="description">Di dalam menjaga prinisip ketidakberpihakan, PT Global Improvement Certification (GIC) dalam melakukan setiap keputusan terkait proses sertifikasi dan hasil sertifikasi harus berdasarkan bukti objektif, dapat diuji kebenarannya serta tidak terpengaruh oleh pihak lain.</p>
+                            <p class="description">Segenap personal PT Global Improvement Certification (GIC) akan menyatakan setiap ancaman dari ketidakberpihakan yang termasuk :</p>
                             <div id="ketidakberpihakan" class="pt-15">
-                                <p class="description">Top <strong>Global Improvement Certification berkomitmen terhadap ketidakberpihakan dalam kegiatan sertifikasi</strong>. Pernyataan yang yang menunjukkan ketidakberpihakan dalam melaksanakan kegiatan sertifikasi sistem manajemen, mengelola konflik kepentingan, dan menjamin objektivitas kegiatan sertifikasi sistem manajemen dapat diakses publik melalui publikasi.</p>
-                                <ul class="uk-list uk-list-decimal">
-                                    <li>Global Improvement Certification mengidentifikasi, menganalisis, mendokumentasikan, dan memperagakan cara mengeliminasi atau memperkecil ancaman konflik kepentingan yang timbul dari ketentuan sertifikasi termasuk setiap konflik yang timbul dari hubungan kerja atau semua sumber konflik kepentingan baik dari pihak internal maupun eksternal.</li>
-                                    <li>Global Improvement Certification tidak dapat memberikan sertifikasi jika terjadi suatu hubungan yang menimbulkan ancaman ketidakberpihakan.</li>
-                                    <li>Global Improvement Certification tidak mensertifikasi suatu lembaga yang bergerak di bidang sertifikasi sistem manajemen.</li>
-                                    <li>Global Improvement Certification tidak menawarkan atau menyediakan konsultasi sistem manajemen.</li>
-                                    <li>Global Improvement Certification tidak menawarkan atau menyediakan audit internal Klien yang disertifikasinya.</li>
-                                    <li>Global Improvement Certification tidak mensertifikasi sistem manajemen pada pelanggan yang telah menerima konsultasi sistem manajemen atau audit internal, dimana hubungan antara organisasi konsultan dengan Global Improvement Certification menunjukkan ancaman yang mempengaruhi ketidakberpihakkan Global Improvement Certification.</li>
-                                    <li>Global Improvement Certification tidak memberikan subkontrak Jasa Audit pada organisasi konsultan Sistem Manajemen.</li>
-                                    <li>Penawaran atau pemasaran jasa sertifikasi Global Improvement Certification memiliki beberapa peraturan untuk menghindari ancaman ketidakberpihakan, berikut adalah peraturan yang ditetapkan oleh Global Improvement Certification terhadap proses pemasaran jasa sertifikasi.</li>
-                                    <li>Kegiatan/jasa sertifikasi Global Improvement Certification tidak ditawarkan atau dipasarkan secara bersamaan dengan kegiatan/konsultasi sistem manajemen.</li>
-                                    <li>Global Improvement Certification akan mengambil tindakan untuk memperbaiki klaim yang tidak sesuai dari setiap organisasi konsultan yang menyatakan atau menunjukkan bahwa sertifikasi akan lebih sederhana, lebih mudah, lebih cepat atau lebih murah jika menggunakan Global Improvement Certification.</li>
-                                    <li>Global Improvement Certification tidak menyatakan atau menunjukkan bahwa sertifikasi akan lebih sederhana, lebih mudah, lebih cepat atau lebih murah jika organisasi konsultan tertentu digunakan.</li>
-                                    <li>Untuk menjamin tidak ada konflik kepentingan, personel yang telah memberikan atau terlibat dalam kegiatan konsultasi sistem manajemen dalam dua tahun berakhirnya konsultasi termasuk mereka yang bertindak dalam kapasitas manajerial tidak boleh berperan serta dalam audit atau kegiatan sertifikasi pada klien yang ditangani oleh Global Improvement Certification.</li>
-                                    <li>Global Improvement Certification akan mengambil tindakan untuk menanggapi setiap ancaman terhadap ketidakberpihakan yang timbul dari tindakan personel, lembaga atau organisasi lain.</li>
-                                    <li>Seluruh Personel Global Improvement Certification (Internal, Eksternal, atau Komite) yang dapat mempengaruhi kegiatan sertifikasi disyaratkan untuk bertindak secara tidak berpihak dan tidak diizinkan memberi tekanan komersial, keuangan atau tekanan lainnya yang mengkompromikan ketidakberpihakan.</li>
+                                <ul class="uk-list uk-list-disc custom-list">
+                                    <li><strong>Kepentingan diri sendiri,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak akan bertindak atas nama dan tujuan sendiri atau untuk mendapatkan keuntungan keuangan.</li>
+                                    <li><strong>Ancaman ulasan diri,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak akan mengaudit perusahaan yang telah dikonsultankan sendiri atau menjadi internal auditor di perusahaan tersebut dalam kurun waktu min 2 tahun.</li>
+                                    <li><strong>Ancaman kepercayaan atau hubungan kedekatan,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak diperbolehkan dalam kedekatan emosional atau hubungan kekeluargaan dengan klien/auditee.</li>
+                                    <li><strong>Ancaman intimidasi,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) apabila mendapatkan tekanan atau paksaan, oleh individu atau organisasi, harus melaporkan hal tersebut kepada PT Global Improvement Certification (GIC) dalam menangani hal tersebut.</li>
                                 </ul>
-                                <p class="description">Personel Global Improvement Certification mensyaratkan personel (Internal dan eksternal) untuk mengungkapkan seluruh situasi yang mungkin menimbulkan konflik kepentingan pada Personel Global Improvement Certification atau personelnya, dan tidak akan menggunakan personel tersebut, kecuali terbukti tidak terdapat konflik kepentingan. Informasi yang didapat akan dijadikan sebagai masukan pada rapat komite etik dan tinjauan manajemen untuk mengidentifikasi dan cara untuk mengeliminasi atau mengurangi ancaman ketidakberpihakan.</p>
                             </div>
                         </div>
                     </div>

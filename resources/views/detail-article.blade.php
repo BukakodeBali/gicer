@@ -6,26 +6,27 @@
         $categories = $article['categories'];
     ?>
     <!-- list berita -->
-    <div class="uk-container">
+    <div id="detail-news" class="uk-container">
         <div class="uk-grid-match berita" uk-grid>
             <div class="uk-width-expand@m">
                 <!-- artikel -->
                 <article class="uk-article" uk-scrollspy="cls: uk-animation-fade; delay: 600">
                     <!-- title head -->
                     <h1 class="uk-article-title title-article">{{ $article['title'] }}</h1>
-                    <p class="uk-article-meta mt-5 mb-10">
-                        @foreach($categories as $category)
-                            <?php
-                                $categoryLink = $category['link']['link'] ?? '';
-                            ?>
-                            <span uk-icon="icon: list; ratio: 0.8"></span> <a href="{{ url('kategori/'.$categoryLink) }}">{{ $category['name'] }}</a>
-                        @endforeach
-                        <span uk-icon="icon: calendar; ratio: 0.8">
-						    	</span> {{ $article['formatted_published_at'] }}
-                    </p>
+                    <div class="uk-flex category-tag">
+                        <p class="mr-10">
+                            @foreach($categories as $category)
+                                <?php
+                                    $link = $category['link']['link'] ?? '';
+                                ?>
+                                <a href="{{ url('kategori/'.$link) }}">{{ $category['name'] }}</a>
+                            @endforeach
+                        </p>
+                        <p>{{ $article['formatted_published_at'] }}</p>
+                    </div>
                     <!-- end title head -->
                     <!-- image -->
-                    <div class="uk-cover-container uk-height-medium">
+                    <div class="uk-cover-container uk-height-medium radius-hidden-10">
                         <img src="{{ $gambar }}" alt="{{ $article['title'] }}" uk-cover>
                     </div>
                     <!-- end image -->

@@ -2,13 +2,13 @@
 
 @section('content')
     <!-- list berita -->
-    <div class="uk-container">
+    <div class="uk-container mb-30">
         <div class="uk-grid-match berita" uk-grid>
             <div class="uk-width-expand@m">
                 <!-- berita -->
                 <div id="berita" class="transparent">
                     <div class="uk-container">
-                        <p class="hes" uk-scrollspy="cls: uk-animation-slide-top; delay: 300"><span>{{ $section ?? '' }}</span></p>
+                        <p class="hes"><span>{{ $section ?? '' }}</span></p>
                         <div class="uk-child-width-1-2@s uk-child-width-1-2@m grid-berita uk-grid-small" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400;">
                             @foreach($articles['data'] as $article)
                                 <?php
@@ -26,24 +26,21 @@
                                                 </div>
                                             </div>
                                             <div class="uk-card-body text-container">
+                                                <div class="uk-flex category-tag">
+                                                    <p class="mr-10">
+                                                        @foreach($categories as $category)
+                                                            <?php
+                                                                $link = $category['link']['link'] ?? '';
+                                                            ?>
+                                                            <a href="{{ url('kategori/'.$link) }}">{{ $category['name'] }}</a>
+                                                        @endforeach
+                                                    </p>
+                                                    <p>{{ $article['formatted_published_at'] }}</p>
+                                                </div>
                                                 <p class="code-berita">{{ $article['title'] }}</p>
                                                 <div class="module line-clamp">
                                                     <p class="desc-berita">{{ substr(strip_tags($article['content']), 0, 120) }}</p>
                                                 </div>
-                                                <table class="berita-info">
-                                                    <td class="left">
-                                                        @foreach($categories as $category)
-                                                            <?php
-                                                                $categoryLink = $category['link']['link'] ?? '';
-                                                            ?>
-                                                            <span uk-icon="icon: list; ratio: 0.8"></span>
-                                                            <a href="{{ url('kategori/'.$categoryLink) }}">{{ $category['name'] }}</a>
-                                                        @endforeach
-                                                    </td>
-                                                    <td class="right">
-                                                        <span uk-icon="icon: calendar; ratio: 0.8"></span> {{ $article['formatted_published_at'] }}
-                                                    </td>
-                                                </table>
                                             </div>
                                         </div>
                                     </a>

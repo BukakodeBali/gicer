@@ -9,21 +9,13 @@
                     <img src="{{ asset('assets/images/base/logo-nav-1.png') }}" class="uk-margin-small-right" alt="logo" style="height: 50px;">
                 </a>
             </div>
-            <div class="uk-navbar-center">
+            <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m">
                     <li class="{{ request()->routeIs('home') ? 'uk-active' : '' }}"><a href="{{ url('/') }}">Beranda</a></li>
                     <li class="{{ request()->routeIs('about') ? 'uk-active' : '' }}"><a href="{{ url('tentang-kami') }}">Tentang Kami</a></li>
                     <li class="{{ request()->routeIs('certification-process') ? 'uk-active' : '' }}"><a href="{{ url('alur-sertifikasi') }}">Sertifikasi</a></li>
-                    <li class="{{ request()->routeIs('contact') ? 'uk-active' : '' }}"><a href="{{ url('kontak') }}">Kontak</a></li>
-                </ul>
-            </div>
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav uk-visible@m">
-                    <li>
-                        <a href="https://client.gicer.id/login">
-                            <div class="pills-button">Verifikasi</div>
-                        </a>
-                    </li>
+                    <li><a href="https://client.certificationimprovement.com/login">Direktori</a></li>
+                    <li class="{{ request()->routeIs('contact') ? 'uk-active' : '' }}"><a href="{{ url('kontak') }}">Hubungi Kami</a></li>
                 </ul>
                 <a uk-navbar-toggle-icon="" href="#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-navbar-toggle-icon uk-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon">

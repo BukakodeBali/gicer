@@ -97,7 +97,7 @@
 						</span>
                     <br>
                     <span>
-							gicer.id &copy; {{ date('Y') }}
+							certificationimprovement.com &copy; {{ date('Y') }}
 						</span>
                 </div>
             </div>
