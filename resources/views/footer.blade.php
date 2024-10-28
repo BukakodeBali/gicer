@@ -13,6 +13,8 @@
                     <p class="title">Layanan Kami</p>
                     <div id="jam-kerja">
                         <p class="layanan-footer"><a href="{{ url('layanan/iso-9001-2015-sistem-manajemen-mutu') }}">ISO 9001:2015</a></p>
+                        <p class="layanan-footer"><a href="{{ url('layanan/iso-14001-2015-sistem-manajemen-lingkungan') }}">ISO 14001:2015</a></p>
+                        <p class="layanan-footer"><a href="{{ url('layanan/iso-45001-2018-sistem-manajemen-kesehatan-keselamatan-kerja') }}">ISO 45001:2018</a></p>
                         <p class="layanan-footer"><a href="{{ url('layanan/iso-37001-2016-sistem-manajemen-anti-penyuapan') }}">ISO 37001:2016</a></p>
                     </div>
                 </div>
@@ -20,7 +22,7 @@
                     <p class="title">Informasi Kontak</p>
                     <p class="kontak-info">Alamat : Indonesia Stock Exchange Tower 1 Level 3, Unit 304, JI. Jendral Sudirman Kav 52-53, Desa/Kelurahan Senayan, Kec. Kebayoran Baru, Kota Adm. Jakarta Selatan, Provinsi DKI Jakarta, Kode Pos: 12190</p>
                     <p class="kontak-info">Telp : +6281236979232</p>
-                    <p class="kontak-info">Email : info@gicer.id</p>
+                    <p class="kontak-info">Email : info@certificationimprovement.com</p>
                 </div>
             </div>
         </div>

@@ -11,13 +11,9 @@
                 <li class="{{ request()->routeIs('home') ? 'uk-active' : '' }}"><a href="{{ url('/') }}">Beranda</a></li>
                 <li class="{{ request()->routeIs('about') ? 'uk-active' : '' }}"><a href="{{ url('tentang-kami') }}">Tentang Kami</a></li>
                 <li class="{{ request()->routeIs('certification-process') ? 'uk-active' : '' }}"><a href="{{ url('alur-sertifikasi') }}">Sertifikasi</a></li>
-                <li class="{{ request()->routeIs('contact') ? 'uk-active' : '' }}"><a href="{{ url('kontak') }}">Kontak</a></li>
+                <li><a href="https://client.certificationimprovement.com/login">Direktori</a></li>
+                <li class="{{ request()->routeIs('contact') ? 'uk-active' : '' }}"><a href="{{ url('kontak') }}">Hubungi Kami</a></li>
             </ul>
-            <div class="stick-on-bottom">
-                <a href="https://client.gicer.id/login">
-                    <div class="pills-button">Verifikasi</div>
-                </a>
-            </div>
         </div>
     </div>
 </div>
