@@ -24,4 +24,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
-          script: "cd gicer.id && .scripts/deploy-prod.sh"
+          script: "cd certificationimprovement.com && .scripts/deploy-prod.sh"
