@@ -2050,6 +2050,8 @@ html {
 	justify-content: center;
 	padding-left: 30px;
 	padding-right: 30px;
+    background-size: 100%;
+    background-position: -15% 155%;
 }
 .not-found img {
 	max-width: 400px;
@@ -2058,6 +2060,9 @@ html {
 	.not-found img {
 		max-width: 300px;
 	}
+    .not-found {
+        background-size: 200%;
+    }
 }
 .form-search-btn form {
 	display: flex;
