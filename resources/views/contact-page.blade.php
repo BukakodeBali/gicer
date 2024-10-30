@@ -70,7 +70,7 @@
 
                         <p class="mb-5 mt-0"><strong>Telephone</strong></p>
                         <p class="mt-0 description">
-                            <a href="tel:+6281236979232">+6281236979232</a>
+                            <a href="tel:02150106260">021-50106260</a>
                         </p>
 
                         <p class="mb-5 mt-0"><strong>Email</strong></p>
