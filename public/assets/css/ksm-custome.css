@@ -205,8 +205,9 @@ html {
 .to-top-btn{
     width: 50px;
     height: 30px;
-    background: #bbc400;
-    border: 1px solid #0b0105;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 1px solid #B38728;
     position: fixed;
     bottom: 20px;
     right: 90px;
@@ -218,14 +219,15 @@ html {
     align-items: center;
 }
 .to-top-btn svg {
-    color: #0b0105;
+    color: #fff;
 }
 .to-top-btn:hover,
 .to-top-btn:focus{
-    background: #899100;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
 .to-top-btn:hover svg {
-    color: #0b0105;
+    color: #fff;
 }
 .show-btn {
     z-index: 1;
@@ -357,40 +359,41 @@ html {
     text-transform: capitalize;
     font-weight: 300;
     font-size: 14px;
-    background: #bbc400;
-    color: #0b0105;
+    background: #0b0105;
+    color: #ffffff;
     border: 1px solid #0b0105;
-    padding: 3px 25px;
-    border-radius: 10px;
+    padding: 1px 25px;
+    border-radius: 20px;
     transition: background-color 0.3s ease, border 0.3s ease, padding 0.3s ease;
 }
 .btn-ksm.white{
-	color: #333;
-	background-color: #fff;
+	color: #ffffff;
+	background-color: #0b0105;
 }
 .btn-ksm:hover,
 .btn-ksm:focus{
-	background-color: #899100;
-    color: #0b0105;
+	background-color: #0b0105;
+    color: #fff;
 }
 .btn-ksm.white:hover,
 .btn-ksm.white:focus{
     color: #0b0105;
-    background-color: #bbc400;
-    border: 1px solid white;
+    background-color: #fff;
+    border: 1px solid #fff;
 }
 .btn-ksm:disabled{
-	background-color: #bbc400;
+	background-color: #0b0105;
     color: #fff;
+    opacity: 50%;
 }
 .btn-ksm-light{
 	font-family: 'Work Sans';
     text-transform: capitalize;
     font-weight: 300;
     font-size: 14px;
-    background: #e1e695;
-    color: #0b0105;
-    border: 1px solid #0b0105;
+    background: hsla(336, 83%, 2%, 0.75);
+    color: #fff;
+    border: 1px solid #fff;
     padding: 3px 25px;
     border-radius: 10px;
     transition: background-color 0.3s ease, border 0.3s ease, padding 0.3s ease;
@@ -400,10 +403,10 @@ html {
 }
 .btn-ksm-light:hover,
 .btn-ksm-light:focus{
-	background: #c3c96d
+	background: hsla(336, 83%, 2%, 0.75);
 }
 .btn-ksm-light:disabled{
-	background-color: #b0b477;
+	background-color: hsla(336, 83%, 2%, 0.75);
 }
 .login-bg .uk-fieldset{
 	padding-top: 60px;
@@ -1043,14 +1046,14 @@ html {
 }
 .navy-btn{
 	padding: 5px 15px;
-    border: 1px solid #0872BA;
+    border: 1px solid #0b0105;
     border-radius: 15px;
     font-size: 8px;
     background: #efefef;
 }
 .navy-btn svg{
     border-radius: 5px;
-    color: #0872BA;
+    color: #0b0105;
     font-size: 8px;
     width: 20px;
 }
@@ -1284,7 +1287,7 @@ html {
     box-shadow: none;
 }
 #layanan [class*=uk-list]>::before {
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: middle;
     color: #fff;
 }
@@ -1308,8 +1311,9 @@ html {
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    background-color: #bbc400;
-    color: #0b0105;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1424,22 +1428,26 @@ html {
 .btn-ksm-slider{
 	font-family: 'Work Sans';
     text-transform: capitalize;
-    background-color: #bbc400 !important;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     border-radius: 20px;
     font-weight: 400;
     font-size: 14px;
-    color: #0b0105 !important;
-    border: 1px solid #0b0105;
+    color: #fff !important;
+    border: 1px solid #B38728;
 }
 .btn-ksm-slider.off-border{
     border-color: transparent;
 }
 .btn-ksm-slider:hover,
 .btn-ksm-slider:focus{
-	background-color: #899100 !important;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
 .btn-ksm-slider:disabled{
-	background-color: #bbc400 !important;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    opacity: 50%;
 }
 #slideshow-ksm .force-right-align{
     align-items: end;
@@ -1614,9 +1622,10 @@ html {
     padding-right: 20px;
 }
 #layanan .flicking-nav-button {
-    background: #bbc400;
-    color: #0b0105;
-    border: 1px solid #0b0105;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: #fff;
+    border: 1px solid #B38728;
     padding: 5px 25px;
     cursor: pointer;
     border-radius: 15px;
@@ -1674,6 +1683,7 @@ html {
 }
 #layanan .flicking-nav-button:disabled {
     background: #fff;
+    color: #B38728;
     border: none;
     padding: 5px 15px;
     cursor: not-allowed;
@@ -1761,8 +1771,9 @@ html {
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    background-color: #bbc400;
-    color: #0b0105;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1918,7 +1929,7 @@ html {
     font-family: 'Work Sans';
     text-transform: capitalize;
     font-weight: 500;
-    font-size: 34px;
+    font-size: 28px;
     margin: 0;
     line-height: normal;
     color: #0b0105;

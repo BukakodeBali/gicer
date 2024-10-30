@@ -208,19 +208,18 @@
                     </div>
                 </div>
                 <div class="uk-width-expand@m">
-                    <p class="description top-spacing">Dengan login menggunakan ID client dan Password pada website : </p>
+                    <p class="description top-spacing">Dengan verifikasi menggunakan Nomor Sertifikat pada website : </p>
                     <ul class="uk-list uk-list-disc custom-list">
                         <li>Buka website <strong>www.certificationimprovement.com</strong></li>
-                        <li>Klik menu <strong>VERIFIKASI</strong></li>
-                        <li>Masukkan <strong>ID client</strong></li>
-                        <li>Masukkan <strong>password</strong></li>
-                        <li><strong>Login</strong></li>
+                        <li>Klik menu <strong>Direktori</strong></li>
+                        <li>Masukkan <strong>Nomor Sertifikat</strong></li>
+                        <li>Klik tombol <strong>Verifikasi</strong></li>
                     </ul>
                 </div>
             </div>
             <div id="note" class="bottom-spacing">
-                <p class="description">- Untuk mendapatkan id client dan password silahkan hubungi: <strong><a target="_blank" href="{{ url('kontak') }}">kontak kami</a></strong>.</p>
-                <p class="mt-0 description">- Untuk login via barcode silahkan scan barcode dengan aplikasi kamera smartphone. Jika aplikasi kamera tidak mendukung silahkan download aplikasi barcode scanner untuk android dan ios.</p>
+                <p class="description">- Untuk mendapatkan nomor sertifikat silahkan hubungi: <strong><a target="_blank" href="{{ url('kontak') }}">kontak kami</a></strong>.</p>
+                <p class="mt-0 description">- Untuk verifikasi via barcode silahkan scan barcode dengan aplikasi kamera smartphone. Jika aplikasi kamera tidak mendukung silahkan download aplikasi barcode scanner untuk android dan ios.</p>
             </div>
         </div>
     </div>
