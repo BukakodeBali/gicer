@@ -34,6 +34,9 @@
 .pt-35{
 	padding-top: 35px;
 }
+.pb-15{
+	padding-bottom: 15px;
+}
 .mr-10 {
     margin-right: 10px;
 }
@@ -921,6 +924,12 @@ html {
 	    background-size: 0px
 	}
 }
+@media(max-width: 480px){
+	#visi-misi .visi,
+	#visi-misi ul {
+	    padding-left: 0px;
+	}
+}
 @media(max-width: 350px){
 	#visi-misi .visi {
 	    padding-left: 0px;
@@ -937,10 +946,16 @@ html {
 	padding-left: 0px !important;
 }
 #keterangan [class*=uk-list]>::before {
-    font-size: 28px;
     vertical-align: middle;
-    line-height: 18px;
-    color: #0872BA;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
 }
 #keterangan li a{
 	font-family: 'Work Sans';
@@ -949,19 +964,19 @@ html {
 }
 #keterangan li p{
 	font-family: 'Work Sans';
-    font-size: 14px;
+    font-size: 16px;
 }
 #ketidakberpihakan p,
 #ketidakberpihakan li a,
 #ketidakberpihakan li p{
 	font-family: 'Work Sans';
-    font-size: 14px;
+    font-size: 16px;
 }
 #visi-misi #ketidakberpihakan ul {
     padding-left: 0px;
 }
 #visi-misi #ketidakberpihakan [class*=uk-list]>::before {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 21px;
 }
 #copyright{
