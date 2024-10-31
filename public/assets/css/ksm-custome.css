@@ -359,20 +359,23 @@ html {
     text-transform: capitalize;
     font-weight: 300;
     font-size: 14px;
-    background: #0b0105;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 1px solid #B38728;
     color: #ffffff;
-    border: 1px solid #0b0105;
     padding: 1px 25px;
     border-radius: 20px;
     transition: background-color 0.3s ease, border 0.3s ease, padding 0.3s ease;
 }
 .btn-ksm.white{
 	color: #ffffff;
-	background-color: #0b0105;
+	background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 1px solid #B38728;
 }
 .btn-ksm:hover,
 .btn-ksm:focus{
-	background-color: #0b0105;
+	background: #B38728;
     color: #fff;
 }
 .btn-ksm.white:hover,
@@ -1559,12 +1562,13 @@ html {
 #about-us .btn-about-more {
     font-family: 'Work Sans';
     text-transform: capitalize;
-    background-color: #0b0105 !important;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    border: 1px solid #B38728;
     border-radius: 20px;
     font-weight: 400;
     font-size: 14px;
     color: #fff !important;
-    border: 1px solid #0b0105;
     margin: 20px 0;
 }
 #about-us .card-reasons {
