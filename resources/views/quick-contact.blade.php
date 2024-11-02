@@ -4,7 +4,7 @@
         <div>
             <div class="container-info">
                 <div>
-                    <h3 class="title">Siap untuk mensertifikasi perusahaan Anda bersama kami?</h3>
+                    <h3 class="title">Siap untuk di sertifikasi oleh kami?</h3>
                     <div class="cta-section">
                         <a target="_blank" href="{{ url('assets/form/form-pendaftaran-gic.pdf') }}">
                             <button class="uk-button uk-button-primary btn-ksm-slider">Form Sertifikasi</button>

@@ -104,7 +104,7 @@
                     <div class="uk-width-expand@m right-bg">
                         <div>
                             <p class="description margin-responsive">
-                                <strong>Global Improvement Certification (GIC)</strong> Lembaga sertifikasi independen, yang tidak bekerjasama dengan perusahaan atau organisasi apapun, yang berkedudukan di Jakarta. Lembaga ini bertujuan untuk mendukung penilaian kesesuaian sistem manajemen dengan menyediakan sumber daya manusia yang profesional, kompeten, dan berpengalaman dalam bidangnya.
+                                <strong>PT Global Improvement Certification (GIC)</strong> merupakan lembaga penilaian kesesuaian atau lembaga sertifikasi untuk sistem manajemen internasional (ISO) yang telah menerapkan persyaratan SNI ISO/IEC 17021-1:2015. Berdirinya PT Global Improvement Certification (GIC) untuk meningkatkan standar kualitas dan integritas, sebagai penyedia jasa sertifikasi ISO yang berkomitmen membantu organisasi mencapai dan mempertahankan sertifikasi standar internasional.
                             </p>
                             <a href="{{ url('tentang-kami') }}">
                                 <button class="uk-button uk-button-primary btn-about-more">

@@ -15,7 +15,8 @@
                 <li>
                     <!-- tentang kami -->
                     <div class="uk-container">
-                        <p class="description"><strong>Global Improvement Certification (GIC)</strong> Lembaga sertifikasi independen, yang tidak bekerjasama dengan perusahaan atau organisasi apapun, yang berkedudukan di Jakarta. Lembaga ini bertujuan untuk mendukung penilaian kesesuaian sistem manajemen dengan menyediakan sumber daya manusia yang profesional, kompeten, dan berpengalaman dalam bidangnya.</p>
+                        <p class="description"><strong>PT Global Improvement Certification (GIC)</strong> merupakan lembaga penilaian kesesuaian atau lembaga sertifikasi untuk sistem manajemen internasional (ISO) yang telah menerapkan persyaratan SNI ISO/IEC 17021-1:2015. Berdirinya PT Global Improvement Certification (GIC) untuk meningkatkan standar kualitas dan integritas, sebagai penyedia jasa sertifikasi ISO yang berkomitmen membantu organisasi mencapai dan mempertahankan sertifikasi standar internasional.</p>
+                        <p class="description">Sesuai kebutuhan industri PT Global Improvement Certification (GIC) didukung sumber daya yang kompeten dan berpengalaman untuk membantu setiap klien kami mencapai keunggulan operasional melalui proses sertifikasi yang efektif dan efisien.</p>
                         <div id="visi-misi">
                             <h3>Kebijakan :</h3>
                             <ul class="uk-list uk-list-disc custom-list">
@@ -33,7 +34,6 @@
                                 <li>Peningkatan Jumlah Sertifikasi: Meningkatkan jumlah perusahaan yang tersertifikasi hingga 15% setiap tahun untuk ISO 9001 dan ISO 37001 dengan mempertahankan kualitas proses sertifikasi.</li>
                                 <li>Kepatuhan terhadap Standar: Memastikan 100% proses sertifikasi sesuai dengan pedoman ISO/IEC 17021 untuk menjaga akurasi, objektivitas, dan transparansi.</li>
                                 <li>Integritas dan Etika: Mengimplementasikan kebijakan “zero tolerance” terhadap konflik kepentingan dan pelanggaran etika dalam proses audit dan sertifikasi, dengan pencapaian 100% kepatuhan.</li>
-                                <li>Inovasi Layanan Sertifikasi: Mengembangkan platform digital untuk memfasilitasi proses audit dan sertifikasi yang lebih efisien dan transparan, dengan target implementasi penuh dalam waktu dua tahun.</li>
                             </ul>
                         </div>
                     </div>
@@ -143,6 +143,12 @@
                                     <li>Jika Perusahaan/instansi/institusi yang telah disertifikasi sedang mengalami pembekuan sertifikasi maka Perusahaan/instansi/institusi tersebut dilarang menggunakan sertifikasi sistem manajemen atas nama PT Global Improvement Certification (GIC) untuk keperluan promosi lebih lanjut.</li>
                                     <li>Perusahaan/instansi/institusi yang masa sertifikasinya telah berakhir, dan tidak diperpanjang harus segera menghentikan penyebarluasan tulisan yang berisi pernyataan “disertifikasi oleh PT Global Improvement Certification (GIC)” dan dilarang menggunakan Logo Sertifikasi PT Global Improvement Certification (GIC) untuk keperluan promosi lebih lanjut.</li>
                                     <li>Penggunaan Logo Sertifikasi PT Global Improvement Certification (GIC)harus memenuhi ketentuan ini.</li>
+                                    <li>
+                                        <div>
+                                            <p>Logo GIC yang benar :</p>
+                                            <img src="{{ asset('assets/images/base/penggunaan-logo.png') }}" alt="Logo GIC">
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
