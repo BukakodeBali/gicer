@@ -7,7 +7,7 @@
                 <li class="tabs-title"><a href="#">Tentang Kami</a></li>
                 <li class="tabs-title"><a href="#">Visi & Misi</a></li>
                 <li class="tabs-title"><a href="#">Struktur Organisasi</a></li>
-                <li class="tabs-title"><a href="#">Ketidakberpihakan</a></li>
+                <li class="tabs-title"><a href="#">Komitmen</a></li>
                 <li class="tabs-title"><a href="#">Mekanisme Penggunaan Logo</a></li>
             </ul>
             <!-- tab content -->
@@ -15,25 +15,20 @@
                 <li>
                     <!-- tentang kami -->
                     <div class="uk-container">
-                        <p class="description"><strong>PT Global Improvement Certification (GIC)</strong> merupakan lembaga penilaian kesesuaian atau lembaga sertifikasi untuk sistem manajemen internasional (ISO) yang telah menerapkan persyaratan SNI ISO/IEC 17021-1:2015. Berdirinya PT Global Improvement Certification (GIC) untuk meningkatkan standar kualitas dan integritas, sebagai penyedia jasa sertifikasi ISO yang berkomitmen membantu organisasi mencapai dan mempertahankan sertifikasi standar internasional.</p>
-                        <p class="description">Sesuai kebutuhan industri PT Global Improvement Certification (GIC) didukung sumber daya yang kompeten dan berpengalaman untuk membantu setiap klien kami mencapai keunggulan operasional melalui proses sertifikasi yang efektif dan efisien.</p>
+                        <p class="description"><strong>PT Global Improvement Certification (GIC)</strong> merupakan lembaga sertifikasi yang berfokus pada sistem manajemen internasional (ISO) dan telah menerapkan persyaratan SNI ISO/IEC 17021-1:2015. Komitmen kami adalah membantu perusahaan di berbagai sektor untuk meningkatkan standar kualitas, integritas, dan kredibilitas mereka melalui proses sertifikasi yang memenuhi standar global.</p>
+                        <p class="description">Berdirinya PT Global Improvement Certification (GIC) dilatarbelakangi oleh kebutuhan industri di Indonesia akan lembaga sertifikasi yang berkompeten dan terpercaya. Kami memahami bahwa sertifikasi ISO memainkan peran penting dalam meningkatkan daya saing dan membangun kepercayaan di pasar internasional, sehingga kami hadir untuk menjembatani kebutuhan ini bagi perusahaan di Indonesia.</p>
+                        <p class="description">Sebagai penyedia jasa sertifikasi ISO, PT Global Improvement Certification (GIC) berkomitmen mendampingi organisasi mencapai dan mempertahankan sertifikasi standar internasional. Kami tidak hanya menawarkan sertifikasi, tetapi juga menjadi mitra dalam memastikan penerapan standar tersebut memberikan manfaat nyata bagi Perusahaan tentu dengan Batasan-Batasan keberpihakan.</p>
+                        <p class="description">Didukung oleh sumber daya manusia yang kompeten dan berpengalaman, kami di PT Global Improvement Certification (GIC) siap memberikan pelayanan yang profesional dan terukur. Setiap auditor dan konsultan kami memiliki keahlian khusus dalam standar ISO, serta pemahaman mendalam tentang berbagai industri, sehingga mereka mampu membantu klien kami mencapai keunggulan operasional melalui proses sertifikasi yang efektif dan efisien.</p>
+                        <p class="description">Sesuai dengan kebutuhan industri, PT Global Improvement Certification (GIC) menawarkan layanan sertifikasi yang beragam, termasuk ISO 9001 untuk Sistem Manajemen Mutu, ISO 37001 untuk Sistem Manajemen Anti Penyuapan, dan standar-standar lainnya yang relevan untuk setiap bidang usaha. Kami berusaha untuk selalu memberikan layanan yang disesuaikan dengan kebutuhan spesifik dari setiap organisasi yang kami layani.</p>
+                        <p class="description">Di GIC, kami memahami bahwa setiap perusahaan memiliki tantangan unik dan proses yang berbeda. Oleh karena itu, kami berkomitmen untuk memberikan solusi sertifikasi yang dapat diimplementasikan secara praktis dan disesuaikan dengan konteks bisnis masing-masing klien kami. Melalui pendekatan ini, kami memastikan bahwa setiap sertifikasi yang kami berikan membawa dampak positif bagi operasional dan pengembangan perusahaan.</p>
+                        <p class="description">PT Global Improvement Certification (GIC) percaya bahwa proses sertifikasi yang akurat, transparan, dan independen merupakan kunci untuk menciptakan lingkungan bisnis yang lebih kompetitif dan bermartabat. Kami hadir untuk membantu perusahaan Anda dalam perjalanan menuju sertifikasi ISO dan mencapai kesuksesan yang berkelanjutan.</p>
                         <div id="visi-misi">
-                            <h3>Kebijakan :</h3>
+                            <h3 style="font-size: 22px;padding-bottom: 0px;">Layanan sertifikasi kami :</h3>
                             <ul class="uk-list uk-list-disc custom-list">
-                                <li>PT Global Improvement Certification berkomitmen untuk memberikan layanan sertifikasi yang berkualitas, objektif, dan profesional.</li>
-                                <li>PT Global Improvement Certification memastikan setiap proses audit dan penilaian dilakukan secara transparan dan akuntabel, dengan memberikan informasi yang jelas dan dapat dipertanggungjawabkan kepada klien.</li>
-                                <li>PT Global Improvement Certification membantu organisasi dalam meningkatkan efektivitas sistem manajemen mereka melalui layanan sertifikasi yang komprehensif dan sesuai dengan kebutuhan bisnis.</li>
-                                <li>PT Global Improvement Certification selalu mematuhi regulasi dan standar yang berlaku. PT Global Improvement Certification mengikuti pedoman yang ditetapkan oleh lembaga terkait untuk menjaga kredibilitas dan integritas setiap proses sertifikasi yang kami lakukan.</li>
-                                <li>PT Global Improvement Certification memprioritaskan integritas dalam seluruh kegiatan bisnis. Tidak ada toleransi terhadap konflik kepentingan, dan kami memastikan setiap tindakan yang diambil oleh tim auditor kami didasarkan pada prinsip kejujuran dan profesionalisme.</li>
-                                <li>PT Global Improvement Certification berkomitmen untuk terus berinovasi dalam menyediakan layanan sertifikasi, termasuk dalam pengembangan teknologi yang mempermudah proses sertifikasi dan audit.</li>
-                            </ul>
-                            <h3>Sasaran :</h3>
-                            <ul class="uk-list uk-list-disc custom-list">
-                                <li>Meningkatkan Kepuasan Klien: Mencapai tingkat kepuasan klien minimal 90% melalui audit yang objektif, tepat waktu, dan layanan yang responsif.</li>
-                                <li>Pengembangan Kompetensi Auditor: Menyediakan pelatihan tahunan bagi auditor untuk memastikan pemahaman mendalam terkait perubahan regulasi ISO 9001 dan ISO 37001, serta peningkatan kemampuan teknis.</li>
-                                <li>Peningkatan Jumlah Sertifikasi: Meningkatkan jumlah perusahaan yang tersertifikasi hingga 15% setiap tahun untuk ISO 9001 dan ISO 37001 dengan mempertahankan kualitas proses sertifikasi.</li>
-                                <li>Kepatuhan terhadap Standar: Memastikan 100% proses sertifikasi sesuai dengan pedoman ISO/IEC 17021 untuk menjaga akurasi, objektivitas, dan transparansi.</li>
-                                <li>Integritas dan Etika: Mengimplementasikan kebijakan “zero tolerance” terhadap konflik kepentingan dan pelanggaran etika dalam proses audit dan sertifikasi, dengan pencapaian 100% kepatuhan.</li>
+                                <li><a href="{{ url('layanan/iso-9001-2015-sistem-manajemen-mutu') }}">ISO 9001:2015 - Sistem Manajemen Mutu</a></li>
+                                <li><a href="{{ url('layanan/iso-14001-2015-sistem-manajemen-lingkungan') }}">ISO 14001:2015 - Sistem Manajemen Lingkungan</a></li>
+                                <li><a href="{{ url('layanan/iso-45001-2018-sistem-manajemen-kesehatan-keselamatan-kerja') }}">ISO 45001:2018 - Sistem Manajemen Kesehatan dan Keselamatan Kerja</a></li>
+                                <li><a href="{{ url('layanan/iso-37001-2016-sistem-manajemen-anti-penyuapan') }}">ISO 37001:2016 - Sistem Manajemen Anti Penyuapan</a></li>
                             </ul>
                         </div>
                     </div>
@@ -55,51 +50,7 @@
                     <!-- struktur organisasi -->
                     <div class="uk-container">
                         <div id="visi-misi" class="uk-text-center">
-                            <p class="uk-text-justify description mt-15">Dalam mendukung kegiatan operasional baik sertifikasi dan manajemen, <strong>PT Global Improvement Certification (GIC)</strong> didukung oleh fungsi struktural yang tertera dalam gambar dibawah ini :</p>
-                            <img src="{{ asset('assets/images/base/struktur-organisasi.png') }}" class="pt-15" style="max-width: 850px;width: 100%" alt="struktur-organisasi">
-                            <p class="uk-text-justify description">Untuk mendukung operasional baik manajemen dan sertifikasi, PT Global Improvement Certification (GIC) didukung oleh :</p>
-                            <div class="uk-text-left">
-                                <ul id="keterangan" uk-accordion="multiple: true">
-                                    <li class="uk-open">
-                                        <a class="uk-accordion-title" style="font-size: 16px;" href="#">Fungsi sertifikasi</a>
-                                        <div class="uk-accordion-content">
-                                            <ul class="uk-list uk-list-disc">
-                                                <li>Pengakaji permohonan</li>
-                                                <li>Lead auditor</li>
-                                                <li>Auditor</li>
-                                                <li>Tenaga ahli</li>
-                                                <li>Pengkaji laporan</li>
-                                                <li>Pengambil keputusan sertifikasi</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="uk-open">
-                                        <a class="uk-accordion-title" style="font-size: 16px;" href="#">Fungsi manajemen</a>
-                                        <div class="uk-accordion-content">
-                                            <ul class="uk-list uk-list-disc">
-                                                <li>Direktur</li>
-                                                <li>Chief Executive Officer</li>
-                                                <li>Manager Corporate</li>
-                                                <li>Manager Development</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="pb-15">
-                                    <p class="uk-text-justify description">Tugas dan tanggung jawab telah ditetapkan untuk masing-masing fungsi dalam mendukung operasional PT Global Improvement Certification (GIC), adapun tugas tersebut meliputi :</p>
-                                </div>
-                                <div id="ketidakberpihakan">
-                                    <ul class="uk-list uk-list-disc custom-list">
-                                        <li>Mekanisme menjaga <strong>ketidakberpihakan</strong> dilakukan dengan mengundang <strong>stakeholder</strong></li>
-                                        <li>Kajian permohonan dilakukan oleh <strong>Manager Technical</strong></li>
-                                        <li>Kajian Laporan dan Keputusan sertifikasi dilakukan <strong>Chief Executive Officer</strong> dan dapat dibantu Lead Auditor/Auditor/Tenaga Ahli apabila Chief Executive Officer tidak memiliki kompetensi dan/atau terlibat kegiatan audit</li>
-                                        <li>Kegiatan audit dilakukan oleh <strong>Lead Auditor, Auditor</strong> dan/atau dibantu oleh <strong>Tenaga Ahli</strong> </li>
-                                        <li>Kegiatan terkait dengan persiapan dan setelah pelaksanaan audit dilakukan oleh <strong>Manager Technical</strong></li>
-                                        <li>Kegiatan terkait dengan keuangan, pengelolaan sumber daya manusia dan pemasaran produk dilakukan oleh <strong>Manager Corporate</strong></li>
-                                        <li>Kegiatan pengelolaan sistem dilakukan oleh <strong>Manager Development</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <img src="{{ asset('assets/images/base/struktur-organisasi.png') }}" style="max-width: 850px;width: 100%" alt="struktur-organisasi">
                         </div>
                     </div>
                     <!-- end of struktur organisasi -->
@@ -107,18 +58,34 @@
                 <li>
                     <!-- ketidakberpihakan -->
                     <div class="uk-container">
-                        <div id="visi-misi">
-                            <p class="description">Di dalam menjaga prinisip ketidakberpihakan, PT Global Improvement Certification (GIC) dalam melakukan setiap keputusan terkait proses sertifikasi dan hasil sertifikasi harus berdasarkan bukti objektif, dapat diuji kebenarannya serta tidak terpengaruh oleh pihak lain.</p>
-                            <p class="description">Segenap personal PT Global Improvement Certification (GIC) akan menyatakan setiap ancaman dari ketidakberpihakan yang termasuk :</p>
-                            <div id="ketidakberpihakan" class="pt-15">
-                                <ul class="uk-list uk-list-disc custom-list">
-                                    <li><strong>Kepentingan diri sendiri,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak akan bertindak atas nama dan tujuan sendiri atau untuk mendapatkan keuntungan keuangan.</li>
-                                    <li><strong>Ancaman ulasan diri,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak akan mengaudit perusahaan yang telah dikonsultankan sendiri atau menjadi internal auditor di perusahaan tersebut dalam kurun waktu min 2 tahun.</li>
-                                    <li><strong>Ancaman kepercayaan atau hubungan kedekatan,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak diperbolehkan dalam kedekatan emosional atau hubungan kekeluargaan dengan klien/auditee.</li>
-                                    <li><strong>Ancaman intimidasi,</strong> yang berarti bahwa personel PT Global Improvement Certification (GIC) apabila mendapatkan tekanan atau paksaan, oleh individu atau organisasi, harus melaporkan hal tersebut kepada PT Global Improvement Certification (GIC) dalam menangani hal tersebut.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul id="keterangan" uk-accordion="multiple: true">
+                            <li class="uk-open">
+                                <a class="uk-accordion-title" href="#">Ketidakberpihakan:</a>
+                                <div class="uk-accordion-content">
+                                    <p class="description">Segenap personal PT Global Improvement Certification (GIC) akan menyatakan setiap ancaman dari ketidakberpihakan yang termasuk :</p>
+                                    <ul class="uk-list uk-list-disc">
+                                        <li><strong>Kepentingan diri sendiri</strong>, yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak akan bertindak atas nama dan tujuan sendiri atau untuk mendapatkan keuntungan keuangan.</li>
+                                        <li><strong>Ancaman ulasan diri</strong>, yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak akan mengaudit perusahaan yang telah dikonsultankan sendiri atau menjadi internal auditor di perusahaan tersebut dalam kurun waktu min 2 tahun.</li>
+                                        <li><strong>Ancaman kepercayaan atau hubungan kedekatan</strong>, yang berarti bahwa personel PT Global Improvement Certification (GIC) tidak diperbolehkan dalam kedekatan emosional atau hubungan kekeluargaan dengan klien/auditee.</li>
+                                        <li><strong>Ancaman intimidasi</strong>, yang berarti bahwa personel PT Global Improvement Certification (GIC) apabila mendapatkan tekanan atau paksaan, oleh individu atau organisasi, harus melaporkan hal tersebut kepada PT Global Improvement Certification (GIC) dalam menangani hal tersebut.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="uk-open">
+                                <a class="uk-accordion-title" href="#">Kebijakan Perusahaan:</a>
+                                <div class="uk-accordion-content">
+                                    <ul class="uk-list uk-list-disc">
+                                        <li>PT Global Improvement Certification berkomitmen untuk memberikan layanan sertifikasi yang berkualitas, objektif, dan profesional.</li>
+                                        <li>PT Global Improvement Certification memastikan setiap proses audit dan penilaian dilakukan secara transparan dan akuntabel, dengan memberikan informasi yang jelas dan dapat dipertanggungjawabkan kepada klien.</li>
+                                        <li>PT Global Improvement Certification membantu organisasi dalam meningkatkan efektivitas sistem manajemen mereka melalui layanan sertifikasi yang komprehensif dan sesuai dengan kebutuhan bisnis.</li>
+                                        <li>PT Global Improvement Certification selalu mematuhi regulasi dan standar yang berlaku. PT Global Improvement Certification mengikuti pedoman yang ditetapkan oleh lembaga terkait untuk menjaga kredibilitas dan integritas setiap proses sertifikasi yang kami lakukan.</li>
+                                        <li>PT Global Improvement Certification memprioritaskan integritas dalam seluruh kegiatan bisnis. Tidak ada toleransi terhadap konflik kepentingan, dan kami memastikan setiap tindakan yang diambil oleh tim auditor kami didasarkan pada prinsip kejujuran dan profesionalisme.</li>
+                                        <li>PT Global Improvement Certification berkomitmen untuk terus berinovasi dalam menyediakan layanan sertifikasi, termasuk dalam pengembangan teknologi yang mempermudah proses sertifikasi dan audit.</li>
+                                        <li>PT Global Improvement Certification melarang dan tidak mentoleransi segala bentuk penyuapan dalam seluruh kegiatan perusahaan. Kami berkomitmen untuk mencegah, mendeteksi, dan menangani segala tindakan yang bertentangan dengan prinsip anti-penyuapan, guna menjaga integritas dan kepercayaan dalam layanan kami.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <!-- end of ketidakberpihakan -->
                 </li>
@@ -129,26 +96,57 @@
                             <h3 style="font-size: 22px;">Penggunaan Logo Sertifikasi PT Global Improvement Certification (GIC)</h3>
                             <div id="ketidakberpihakan" class="pt-15">
                                 <ul class="uk-list uk-list-disc custom-list">
-                                    <li>Perusahaan/instansi/institusi yang telah disertifikasi oleh PT Global Improvement Certification (GIC), berhak untuk membubuhkan Logo Sertifikasi PT Global Improvement Certification (GIC) pada kertas tulis (kertas kepala surat, pernyataan, laporan, brosur, kartu nama, amplop atau hal lain yang relevan dengan standar dan ruang lingkup yang telah disertifikasi oleh PT Global Improvement Certification (GIC)).</li>
-                                    <li>Perusahaan/instansi/institusi yang telah disertifikasi oleh PT Global Improvement Certification (GIC) berhak menggunakan Logo Sertifikasi PT Global Improvement Certification (GIC) pada bahan Publisitasnya asalkan memenuhi ketentuan pada Poin  2.</li>
-                                    <li>Perusahaan/instansi/institusi yang telah disertifikasi oleh PT Global Improvement Certification (GIC) berhak menggunakan pernyataan disertifikasi oleh PT Global Improvement Certification (GIC) asalkan Perusahaan/instansi/institusi tersebut menjamin sertifikasi tersebut tidak digunakan untuk kegiatan yang ruang lingkupnya tidak disertifikasi.</li>
-                                    <li>Logo Sertifikasi PT Global Improvement Certification (GIC) tidak boleh dibubuhkan pada barang (produk) dan kemasan yang diperjualbelikan serta tidak boleh dibubuhkan pada laporan uji laboratorium, kalibrasi atau inspeksi.</li>
-                                    <li>Logo Sertifikasi PT Global Improvement Certification (GIC) tidak boleh lagi dibubuhkan pada kemasan produk termasuk dalam (Packaging), Logo tersebut diganti dengan pernyataan/statement seperti contoh sebagai berikut :  “tersertifikasi ISO 9001:2015 oleh PT Global Improvement Certification (GIC)”.</li>
+                                    <li>Perusahaan yang disertifikasi oleh PT Global Improvement Certification (GIC) dapat mencantumkan logo sertifikasi pada dokumen resmi dan bahan relevan, seperti kop surat, laporan, dan brosur, sesuai standar dan ruang lingkup sertifikasi.</li>
+                                    <li>Logo dapat digunakan pada bahan publikasi dengan memenuhi ketentuan yang berlaku.</li>
+                                    <li>Pernyataan "disertifikasi oleh GIC" dapat digunakan selama sesuai dengan ruang lingkup sertifikasi yang berlaku.</li>
+                                    <li>Logo tidak boleh dicantumkan pada produk, kemasan, atau laporan uji dan kalibrasi yang diperjualbelikan.</li>
+                                    <li>Logo tidak boleh digunakan pada kemasan produk; gantikan dengan pernyataan seperti "tersertifikasi ISO 9001:2015 oleh PT Global Improvement Certification (GIC)".</li>
                                 </ul>
                             </div>
                             <h3 style="font-size: 22px;">Ketentuan Lain Dalam Menggunakan Logo Sertifikasi PT Global Improement Certification (GIC) </h3>
                             <div id="ketidakberpihakan" class="pt-15">
                                 <ul class="uk-list uk-list-disc custom-list">
-                                    <li>Logo Sertifikasi PT Global Improvement Certification (GIC) atau tiap pernyataan “disertifikasi/tersertifikasi oleh PT Global Improvement Certification (GIC)“ tidak boleh digunakan untuk menyatakan baik secara langsung atau tidak langsung bahwa PT Global Improvement Certification (GIC) bertanggung jawab atas penyalahgunaan, pendapat atau penafsiran yang berasal dari penggunaan logo tersebut.</li>
-                                    <li>Jika Perusahaan/instansi/institusi yang telah disertifikasi sedang mengalami pembekuan sertifikasi maka Perusahaan/instansi/institusi tersebut dilarang menggunakan sertifikasi sistem manajemen atas nama PT Global Improvement Certification (GIC) untuk keperluan promosi lebih lanjut.</li>
-                                    <li>Perusahaan/instansi/institusi yang masa sertifikasinya telah berakhir, dan tidak diperpanjang harus segera menghentikan penyebarluasan tulisan yang berisi pernyataan “disertifikasi oleh PT Global Improvement Certification (GIC)” dan dilarang menggunakan Logo Sertifikasi PT Global Improvement Certification (GIC) untuk keperluan promosi lebih lanjut.</li>
-                                    <li>Penggunaan Logo Sertifikasi PT Global Improvement Certification (GIC)harus memenuhi ketentuan ini.</li>
-                                    <li>
+                                    <li>Logo atau pernyataan “disertifikasi/tersertifikasi oleh PT Global Improvement Certification (GIC)” tidak boleh digunakan untuk menyiratkan bahwa GIC bertanggung jawab atas penyalahgunaan atau penafsiran yang timbul dari penggunaannya.</li>
+                                    <li>Jika sertifikasi dibekukan, perusahaan yang bersangkutan tidak boleh menggunakan sertifikasi atas nama GIC untuk tujuan promosi lebih lanjut.</li>
+                                    <li>Perusahaan yang sertifikasinya berakhir dan tidak diperpanjang harus segera menghentikan penggunaan logo atau pernyataan “disertifikasi oleh PT Global Improvement Certification (GIC)” dalam promosi.</li>
+                                    <li class="dot-top">
                                         <div>
-                                            <p>Logo GIC yang benar :</p>
-                                            <img src="{{ asset('assets/images/base/penggunaan-logo.png') }}" alt="Logo GIC">
+                                            <p>Logo PT Global Improvement Certification (GIC) yang benar adalah :</p>
+                                            <ul class="uk-list uk-list-numeric custom-list small">
+                                                <li class="dot-top">
+                                                    <div>
+                                                        <p class="description">Logo Perusahaan </p>
+                                                        <img src="{{ asset('assets/images/base/penggunaan-logo.png') }}" class="max-w-210" alt="Logo GIC">
+                                                    </div>
+                                                </li>
+                                                <li class="dot-top">
+                                                    <div>
+                                                        <p class="description">Logo Sertifikasi standar ISO 9001:2015 </p>
+                                                        <img src="{{ asset('assets/images/base/penggunaan-logo-9001.png') }}" class="max-w-200" alt="Logo GIC 9001">
+                                                    </div>
+                                                </li>
+                                                <li class="dot-top">
+                                                    <div>
+                                                        <p class="description">Logo Sertifikasi standar ISO 14001:2015 </p>
+                                                        <img src="{{ asset('assets/images/base/penggunaan-logo-14001.png') }}" class="max-w-200" alt="Logo GIC 14001">
+                                                    </div>
+                                                </li>
+                                                <li class="dot-top">
+                                                    <div>
+                                                        <p class="description">Logo Sertifikasi standar ISO 45001:2018 </p>
+                                                        <img src="{{ asset('assets/images/base/penggunaan-logo-45001.png') }}" class="max-w-200" alt="Logo GIC 45001">
+                                                    </div>
+                                                </li>
+                                                <li class="dot-top">
+                                                    <div>
+                                                        <p class="description">Logo Sertifikasi standar ISO 37001:2016 </p>
+                                                        <img src="{{ asset('assets/images/base/penggunaan-logo-37001.png') }}" class="max-w-200" alt="Logo GIC 37001">
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </li>
+                                    <li>Penggunaan Logo Sertifikasi PT Global Improvement Certification (GIC) harus memenuhi ketentuan ini.</li>
                                 </ul>
                             </div>
                         </div>
