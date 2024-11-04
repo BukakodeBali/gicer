@@ -7,37 +7,34 @@
                 <h3 style="padding-top: 0;">Alur Sertifikasi</h3>
             </div>
             <p class="uk-text-justify">Dalam proses sertifikasi PT Global Improvement Certification (GIC) berkomitmen pada prinsip ketidakberpihakan jadi di setiap proses sertifikasi selalu dilakukan evaluasi konflik kepentingan dan memitigasi resiko-resiko yang mungkin timbul dalam proses sertifikasi. Berikut merupakan gambaran besar dari proses sertifikasi apabila ingin mengetahui lebih detail dan terperinci silakan menghubungi kami </p>
-            <img src="{{ asset('assets/images/base/alur-sertifikasi.png') }}" class="pt-15" alt="struktur-organisasi"><h3 style="font-size: 26px;margin-top: 25px">Katagori Ketidaksesuaian pada saat audit :</h3>
-            <ul id="keterangan" uk-accordion="multiple: true">
+            <img src="{{ asset('assets/images/base/alur-sertifikasi.png') }}" class="pt-15" alt="struktur-organisasi">
+            <p class="description">Dalam pelaksanaan sertifikasi oleh PT GIC ada beberapa istilah beserta ketentuannya yang wajib dipatuhi seperti :</p>
+            <ul id="keterangan" style="margin-top: 0px;" uk-accordion="multiple: true">
                 <li class="uk-open">
-                    <a class="uk-accordion-title" href="#">Major</a>
+                    <a class="uk-accordion-title" href="#">Pembekuan Sertifikasi:</a>
                     <div class="uk-accordion-content">
                         <ul class="uk-list uk-list-disc">
-                            <li>Kegagalan pemenuhan persyaratan sertifikasi yang berdampak signifikan </li>
-                            <li>Akumulasi ketidaksesuaian minor di area atau fungsi tertentu </li>
-                            <li>Ketidaksesuaian berulang dari hasil audit sebelumnya</li>
-                            <li>Waktu penyelesaian 1 bulan</li>
+                            <li>Hal ini dapat terjadi apabila Perusahaan gagal secara total memenuhi persyaratan sertifikasi, termasuk persyaratan sistem manajemen, atau</li>
+                            <li>Perusahaan yang disertifikasi tidak membolehkan pelaksanaan survailen atau resertifikasi sesuai program yang ditetapkan, atau</li>
+                            <li>Perusahaan meminta pembekuan secara sukarela</li>
+                            <li>Perusahaan tidak menindaklanjuti hasil sesuai batas waktu yang ditetapkan dan perpanjangan waktu yang diberikan</li>
+                            <li>Perusahaan belum menyelesaikan administrasi pembayaran 1 (satu) bulan setelah pelaksanaan audit</li>
                         </ul>
                     </div>
                 </li>
                 <li class="uk-open">
-                    <a class="uk-accordion-title" href="#">Minor</a>
+                    <a class="uk-accordion-title" href="#">Pengaktifan pembekuan</a>
                     <div class="uk-accordion-content">
-                        <ul class="uk-list uk-list-disc">
-                            <li>Ketidakonsistenan dalam penerapan persyaratan sertifikasi atau </li>
-                            <li>Ketidakonsistenan dalam penerapan sistem atau prosedur yang dimiliki oleh calon klien/klien</li>
-                            <li>Observasi yang tidak ditindaklanjuti oleh calon klien/klien sehingga menyebabkan ketidakkonsistenan dalam penerapan persyaratan sertifikasi</li>
-                            <li>Waktu penyelesaian 2 bulan</li>
-                        </ul>
+                        <p class="description" style="font-size: 14px;">Apabila dalam kurun waktu pembekuan, klien telah menyelesaikan hal-hal yang menjadi alasan pembekuan, PT Global Improvement Certification (GIC) akan mengaktifkan pembekuan status sertifikasi klien.</p>
                     </div>
                 </li>
                 <li class="uk-open">
-                    <a class="uk-accordion-title" href="#">Observasi</a>
+                    <a class="uk-accordion-title" href="#">Pencabutan Sertifikasi:</a>
                     <div class="uk-accordion-content">
                         <ul class="uk-list uk-list-disc">
-                            <li>Peluang bagi calon klien/klien untuk melakukan perbaikan</li>
-                            <li>Potensi ketidaksesuaian minor namun belum didukung oleh bukti-bukti yang cukup</li>
-                            <li>Tidak berkewajiban untuk mengirimkan tindakan atas observasi yang diterbitkan</li>
+                            <li>Perusahaan gagal menyelesaikan hal-hal yang menjadi alasan pembekuan</li>
+                            <li>Hasil short notice yang diterbitkan merekomendasikan pencabutan status sertikasi</li>
+                            <li>Perusahaan belum menyelesaikan administrasi pembayaran 3 (tiga) bulan setelah pelaksanaan audit</li>
                         </ul>
                     </div>
                 </li>

@@ -5,7 +5,7 @@
             <div class="uk-grid-match bottom-spacing uk-grid-small" uk-grid>
                 <div id="app" class="uk-width-1-1@s uk-width-1-2@m uk-width-2-5@l">
                     <div class="card-outer">
-                        <p class="title">kami ingin membantu</p>
+                        <p class="title">ada yang bisa kami bantu?</p>
                         <p class="description">Anda dapat menghubungi kami apabila ada pertanyaan terkait dengan layanan kami, melalui form dan informasi kontak yg tersedia</p>
                         <!-- form contact -->
                         <form v-on:submit.prevent="submitContact">
@@ -108,47 +108,13 @@
                                         <div class="uk-container">
                                             <div id="visi-misi">
                                                 <h3 style="font-size: 20px;padding:0px">Mekanisme Keluhan</h3>
-                                                <p class="description">Klien memberikan keluhan baik secara lisan maupun tulisan, melalui media tatap muka (pada saat kunjungan), surat, website, email dan telepon. Keluhan yang diterima akan dicatat dalam Form Keluhan Pelanggan.</p>
-                                                <p class="description" style="margin: 0;"><strong>Penanganan Keluhan Pelanggan</strong></p>
-                                                <div id="ketidakberpihakan" class="pt-15">
-                                                    <ul class="uk-list uk-list-disc custom-list">
-                                                        <li>Divisi terkait melakukan investigasi atas keluhan dan mencatatnya dalam formulir Permintaan Tindakan Korektif.</li>
-                                                        <li>Selanjutnya Divisi terkait melakukan tindakan korektif, yang kemudian diverifikasi oleh Manager Development.</li>
-                                                        <li>Manager Development memperbaharui formulir Permintaan Tindakan Korektif dan menutup (closed out) kasus jika sudah diselesaikan. </li>
-                                                        <li>Masing-masing Divisi memberikan jawaban atas keluhan Pelanggan.</li>
-                                                    </ul>
-                                                </div>
-                                                <p class="description" style="margin: 0;"><strong>Mekanisme Tindak Lanjut Keluhan</strong></p>
-                                                <div id="ketidakberpihakan" class="pt-15">
-                                                    <ul class="uk-list uk-list-disc custom-list">
-                                                        <li>Sebagai pertanggungjawaban atas penanganan keluhan, maka seluruh keluhan yang ada dan tindakan perbaikan yang diambil dilaporkan pada Rapat Tinjauan Manajemen.</li>
-                                                    </ul>
-                                                </div>
-                                                <p class="description" style="margin: 0;"><strong>Mekanisme Pengukuran Kepuasan Pelanggan</strong></p>
-                                                <div id="ketidakberpihakan" class="pt-15">
-                                                    <ul class="uk-list uk-list-disc custom-list">
-                                                        <li>Pada saat dilaksanakan audit di klien (onsite audit), tim audit yang ditugaskan memberikan Form Kepuasan Pelanggan kepada klien untuk melihat kinerja auditor dan pelayanan secara keseluruhan yang diberikan oleh PT Global Improvement Certification.</li>
-                                                        <li>Hasil isian form tersebut kemudian diberikan kepada Manager Development untuk dilakukan evaluasi.</li>
-                                                        <li>Laporan Evaluasi Kepuasan Pelanggan beserta seluruh lampiran diarsip oleh Manager Development.</li>
-                                                    </ul>
-                                                </div>
+                                                <p class="description">Perusahaan memberikan keluhan baik secara lisan maupun tulisan, melalui media tatap muka (pada saat kunjungan), surat, website, email dan telepon. Keluhan yang diterima akan dicatat dalam Form Keluhan Pelanggan.</p>
+                                                <p class="description" style="margin: 0;">Berikut alur pengajuan keluhan :</p>
+                                                <img src="{{ asset('assets/images/base/mekanisme-keluhan.png') }}" class="pt-15" alt="mekanisme-keluhan">
                                                 <h3 style="font-size: 20px;padding:0px">Mekanisme Banding</h3>
-                                                <p class="description">Banding terhadap hasil sertifikasi dapat diajukan oleh klien tersertifikasi PT Global Improvement Certification, adapun banding dapat berupa hasil audit, keputusan sertifikasi dan/atau hasil keputusan yang berdampak terhadap klien.</p>
-                                                <div id="ketidakberpihakan" class="pt-15">
-                                                    <ul class="uk-list uk-list-disc custom-list">
-                                                        <li>Klien mengajukan banding dengan mengirimkan Surat Banding yang ditujukan kepada Direktur PT Global Improvement Certification.</li>
-                                                        <li class="dot-top">
-                                                            Berdasarkan surat banding yang diterima, Direktur akan membentuk tim banding yang berisi Ketua dan anggota tim, dengan ketentuan :
-                                                            <ul class="uk-list uk-list-numeric custom-list small">
-                                                                <li>Tim Banding dapat terdiri dari personil dari perwakilan PT Global Improvement Certification, Auditor dan/atau Tenaga Ahli yang tidak terlibat kegiatan audit serta salah satu perwakilan stakeholder.</li>
-                                                                <li>Apabila diperlukan Tim Banding dapat melibatkan penasehat hukum yang ditunjuk untuk dan atas nama PT Global Improvement Certification untuk menangani proses penanganan banding.</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Keputusan rapat tim banding dilakukan secara musyawarah. Apabila tidak tercapai secara musyawarah, keputusan dilakukan secara voting.</li>
-                                                        <li>Keputusan Banding ditandatangani oleh Ketua dan anggota Tim Banding yang ditunjuk, kemudian hasil rapat diserahkan kepada Chief Executive Officer untuk ditindaklanjuti.</li>
-                                                        <li>Proses penanganan banding didokumentasikan oleh <i>Manager Development</i></li>
-                                                    </ul>
-                                                </div>
+                                                <p class="description">Banding terhadap hasil sertifikasi dapat diajukan oleh perusahaan tersertifikasi PT Global Improvement Certification, adapun banding dapat berupa hasil audit, keputusan sertifikasi dan/atau hasil keputusan yang berdampak terhadap Perusahaan.</p>
+                                                <p class="description" style="margin: 0;">Berikut alur pengajuan banding :</p>
+                                                <img src="{{ asset('assets/images/base/mekanisme-banding.png') }}" class="pt-15" alt="mekanisme-banding">
                                             </div>
                                         </div>
                                         <!-- end of keluhan banding -->
