@@ -7,7 +7,7 @@
                     <div>
                         <img src="{{ url('assets/images/base/logo-white.png') }}" class="logo-icon">
                     </div>
-                    <p class="description">Global Improvement Certification merupakan lembaga penilaian kesesuaian untuk sistem manajemen internasional (ISO).</p>
+                    <p class="description">Global Improvement Certification merupakan lembaga sertifikasi untuk sistem manajemen internasional (ISO).</p>
                 </div>
                 <div class="uk-width-1-3@m uk-width-1-4@l pad-right-footer-center">
                     <p class="title">Layanan Kami</p>

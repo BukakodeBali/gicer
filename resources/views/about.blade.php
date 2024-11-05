@@ -17,7 +17,7 @@
                     <div class="uk-container">
                         <p class="description"><strong>PT Global Improvement Certification (GIC)</strong> merupakan lembaga sertifikasi yang berfokus pada sistem manajemen internasional (ISO) dan telah menerapkan persyaratan SNI ISO/IEC 17021-1:2015. Komitmen kami adalah membantu perusahaan di berbagai sektor untuk meningkatkan standar kualitas, integritas, dan kredibilitas mereka melalui proses sertifikasi yang memenuhi standar global.</p>
                         <p class="description">Berdirinya PT Global Improvement Certification (GIC) dilatarbelakangi oleh kebutuhan industri di Indonesia akan lembaga sertifikasi yang berkompeten dan terpercaya. Kami memahami bahwa sertifikasi ISO memainkan peran penting dalam meningkatkan daya saing dan membangun kepercayaan di pasar internasional, sehingga kami hadir untuk menjembatani kebutuhan ini bagi perusahaan di Indonesia.</p>
-                        <p class="description">Sebagai penyedia jasa sertifikasi ISO, PT Global Improvement Certification (GIC) berkomitmen mendampingi organisasi mencapai dan mempertahankan sertifikasi standar internasional. Kami tidak hanya menawarkan sertifikasi, tetapi juga menjadi mitra dalam memastikan penerapan standar tersebut memberikan manfaat nyata bagi Perusahaan tentu dengan Batasan-Batasan keberpihakan.</p>
+                        <p class="description">Sebagai penyedia jasa sertifikasi ISO, PT Global Improvement Certification (GIC) berkomitmen memberikan jasa audit kepada perusahaan demi mempertahankan sertifikasi standar internasionalnya. Kami ingin menjadi mitra dalam memastikan penerapan standar tersebut memberikan manfaat nyata bagi Perusahaan tentu dengan Batasan-Batasan ketidakberpihakan kami sebagai lembaga sertifikasi.</p>
                         <p class="description">Didukung oleh sumber daya manusia yang kompeten dan berpengalaman, kami di PT Global Improvement Certification (GIC) siap memberikan pelayanan yang profesional dan terukur. Setiap auditor dan konsultan kami memiliki keahlian khusus dalam standar ISO, serta pemahaman mendalam tentang berbagai industri, sehingga mereka mampu membantu klien kami mencapai keunggulan operasional melalui proses sertifikasi yang efektif dan efisien.</p>
                         <p class="description">Sesuai dengan kebutuhan industri, PT Global Improvement Certification (GIC) menawarkan layanan sertifikasi yang beragam, termasuk ISO 9001 untuk Sistem Manajemen Mutu, ISO 37001 untuk Sistem Manajemen Anti Penyuapan, dan standar-standar lainnya yang relevan untuk setiap bidang usaha. Kami berusaha untuk selalu memberikan layanan yang disesuaikan dengan kebutuhan spesifik dari setiap organisasi yang kami layani.</p>
                         <p class="description">Di GIC, kami memahami bahwa setiap perusahaan memiliki tantangan unik dan proses yang berbeda. Oleh karena itu, kami berkomitmen untuk memberikan solusi sertifikasi yang dapat diimplementasikan secara praktis dan disesuaikan dengan konteks bisnis masing-masing klien kami. Melalui pendekatan ini, kami memastikan bahwa setiap sertifikasi yang kami berikan membawa dampak positif bagi operasional dan pengembangan perusahaan.</p>
@@ -39,7 +39,7 @@
                     <div class="uk-container">
                         <div id="visi-misi">
                             <h3>Visi :</h3>
-                            <p class="visi description">Menjadi lembaga penilaian kesesuaian terdepan dan terpercaya di tingkat nasional maupun internasional, yang berkontribusi pada peningkatan standar mutu dan integritas di berbagai sektor industry.</p>
+                            <p class="visi description">Menjadi lembaga sertifikasi terdepan dan terpercaya di tingkat nasional maupun internasional, yang berkontribusi pada peningkatan standar mutu dan integritas di berbagai sektor industri.</p>
                             <h3>Misi :</h3>
                             <p class="visi description">Memberikan pelayanan penilaian kesesuaian yang berkualitas, objektif, transparan, integritas dan professional serta mendukung peningkatan kompetensi dan kesadaran perusahaan dalam memenuhi standar kualitas dan keberlanjutan.</p>
                         </div>
@@ -146,7 +146,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li>Penggunaan Logo Sertifikasi PT Global Improvement Certification (GIC) harus memenuhi ketentuan ini.</li>
+                                    <li>Penggunaan Logo Sertifikasi PT Global Improvement Certification (GIC) harus memenuhi ketentuan di atas.</li>
                                 </ul>
                             </div>
                         </div>

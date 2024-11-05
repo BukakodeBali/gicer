@@ -10,7 +10,7 @@ class AboutController extends Controller
     {
         return view('about', [
             'title' => 'Tentang Kami',
-            'meta_description' => 'Global Improvement Certification merupakan lembaga penilaian kesesuaian untuk sistem manajemen internasional (ISO)'
+            'meta_description' => 'Global Improvement Certification merupakan lembaga sertifikasi untuk sistem manajemen internasional (ISO)'
         ]);
     }
 }
