@@ -77,26 +77,26 @@
                                     <li>
                                         <!-- kontak kami -->
                                         <div class="uk-container">
-                                            <p class="mb-5 mt-0"><strong>Alamat</strong></p>
+                                            <p class="mb-5 mt-0"><span style="font-weight: 500;">Alamat</span></p>
                                             <p class="mt-0 description">Indonesia Stock Exchange Tower 1 Level 3, Unit 304, JI. Jendral Sudirman Kav 52-53, Desa/Kelurahan Senayan, Kec. Kebayoran Baru, Kota Adm. Jakarta Selatan, Provinsi DKI Jakarta, Kode Pos: 12190</p>
 
-                                            <p class="mb-5 mt-0"><strong>Telephone</strong></p>
+                                            <p class="mb-5 mt-0"><span style="font-weight: 500;">Telephone</span></p>
                                             <p class="mt-0 description">
                                                 <a href="tel:02150106260">021-50106260</a>
                                             </p>
 
-                                            <p class="mb-5 mt-0"><strong>Email</strong></p>
+                                            <p class="mb-5 mt-0"><span style="font-weight: 500;">Email</span></p>
                                             <p class="mt-0 description">
                                                 <a href="mailto:info@certificationimprovement.com">info@certificationimprovement.com</a>
                                             </p>
 
-                                            <p class="title" style="margin-bottom: 20px; margin-top: 30px">Keluhan & Banding</p>
-                                            <p class="mb-5 mt-0"><strong>Keluhan dapat di ajukan melalui email berikut:</strong></p>
+                                            <p class="title" style="margin-bottom: 20px; margin-top: 30px; font-size: 20px">Keluhan & Banding</p>
+                                            <p class="mb-5 mt-0"><span style="font-weight: 500;">Keluhan dapat di ajukan melalui email berikut:</span></p>
                                             <p class="mt-0 description">
                                                 <a href="mailto:development@certificationimprovement.com">development@certificationimprovement.com</a>
                                             </p>
 
-                                            <p class="mb-5 mt-0"><strong>Banding dapat di ajukan melalui email berikut:</strong></p>
+                                            <p class="mb-5 mt-0"><span style="font-weight: 500;">Banding dapat di ajukan melalui email berikut:</span></p>
                                             <p class="mt-0 description">
                                                 <a href="mailto:development@certificationimprovement.com">development@certificationimprovement.com</a>
                                             </p>
