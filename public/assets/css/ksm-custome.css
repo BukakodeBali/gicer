@@ -1254,6 +1254,7 @@ html {
 }
 #quick-contact {
     position: relative;
+    z-index: 1;
 }
 #quick-contact > .uk-container > div {
     background: #0872ba;
@@ -1661,7 +1662,7 @@ html {
     font-family: 'Work Sans';
     text-transform: capitalize;
     font-weight: 500;
-    font-size: 45px;
+    font-size: 40px;
     margin: 0;
     line-height: normal;
     color: #0b0105;

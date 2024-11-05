@@ -47,7 +47,7 @@
                         <div class="uk-width-expand@m textual-content">
                             <p uk-slider-parallax="y: 110,-110;" class="code-layanan">Lembaga Sertifikasi</p>
                             <p uk-slider-parallax="y: 100,-100;" class="name-layanan">Sertifikasi ISO Independen Bertaraf Internasional</p>
-                            <p uk-slider-parallax="y: 90,-90;" class="desc-layanan">Global Improvement Certification merupakan lembaga penilaian kesesuaian untuk sistem manajemen internasional (ISO). </p>
+                            <p uk-slider-parallax="y: 90,-90;" class="desc-layanan">Global Improvement Certification merupakan lembaga sertifikasi untuk sistem manajemen internasional (ISO). </p>
                             <a href="{{ url('tentang-kami') }}">
                                 <button uk-slider-parallax="y: 80,-80;" class="uk-button uk-button-primary btn-ksm-slider">
                                     Lebih Lanjut
@@ -103,8 +103,8 @@
                     </div>
                     <div class="uk-width-expand@m right-bg">
                         <div>
-                            <p class="description margin-responsive">
-                                <strong>PT Global Improvement Certification (GIC)</strong> merupakan lembaga penilaian kesesuaian atau lembaga sertifikasi untuk sistem manajemen internasional (ISO) yang telah menerapkan persyaratan SNI ISO/IEC 17021-1:2015. Berdirinya PT Global Improvement Certification (GIC) untuk meningkatkan standar kualitas dan integritas, sebagai penyedia jasa sertifikasi ISO yang berkomitmen membantu organisasi mencapai dan mempertahankan sertifikasi standar internasional.
+                            <p class="description margin-responsive uk-text-justify">
+                                <strong>PT Global Improvement Certification (GIC)</strong> merupakan lembaga sertifikasi untuk sistem manajemen internasional (ISO) yang telah menerapkan persyaratan SNI ISO/IEC 17021-1:2015. Berdirinya PT Global Improvement Certification (GIC) untuk meningkatkan standar kualitas dan integritas, sebagai penyedia jasa sertifikasi ISO yang berkomitmen membantu organisasi mencapai dan mempertahankan sertifikasi standar internasional.
                             </p>
                             <a href="{{ url('tentang-kami') }}">
                                 <button class="uk-button uk-button-primary btn-about-more">
