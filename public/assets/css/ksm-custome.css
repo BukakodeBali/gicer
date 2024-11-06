@@ -2251,6 +2251,10 @@ html {
 #tentang-kami .uk-tab::before {
     border-bottom: 0;
 }
+#tentang-kami,
+#visi-misi {
+    text-align: justify;
+}
 .login-bg {
     background-size: 120%;
     background-position: 0% 15%;
