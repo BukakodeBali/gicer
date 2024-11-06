@@ -72,6 +72,13 @@
                                 </div>
                             </li>
                             <li class="uk-open">
+                                <a class="uk-accordion-title" href="#">Kerahasiaan:</a>
+                                <p class="description">PT Global Improvement Certification (GIC) wajib menjaga informasi klien yang diperoleh dari pelaksanaan kegiatan sertifikasi dan tidak akan memberikan informasi apa pun tentang klien kepada pihak ketiga, kecuali dipersyaratkan dalam peraturan tertulis.</p>
+                                <p class="description">Semua informasi yang tidak boleh dipublikasi harus dijadikan sebagai kerahasiaan. Informasi tentang klien dari sumber selain klien harus dijadikan sebagai kerahasiaan, yang mana konsisten dengan kebijakan PT Global Improvement Certification (GIC).</p>
+                                <p class="description">PT Global Improvement Certification (GIC) paham untuk menjaga kerahasiaan setiap informasi dipersyaratkan.</p>
+                                <p class="description">Dokumen beserta informasi milik klien hanya dapat diakses oleh Personel yang memiliki kewenangan dan hak untuk mengakses. Pihak yang bukan merupakan bagian dari PT Global Improvement Certification (GIC) tidak dapat mengakses dokumen beserta informasi milik klien PT Global Improvement Certification (GIC).</p>
+                            </li>
+                            <li class="uk-open">
                                 <a class="uk-accordion-title" href="#">Kebijakan Perusahaan:</a>
                                 <div class="uk-accordion-content">
                                     <ul class="uk-list uk-list-disc">
