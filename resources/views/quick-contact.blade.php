@@ -1,5 +1,5 @@
 <!-- quick contact -->
-<div id="quick-contact" class="{{ request()->routeIs('home') || request()->routeIs('about') ? 'bg-white' : 'bg-transparent' }}">
+<div id="quick-contact" class="{{ request()->routeIs('home') || request()->routeIs('about') || request()->routeIs('certification-process') || request()->routeIs('layanan') ? 'bg-white' : 'bg-transparent' }}">
     <div class="uk-container">
         <div>
             <div class="container-info">
