@@ -956,12 +956,12 @@ html {
     margin: 0 auto;
 }
 #visi-misi .visi{
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Work Sans';
     margin-top: 0px;
 }
 #visi-misi ul{
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Work Sans';
 }
 #visi-misi [class*=uk-list]>::before{
