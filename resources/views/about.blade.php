@@ -118,35 +118,35 @@
                                     <li>Organisasi yang sertifikasinya berakhir dan tidak diperpanjang harus segera menghentikan penggunaan logo atau pernyataan “disertifikasi oleh PT Global Improvement Certification (GIC)” dalam promosi.</li>
                                     <li class="dot-top">
                                         <div>
-                                            <p>Logo PT Global Improvement Certification (GIC) yang benar adalah :</p>
+                                            <p style="font-size: 15px;">Logo PT Global Improvement Certification (GIC) yang benar adalah :</p>
                                             <ul class="uk-list uk-list-numeric custom-list small">
                                                 <li class="dot-top">
                                                     <div>
-                                                        <p class="description">Logo Perusahaan </p>
+                                                        <p class="description" style="font-size: 15px;">Logo Perusahaan </p>
                                                         <img src="{{ asset('assets/images/base/penggunaan-logo.png') }}" class="max-w-210" alt="Logo GIC">
                                                     </div>
                                                 </li>
                                                 <li class="dot-top">
                                                     <div>
-                                                        <p class="description">Logo Sertifikasi standar ISO 9001:2015 </p>
+                                                        <p class="description" style="font-size: 15px;">Logo Sertifikasi standar ISO 9001:2015 </p>
                                                         <img src="{{ asset('assets/images/base/penggunaan-logo-9001.png') }}" class="max-w-200" alt="Logo GIC 9001">
                                                     </div>
                                                 </li>
                                                 <li class="dot-top">
                                                     <div>
-                                                        <p class="description">Logo Sertifikasi standar ISO 14001:2015 </p>
+                                                        <p class="description" style="font-size: 15px;">Logo Sertifikasi standar ISO 14001:2015 </p>
                                                         <img src="{{ asset('assets/images/base/penggunaan-logo-14001.png') }}" class="max-w-200" alt="Logo GIC 14001">
                                                     </div>
                                                 </li>
                                                 <li class="dot-top">
                                                     <div>
-                                                        <p class="description">Logo Sertifikasi standar ISO 45001:2018 </p>
+                                                        <p class="description" style="font-size: 15px;">Logo Sertifikasi standar ISO 45001:2018 </p>
                                                         <img src="{{ asset('assets/images/base/penggunaan-logo-45001.png') }}" class="max-w-200" alt="Logo GIC 45001">
                                                     </div>
                                                 </li>
                                                 <li class="dot-top">
                                                     <div>
-                                                        <p class="description">Logo Sertifikasi standar ISO 37001:2016 </p>
+                                                        <p class="description" style="font-size: 15px;">Logo Sertifikasi standar ISO 37001:2016 </p>
                                                         <img src="{{ asset('assets/images/base/penggunaan-logo-37001.png') }}" class="max-w-200" alt="Logo GIC 37001">
                                                     </div>
                                                 </li>
