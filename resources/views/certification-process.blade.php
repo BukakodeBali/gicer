@@ -14,27 +14,27 @@
                     <a class="uk-accordion-title" href="#">Pembekuan Sertifikasi:</a>
                     <div class="uk-accordion-content">
                         <ul class="uk-list uk-list-disc">
-                            <li>Hal ini dapat terjadi apabila Perusahaan gagal secara total memenuhi persyaratan sertifikasi, termasuk persyaratan sistem manajemen, atau</li>
-                            <li>Perusahaan yang disertifikasi tidak membolehkan pelaksanaan survailen atau resertifikasi sesuai program yang ditetapkan, atau</li>
-                            <li>Perusahaan meminta pembekuan secara sukarela</li>
-                            <li>Perusahaan tidak menindaklanjuti hasil sesuai batas waktu yang ditetapkan dan perpanjangan waktu yang diberikan</li>
-                            <li>Perusahaan belum menyelesaikan administrasi pembayaran 1 (satu) bulan setelah pelaksanaan audit</li>
+                            <li>Hal ini dapat terjadi apabila Organisasi gagal secara total memenuhi persyaratan sertifikasi, termasuk persyaratan sistem manajemen, atau</li>
+                            <li>Organisasi yang disertifikasi tidak membolehkan pelaksanaan survailen atau resertifikasi sesuai program yang ditetapkan, atau</li>
+                            <li>Organisasi meminta pembekuan secara sukarela</li>
+                            <li>Organisasi tidak menindaklanjuti hasil sesuai batas waktu yang ditetapkan dan perpanjangan waktu yang diberikan</li>
+                            <li>Organisasi belum menyelesaikan administrasi pembayaran 1 (satu) bulan setelah pelaksanaan audit</li>
                         </ul>
                     </div>
                 </li>
                 <li class="uk-open">
                     <a class="uk-accordion-title" href="#">Pengaktifan pembekuan</a>
                     <div class="uk-accordion-content">
-                        <p class="description" style="font-size: 14px;">Apabila dalam kurun waktu pembekuan, klien telah menyelesaikan hal-hal yang menjadi alasan pembekuan, PT Global Improvement Certification (GIC) akan mengaktifkan pembekuan status sertifikasi klien.</p>
+                        <p class="description" style="font-size: 14px;">Apabila dalam kurun waktu pembekuan, organisasi telah menyelesaikan hal-hal yang menjadi alasan pembekuan, PT Global Improvement Certification (GIC) akan mengaktifkan pembekuan status sertifikasi organisasi.</p>
                     </div>
                 </li>
                 <li class="uk-open">
                     <a class="uk-accordion-title" href="#">Pencabutan Sertifikasi:</a>
                     <div class="uk-accordion-content">
                         <ul class="uk-list uk-list-disc">
-                            <li>Perusahaan gagal menyelesaikan hal-hal yang menjadi alasan pembekuan</li>
+                            <li>Organisasi gagal menyelesaikan hal-hal yang menjadi alasan pembekuan</li>
                             <li>Hasil short notice yang diterbitkan merekomendasikan pencabutan status sertikasi</li>
-                            <li>Perusahaan belum menyelesaikan administrasi pembayaran 3 (tiga) bulan setelah pelaksanaan audit</li>
+                            <li>Organisasi belum menyelesaikan administrasi pembayaran 3 (tiga) bulan setelah pelaksanaan audit</li>
                         </ul>
                     </div>
                 </li>

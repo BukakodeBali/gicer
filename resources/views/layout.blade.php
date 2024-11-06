@@ -20,7 +20,7 @@
     <!-- fonts -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/work-sans.css') }}">
     <!-- Custom Styling -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ksm-custome.css?v=0.0.7') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ksm-custome.css?v=0.0.8') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/uikit-sticky.css') }}">
     <!-- Flicking -->
     <link rel="stylesheet" href="{{ asset('assets/css/flicking.css') }}" />

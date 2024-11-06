@@ -482,9 +482,6 @@ html {
 .btn-ksm-light:disabled{
 	background-color: hsla(336, 83%, 2%, 0.75);
 }
-.login-bg .uk-fieldset{
-	padding-top: 60px;
-}
 @media(max-width: 959px){
 	.border-rounded{
 		border-radius: 0px;
@@ -495,9 +492,6 @@ html {
 	}
 	.pad-form-outter{
 		padding-top: 30px;
-	}
-	.login-bg .uk-fieldset{
-		padding-top: 0px;
 	}
 	.pad-mobile{
 		padding: 0px 15px;
@@ -2256,4 +2250,60 @@ html {
 }
 #tentang-kami .uk-tab::before {
     border-bottom: 0;
+}
+.login-bg {
+    background-size: 120%;
+    background-position: 0% 15%;
+}
+.login-bg .logo-x {
+    height: 45px;
+    margin-bottom: 80px;
+}
+.login-bg .title {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 700;
+    color: #0b0105;
+}
+.login-bg .description {
+    margin-bottom: 40px;
+}
+.login-bg .form-card {
+    position: relative;
+}
+.login-bg .form-card .center-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 990;
+    padding: 20px;
+}
+.login-bg .action-section {
+    align-items: center;
+    gap: 20px;
+    display: flex;
+}
+.login-bg .action-section > a {
+    color: #666;
+}
+@media(max-width: 960px){
+	.login-bg{
+	    background-size: inherit;
+	}
+    .login-bg .form-card .center-items {
+        position: unset;
+        top: 0;
+        left: 0;
+        transform: unset;
+        width: auto;
+        box-sizing: unset;
+        z-index: unset;
+        padding: 20px;
+    }
+    .login-bg .description {
+        margin-bottom: 0px;
+    }
 }

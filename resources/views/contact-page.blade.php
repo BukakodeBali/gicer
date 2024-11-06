@@ -89,17 +89,6 @@
                                             <p class="mt-0 description">
                                                 <a href="mailto:info@certificationimprovement.com">info@certificationimprovement.com</a>
                                             </p>
-
-                                            <p class="title" style="margin-bottom: 20px; margin-top: 30px; font-size: 20px">Keluhan & Banding</p>
-                                            <p class="mb-5 mt-0"><span style="font-weight: 500;">Keluhan dapat di ajukan melalui email berikut:</span></p>
-                                            <p class="mt-0 description">
-                                                <a href="mailto:development@certificationimprovement.com">development@certificationimprovement.com</a>
-                                            </p>
-
-                                            <p class="mb-5 mt-0"><span style="font-weight: 500;">Banding dapat di ajukan melalui email berikut:</span></p>
-                                            <p class="mt-0 description">
-                                                <a href="mailto:development@certificationimprovement.com">development@certificationimprovement.com</a>
-                                            </p>
                                         </div>
                                         <!-- end of kontak kami -->
                                     </li>
@@ -108,13 +97,22 @@
                                         <div class="uk-container">
                                             <div id="visi-misi">
                                                 <h3 style="font-size: 20px;padding:0px">Mekanisme Keluhan</h3>
-                                                <p class="description">Perusahaan memberikan keluhan baik secara lisan maupun tulisan, melalui media tatap muka (pada saat kunjungan), surat, website, email dan telepon. Keluhan yang diterima akan dicatat dalam Form Keluhan Pelanggan.</p>
+                                                <p class="description">Organisasi dapat mengahujan keluhan baik secara lisan maupun tulisan, melalui media tatap muka (pada saat kunjungan), surat, website, email dan telepon. Keluhan yang diterima akan dicatat dalam Form Keluhan Pelanggan.</p>
                                                 <p class="description" style="margin: 0;">Berikut alur pengajuan keluhan :</p>
                                                 <img src="{{ asset('assets/images/base/mekanisme-keluhan.png') }}" class="pt-15" alt="mekanisme-keluhan">
                                                 <h3 style="font-size: 20px;padding:0px">Mekanisme Banding</h3>
-                                                <p class="description">Banding terhadap hasil sertifikasi dapat diajukan oleh perusahaan tersertifikasi PT Global Improvement Certification, adapun banding dapat berupa hasil audit, keputusan sertifikasi dan/atau hasil keputusan yang berdampak terhadap Perusahaan.</p>
+                                                <p class="description">Banding terhadap hasil sertifikasi dapat diajukan oleh organisasi tersertifikasi PT Global Improvement Certification, adapun banding dapat berupa hasil audit, keputusan sertifikasi dan/atau hasil keputusan yang berdampak terhadap Organisasi.</p>
                                                 <p class="description" style="margin: 0;">Berikut alur pengajuan banding :</p>
                                                 <img src="{{ asset('assets/images/base/mekanisme-banding.png') }}" class="pt-15" alt="mekanisme-banding">
+                                                <p class="title" style="margin-bottom: 20px; margin-top: 30px; font-size: 20px">Keluhan & Banding</p>
+                                                <p class="mb-5 mt-0"><span style="font-weight: 500;">Keluhan dapat di ajukan melalui email berikut:</span></p>
+                                                <p class="mt-0 description">
+                                                    <a href="mailto:development@certificationimprovement.com">development@certificationimprovement.com</a>
+                                                </p>
+                                                <p class="mb-5 mt-0"><span style="font-weight: 500;">Banding dapat di ajukan melalui email berikut:</span></p>
+                                                <p class="mt-0 description">
+                                                    <a href="mailto:development@certificationimprovement.com">development@certificationimprovement.com</a>
+                                                </p>
                                             </div>
                                         </div>
                                         <!-- end of keluhan banding -->
@@ -123,7 +121,7 @@
                                         <!-- whistle blowing banding -->
                                         <div class="uk-container">
                                             <div id="visi-misi">
-                                                <p class="description"><strong>Laporkan segala bentuk pelanggaran atau penyalahgunaan wewenang di lingkungan perusahaan kami.</strong> Kami menjamin kerahasiaan identitas Anda dan akan menindaklanjuti laporan Anda secara profesional dan transparan demi terciptanya lingkungan kerja yang jujur dan aman. </p>
+                                                <p class="description"><strong>Laporkan segala bentuk pelanggaran atau penyalahgunaan wewenang di lingkungan organisasi kami.</strong> Kami menjamin kerahasiaan identitas Anda dan akan menindaklanjuti laporan Anda secara profesional dan transparan demi terciptanya lingkungan kerja yang jujur dan aman. </p>
                                                 <p class="description">Laporkan melalui button berikut:</p>
                                                 <a href="mailto:corporate@certificationimprovement.com">
                                                     <button uk-slider-parallax="y: 80,-80;" class="uk-button uk-button-primary btn-ksm-slider">
