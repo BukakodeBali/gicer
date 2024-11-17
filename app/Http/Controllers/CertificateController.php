@@ -40,25 +40,26 @@ class CertificateController extends Controller
             $startDate  = $request->start_date;
             $endDate    = $request->end_date;
 
-            $certificates = Certificate::with(['client:id,code,name', 'product', 'status_app'])
-                            ->when($status, function ($q) use ($status) {
-                                $q->where('status', $status);
-                            })
-                            ->when($issueDate, function ($q) use ($issueDate){
-                                $q->whereDate('issue_date', $issueDate);
-                            })
-                            ->when($startDate <> '' && $endDate <> '', function ($q) use ($startDate, $endDate) {
-                                $q->whereBetween('expired', [$startDate, $endDate]);
-                            })
-                            ->when($statusApp <> '', function ($q) use ($statusApp) {
-                                $q->where('status_id', $statusApp);
-                            })
-                            ->when($keyword <> '', function ($q) use ($keyword){
-                                $q->whereHas('client', function ($q) use ($keyword) {
-                                    $q->where('code', 'like', "%{$keyword}%")
-                                        ->orWhere('name', 'like', "%{$keyword}%");
-                                });
-                            })->orderBy('id', 'desc');
+            $certificates = Certificate::query()
+                ->with(['client:id,code,name', 'product', 'status_app'])
+                ->when($status, function ($q) use ($status) {
+                    $q->where('status', $status);
+                })
+                ->when($issueDate, function ($q) use ($issueDate){
+                    $q->whereDate('issue_date', $issueDate);
+                })
+                ->when($startDate <> '' && $endDate <> '', function ($q) use ($startDate, $endDate) {
+                    $q->whereBetween('expired', [$startDate, $endDate]);
+                })
+                ->when($statusApp <> '', function ($q) use ($statusApp) {
+                    $q->where('status_id', $statusApp);
+                })
+                ->when($keyword <> '', function ($q) use ($keyword){
+                    $q->whereHas('client', function ($q) use ($keyword) {
+                        $q->where('code', 'like', "%{$keyword}%")
+                            ->orWhere('name', 'like', "%{$keyword}%");
+                    });
+                })->orderBy('id', 'desc');
 
             $certificates = $perPage == 'all' ? $certificates->get():$certificates->paginate($perPage);
             return CertificateResources::collection($certificates);
