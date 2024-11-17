@@ -332,7 +332,7 @@ class CertificateController extends Controller
         $start = $i;
         foreach ($certificates as $key => $certificate) {
             $sheet->setCellValue('A'.$i, $key+1);
-            $sheet->setCellValue('B'.$i, 'KSM/'.$certificate->client->code.'/'.$certificate->product->code);
+            $sheet->setCellValue('B'.$i, env('CERTIFICATE_PREFIX').'/'.$certificate->client->code.'/'.$certificate->product->code);
             $sheet->setCellValue('C'.$i, $certificate->client->code);
             $sheet->setCellValue('D'.$i, $certificate->client->name);
             $sheet->setCellValue('E'.$i, $certificate->product->number." : ".$certificate->product->period." ".$certificate->product->name);
