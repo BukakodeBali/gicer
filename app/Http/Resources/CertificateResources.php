@@ -40,7 +40,7 @@ class CertificateResources extends JsonResource
             'e_code' => $this->e_code,
             'nace_code' => $this->nace_code,
             'scope_name' => $this->scope_name,
-            'qr_code' => $this->qr_code ? base64_encode($this->qr_code) : '',
+            'qrcode' => $this->qr_code ? base64_encode($this->qr_code) : '',
         ];
     }
 }
