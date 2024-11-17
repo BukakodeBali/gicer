@@ -5,6 +5,7 @@ namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Certificate extends Model
 {
@@ -15,6 +16,7 @@ class Certificate extends Model
         'expired',
         'original_date',
         'status',
+        'hash',
         'status_id',
         'user_id',
         'e_code',
@@ -40,5 +42,14 @@ class Certificate extends Model
     public function product()
     {
         return $this->belongsTo('App\Models\Product', 'product_id');
+    }
+
+    public function getQrCodeAttribute(): string
+    {
+        if (Storage::disk('local')->exists('certificates/'.$this->id.'.PNG')) {
+            return Storage::disk('local')->get('certificates/'.$this->id.'.PNG');
+        }
+
+        return '';
     }
 }

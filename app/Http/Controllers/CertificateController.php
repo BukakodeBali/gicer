@@ -15,8 +15,11 @@ use App\Traits\ExcelStyle;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use LaravelQRCode\Facades\QRCode;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -78,11 +81,43 @@ class CertificateController extends Controller
             $data['status_id']  = $request->has('status_id') && $request->filled('status_id') ? $request->status_id:$status->id;
             $data['original_date'] = $data['issue_date'];
 
-            $certificate        = Certificate::create($data);
+            DB::beginTransaction();
+            try {
+                $certificate        = Certificate::create($data);
 
-            $certificateDetail  = $this->buildDetail($data);
+                $hash = app('hash')->make($certificate->id.Str::random(10));
+                $hash = preg_replace('/[^A-Za-z0-9\-]/', '', $hash);
+                $certificate->hash = $hash;
+                $certificate->save();
 
-            return $certificate->details()->saveMany($certificateDetail) ? $this->storeTrue('sertifikat') : $this->storeFalse('sertifikat');
+
+                $storagePath= Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
+
+                $filename   = $certificate->id.'.PNG';
+
+                $filepath   = $storagePath.'certificates/'.$filename;
+
+                $qrurl      = env('APP_CLIENT_URL').'/verify-certificate/'.$hash;
+
+                QRCode::url($qrurl)
+                    ->setOutfile($filepath)
+                    ->setSize(8)
+                    ->setMargin(2)
+                    ->setErrorCorrectionLevel('H')
+                    ->png();
+
+                $certificateDetail  = $this->buildDetail($data);
+
+                $certificate->details()->saveMany($certificateDetail);
+
+                DB::commit();
+
+                return $this->storeTrue('sertifikat');
+            } catch (\Exception $e) {
+                DB::rollBack();
+                Log::info($e->getMessage());
+                return $this->storeFalse('sertifikat');
+            }
         else:
             return $this->unAuthorized();
         endif;
@@ -92,6 +127,27 @@ class CertificateController extends Controller
     {
         if ($this->user->can('update certificate')):
             $certificate = Certificate::find($id);
+            if ($certificate->qr_code === '') {
+                $hash = app('hash')->make($certificate->id.Str::random(10));
+                $hash = preg_replace('/[^A-Za-z0-9\-]/', '', $hash);
+                $certificate->hash = $hash;
+                $certificate->save();
+
+                $storagePath= Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
+
+                $filename   = $certificate->id.'.PNG';
+
+                $filepath   = $storagePath.'certificates/'.$filename;
+
+                $qrurl      = env('APP_CLIENT_URL').'/verify-certificate/'.$hash;
+
+                QRCode::url($qrurl)
+                    ->setOutfile($filepath)
+                    ->setSize(8)
+                    ->setMargin(2)
+                    ->setErrorCorrectionLevel('H')
+                    ->png();
+            }
 
             if ($certificate) {
                 $data = $request->all();
