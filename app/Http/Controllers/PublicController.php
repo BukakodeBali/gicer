@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\ContactRequest;
+use App\Http\Resources\CertificateClientResources;
 use App\Http\Resources\ClientCertificatesResources;
 use App\Mails\ContactMail;
+use App\Models\Certificate;
 use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -44,5 +46,27 @@ class PublicController extends Controller
         }
 
         return $this->dataNotFound('client');
+    }
+
+    public function getCertificateByHash(Request $request)
+    {
+        $hash = $request->hash;
+        $certificate = Certificate::where('hash', $hash)->first();
+        if ($certificate) {
+            $certificate = Certificate::with([
+                'client',
+                'details' => function ($q) {
+                    return $q->whereNotIn('status_id', [5]);
+                },
+                'status_app',
+                'product',
+                'details.status',
+            ])
+            ->find($certificate->id);
+
+            return new CertificateClientResources($certificate);
+        }
+
+        return $this->dataNotFound('certificate');
     }
 }

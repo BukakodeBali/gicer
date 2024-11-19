@@ -137,5 +137,6 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->post('/contact', 'PublicController@contact');
     $router->get('/get_hash/certificates', 'PublicController@getCertificatesByHash');
+    $router->get('/get_hash/certificate', 'PublicController@getCertificateByHash');
 });
 
