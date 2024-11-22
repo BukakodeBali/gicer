@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Certificate;
 use App\Models\CertificateDetail;
+use App\Models\Status;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
@@ -39,7 +40,7 @@ class CheckStatusCertificate extends Command
         Log::info($today);
         $details = CertificateDetail::with(['certificate'])
             ->where('issue_date', '=', $today)
-//            ->where('is_active', '=', '0')
+            ->where('status_id', '!=', 5)
             ->get();
         Log::info($details);
         foreach ($details as $detail) {
