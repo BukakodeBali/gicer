@@ -42,6 +42,7 @@ class CertificateClientResources extends JsonResource
             'e_code' => $this->resource->e_code,
             'nace_code' => $this->resource->nace_code,
             'scope_name' => $this->resource->scope_name,
+            'year' => Carbon::parse($this->resource->original_date)->floatDiffInYears(Carbon::parse($this->resource->expired)),
         ];
     }
 
