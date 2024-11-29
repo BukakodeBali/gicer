@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Storage;
 
 class Certificate extends Model
 {
+    const STATUS_ACTIVE = 'Active';
+    const STATUS_SUSPEND = 'Suspend';
+    const STATUS_WITHDRAW = 'Withdraw';
+    const STATUS_EXPIRED = 'Expired';
+
     protected $fillable = [
         'client_id',
         'product_id',

@@ -40,7 +40,7 @@ class CheckStatusCertificate extends Command
         Log::info($today);
         $details = CertificateDetail::with(['certificate'])
             ->where('issue_date', '=', $today)
-            ->where('status_id', '!=', 5)
+            ->where('status_id', '!=', Status::STATUS_TRANSFER)
             ->get();
         Log::info($details);
         foreach ($details as $detail) {

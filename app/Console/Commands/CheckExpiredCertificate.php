@@ -35,19 +35,40 @@ class CheckExpiredCertificate extends Command
     public function handle()
     {
         $today = Carbon::now()->toDateString();
-        $certificates = Certificate::where('status', '=', 'Active')->where('expired', '=', $today)->get();
+
+        // Suspended
+        $certificates = Certificate::query()
+            ->where('status', '=', Certificate::STATUS_ACTIVE)
+            ->whereRaw("DATE_ADD(expired, INTERVAL 3 MONTH) = '{$today}'")
+            ->get();
         Log::info($certificates);
         foreach ($certificates as $certificate) {
             $certificate->update([
-                'status' => 'Suspend'
+                'status' => Certificate::STATUS_SUSPEND
             ]);
         }
 
-        $certificates = Certificate::where('status', '=', 'Suspend')->whereRaw("DATE_ADD(expired, INTERVAL 1 MONTH) = '{$today}'")->get();
+        // Withdraw
+        $certificates = Certificate::query()
+            ->where('status', '=', Certificate::STATUS_SUSPEND)
+            ->whereRaw("DATE_ADD(expired, INTERVAL 6 MONTH) = '{$today}'")
+            ->get();
         Log::info($certificates);
         foreach ($certificates as $certificate) {
             $certificate->update([
-                'status' => 'Non Active'
+                'status' => Certificate::STATUS_WITHDRAW
+            ]);
+        }
+
+        // Expired
+        $certificates = Certificate::query()
+            ->where('status', '!=', Certificate::STATUS_ACTIVE)
+            ->whereRaw("DATE_ADD(issue_date, INTERVAL 36 MONTH) = '{$today}'")
+            ->get();
+        Log::info($certificates);
+        foreach ($certificates as $certificate) {
+            $certificate->update([
+                'status' => Certificate::STATUS_EXPIRED
             ]);
         }
     }
