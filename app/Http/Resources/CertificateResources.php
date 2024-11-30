@@ -17,7 +17,8 @@ class CertificateResources extends JsonResource
         Carbon::setLocale('id');
         return [
             'id'            => $this->id,
-            'code'          => env('CERTIFICATE_PREFIX').'/'.$client->code.'/'.$product->code,
+            'code'          => $this->resource->code,
+            'password'      => $this->resource->password,
             'client_id'     => $client->id,
             'client_code'   => $client->code,
             'client_name'   => $client->name,

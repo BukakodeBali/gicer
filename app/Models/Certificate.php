@@ -22,11 +22,14 @@ class Certificate extends Model
         'original_date',
         'status',
         'hash',
+        'code',
+        'password',
         'status_id',
         'user_id',
         'e_code',
         'nace_code',
         'scope_name',
+        'created_by',
     ];
 
     public function details()

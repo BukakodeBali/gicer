@@ -94,6 +94,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
             $router->post('/', 'CertificateController@store');
             $router->delete('/{id}', 'CertificateController@destroy');
             $router->post('/update-issue-date-detail', 'CertificateController@updateIssueDateDetail');
+            $router->put('/{id}/password', 'CertificateController@updatePassword');
 
             $router->get('/dashboard/count', 'CertificateController@dashboard');
             $router->get('/dashboard/will-expired', 'CertificateController@willExpired');

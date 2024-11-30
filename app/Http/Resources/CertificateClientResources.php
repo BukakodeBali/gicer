@@ -16,7 +16,7 @@ class CertificateClientResources extends JsonResource
 
         return [
             'id'            => $this->resource->id,
-            'code'          => env('CERTIFICATE_PREFIX').'/'.$client->code.'/'.$product->code,
+            'code'          => $this->resource->code,
             'client_id'     => $client->id,
             'client_code'   => $client->code,
             'client_name'   => $client->name,

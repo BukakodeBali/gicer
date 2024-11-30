@@ -56,4 +56,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     {
         return $this->hasOne('App\Models\Client', 'user_id', 'id');
     }
+
+    public function certificate()
+    {
+        return $this->hasOne('App\Models\Certificate', 'user_id', 'id');
+    }
 }

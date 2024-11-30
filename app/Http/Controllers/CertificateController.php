@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\CertificateStoreRequest;
+use App\Http\Requests\CertificateUpdatePasswordRequest;
 use App\Http\Requests\CertificateUpdateRequest;
 use App\Http\Resources\CertificateExpiredResources;
 use App\Http\Resources\CertificateResources;
 use App\Models\Certificate;
 use App\Models\CertificateDetail;
+use App\Models\Client;
+use App\Models\Product;
 use App\Models\Status;
+use App\Models\User;
 use App\Traits\ExcelStyle;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -76,15 +80,51 @@ class CertificateController extends Controller
         if ($this->user->can('create certificate')):
             $data               = $request->all();
             $status             = Status::oldest()->first();
-            $data['user_id']    = Auth::id();
+            $data['created_by']    = Auth::id();
             $data['expired']    = Carbon::parse($request->issue_date)->addYear()->toDateString();
             $data['status_id']  = $request->has('status_id') && $request->filled('status_id') ? $request->status_id:$status->id;
             $data['original_date'] = $data['issue_date'];
 
+            $client = Client::find($data['client_id']);
+            if (!$client) {
+                return $this->storeFalse('sertifikat, client not found');
+            }
+
+            $product = Product::find($data['product_id']);
+            if (!$product) {
+                return $this->storeFalse('sertifikat, product not found');
+            }
+
+            $code = env('CERTIFICATE_PREFIX').'/'.$client->code.'/'.$product->code;
+            // check code exists
+            $checkCode = Certificate::query()
+                ->where('code', $code)
+                ->first();
+            if ($checkCode) {
+                $latestCertificate = Certificate::query()
+                    ->latest()
+                    ->first();
+
+                $code = env('CERTIFICATE_PREFIX').'/'.$client->code.'/'.$product->code.'/'.($latestCertificate->id + 1);
+            }
+
+            $password = Str::random(8);
+            $data['code'] = $code;
+            $data['password'] = $password;
+
+            $user = [
+                'username'  => $data['code'],
+                'email'     => $data['code'],
+                'password'  => app('hash')->make($password),
+            ];
+
             DB::beginTransaction();
             try {
-                $certificate        = Certificate::create($data);
+                $user = User::create($user);
+                $data['user_id'] = $user->id;
+                $user->assignRole('Client');
 
+                $certificate        = Certificate::create($data);
                 $hash = app('hash')->make($certificate->id.Str::random(10));
                 $hash = preg_replace('/[^A-Za-z0-9\-]/', '', $hash);
                 $certificate->hash = $hash;
@@ -92,11 +132,8 @@ class CertificateController extends Controller
 
 
                 $storagePath= Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
-
                 $filename   = $certificate->id.'.PNG';
-
                 $filepath   = $storagePath.'certificates/'.$filename;
-
                 $qrurl      = env('APP_CLIENT_URL').'/verify-certificate/'.$hash;
 
                 QRCode::url($qrurl)
@@ -107,7 +144,6 @@ class CertificateController extends Controller
                     ->png();
 
                 $certificateDetail  = $this->buildDetail($data);
-
                 $certificate->details()->saveMany($certificateDetail);
 
                 DB::commit();
@@ -127,6 +163,42 @@ class CertificateController extends Controller
     {
         if ($this->user->can('update certificate')):
             $certificate = Certificate::find($id);
+            if (!$certificate->code) {
+                $client = Client::find($certificate->client_id);
+                if (!$client) {
+                    return $this->storeFalse('sertifikat, client not found');
+                }
+
+                $product = Product::find($certificate->product_id);
+                if (!$product) {
+                    return $this->storeFalse('sertifikat, product not found');
+                }
+
+                $code = env('CERTIFICATE_PREFIX').'/'.$client->code.'/'.$product->code;
+                // check code exists
+                $checkCode = Certificate::query()
+                    ->where('code', $code)
+                    ->first();
+                if ($checkCode) {
+                    $code = env('CERTIFICATE_PREFIX').'/'.$client->code.'/'.$product->code.'/'.$certificate->id;
+                }
+
+                $password = Str::random(8);
+                $user = [
+                    'username'  => $code,
+                    'email'     => $code,
+                    'password'  => app('hash')->make($password),
+                ];
+
+                $user = User::create($user);
+                $user->assignRole('Client');
+                $certificate->code = $code;
+                $certificate->password = $password;
+                $certificate->user_id = $user->id;
+                $certificate->save();
+            }
+
+
             if ($certificate->qr_code === '') {
                 $hash = app('hash')->make($certificate->id.Str::random(10));
                 $hash = preg_replace('/[^A-Za-z0-9\-]/', '', $hash);
@@ -134,11 +206,8 @@ class CertificateController extends Controller
                 $certificate->save();
 
                 $storagePath= Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
-
                 $filename   = $certificate->id.'.PNG';
-
                 $filepath   = $storagePath.'certificates/'.$filename;
-
                 $qrurl      = env('APP_CLIENT_URL').'/verify-certificate/'.$hash;
 
                 QRCode::url($qrurl)
@@ -151,12 +220,11 @@ class CertificateController extends Controller
 
             if ($certificate) {
                 $data = $request->all();
-
                 if ($request->reset_detail) {
-                    CertificateDetail::where('certificate_id', $id)->delete();
-
+                    CertificateDetail::query()
+                        ->where('certificate_id', $id)
+                        ->delete();
                     $certificateDetail = $this->buildDetail($data);
-
                     $certificate->details()->saveMany($certificateDetail);
                 }
 
@@ -173,7 +241,6 @@ class CertificateController extends Controller
     {
         if ($this->user->can('delete certificate')):
             $certificate = Certificate::find($id);
-
             if ($certificate) {
                 return $certificate->delete() ? $this->destroyTrue('sertifikat') : $this->storeFalse('sertifikat');
             }
@@ -226,13 +293,9 @@ class CertificateController extends Controller
 
         foreach ($status as $key => $status) {
             $isActive = $status->id == $data['status_id'] ? 1:0;
-
             $period = $period + $status->period;
-
             $date = $startDate->copy()->addMonths($period);
-
             $issueDate = $date->toDateString();
-
             $details[] = new CertificateDetail([
                 'status_id'     => $status->id,
                 'issue_date'    => $issueDate,
@@ -252,27 +315,46 @@ class CertificateController extends Controller
 
         $detailId = $request->detail_id;
         $issueDate = Carbon::parse($request->issue_date);
-
         $detail = CertificateDetail::find($detailId);
         $detail->issue_date = $issueDate->toDateString();
         $detail->save();
 
-        // UPDATE DETAIL (OTHER)
-//        $details = CertificateDetail::query()
-//            ->with('status')
-//            ->where('id', '>', $detail->id)
-//            ->where('certificate_id', '=', $detail->certificate_id)
-//            ->orderBy('status_id', 'asc')
-//            ->get();
-//
-//        $period = 0;
-//        foreach ($details as $detail) {
-//            $period = $period + $detail->status->period;
-//            $detail->issue_date = $issueDate->copy()->addMonths($period)->toDateString();
-//            $detail->save();
-//        }
-
         return $this->updateTrue('Detail sertifikat');
+    }
+
+    public function updatePassword(CertificateUpdatePasswordRequest $request, $id)
+    {
+        if (!$this->user->can('update certificate')) {
+            return $this->unAuthorized();
+        }
+
+        $password = $request->password;
+
+        $certificate = Certificate::find($id);
+        if (!$certificate) {
+            return $this->dataNotFound('Certificate not found');
+        }
+
+        $user = User::find($certificate->user_id);
+        if (!$user) {
+            return $this->dataNotFound('User not found');
+        }
+
+        DB::beginTransaction();
+        try {
+            $certificate->password = $password;
+            $certificate->save();
+
+            $user->password = app('hash')->make($password);
+            $user->save();
+
+            DB::commit();
+            return $this->updateTrue('Password');
+        } catch (\Throwable $e) {
+            DB::rollBack();
+
+            return $this->updateFalse('Password');
+        }
     }
 
     public function generateExcel(Request $request)
@@ -332,7 +414,7 @@ class CertificateController extends Controller
         $start = $i;
         foreach ($certificates as $key => $certificate) {
             $sheet->setCellValue('A'.$i, $key+1);
-            $sheet->setCellValue('B'.$i, env('CERTIFICATE_PREFIX').'/'.$certificate->client->code.'/'.$certificate->product->code);
+            $sheet->setCellValue('B'.$i, $certificate->code);
             $sheet->setCellValue('C'.$i, $certificate->client->code);
             $sheet->setCellValue('D'.$i, $certificate->client->name);
             $sheet->setCellValue('E'.$i, $certificate->product->number." : ".$certificate->product->period." ".$certificate->product->name);

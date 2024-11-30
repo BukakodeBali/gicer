@@ -39,8 +39,8 @@ class ClientLoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'code.required' => 'Kode perusahaan wajib isi',
-            'code.exists' => 'Kode perusahaan tidak ditemukan',
+            'code.required' => 'Nomor sertifikat wajib isi',
+            'code.exists' => 'Nomor tidak ditemukan',
             'password.required' => 'Password wajib isi',
             'password.min' => 'Password minimal 8 karakter'
         ];

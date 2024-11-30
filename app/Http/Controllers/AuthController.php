@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ClientLoginRequest;
 use App\Http\Requests\LoginRequest;
+use App\Models\Certificate;
 use App\Models\User;
 use Auth;
 
@@ -90,7 +91,6 @@ class AuthController extends Controller
         $password = $request->password;
 
         $user = User::where('username', $username)->first();
-
         if ($user) {
             $token = Auth::attempt(['email' => $user->email, 'password' => $password]);
 
@@ -102,10 +102,15 @@ class AuthController extends Controller
 
                 return response()->json($response, 401);
             } else {
+                $certificate = Certificate::query()
+                    ->where('user_id', $user->id)
+                    ->first();
+
                 $response = [
                     'status'    => true,
                     'message'   => 'Login successfully',
                     'data'      => $user,
+                    'hash'      => $certificate->hash,
                     'token_data'=> $this->respondWithToken($token)
                 ];
 
