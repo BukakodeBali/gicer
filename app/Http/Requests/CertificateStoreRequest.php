@@ -31,7 +31,7 @@ class CertificateStoreRequest extends FormRequest
             'issue_date'=> 'required|date',
             'status_id' => 'required|exists:status,id',
             'status'    => 'required',
-            'e_code'    => 'required|max:10',
+            'e_code'    => 'nullable|max:10',
             'nace_code' => 'nullable|max:10',
             'scope_name'=> 'required'
         ];

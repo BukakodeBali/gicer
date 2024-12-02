@@ -31,7 +31,7 @@ class CertificateUpdateRequest extends FormRequest
             'status_id' => 'required|exists:status,id',
             'status'    => 'required',
             'reset_detail' => 'required|boolean',
-            'e_code' => 'required|max:10',
+            'e_code' => 'nullable|max:10',
             'nace_code' => 'nullable|max:10',
             'scope_name' => 'required'
         ];
