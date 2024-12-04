@@ -172,9 +172,15 @@ class ClientController extends Controller
             $client = Client::find($id);
 
             if ($client) {
+                $certificates = $client->certificates;
                 try {
                     DB::beginTransaction();
-                    User::find($client['user_id'])->delete();
+                    foreach ($certificates as $certificate) {
+                        User::find($certificate->user_id)->forceDelete();
+                        $certificate->delete();
+                    }
+
+                    User::find($client['user_id'])->forceDelete();
                     $client->delete();
                     DB::commit();
 
@@ -248,10 +254,12 @@ class ClientController extends Controller
      */
     public function generateCode()
     {
-        $client = Client::latest()->first();
+        $client = Client::query()
+            ->withTrashed()
+            ->latest()
+            ->first();
 
         $code   = '0001';
-
         if ($client) {
             $clientCode = (int) $client['code'];
             $clientCode = $clientCode + 1;

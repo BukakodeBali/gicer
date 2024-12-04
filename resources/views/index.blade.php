@@ -309,9 +309,6 @@
                 const containerWidth = container.offsetWidth;
                 const windowWidth = window.innerWidth;
                 const margin = (windowWidth - containerWidth) / 2;
-                console.log(containerWidth);
-                console.log(windowWidth);
-                console.log(margin);
 
                 if (windowWidth > 640) {
                     return margin - 6;
