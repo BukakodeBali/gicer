@@ -73,10 +73,12 @@
                             </li>
                             <li class="uk-open">
                                 <a class="uk-accordion-title" href="#">Kerahasiaan:</a>
-                                <p class="description">PT Global Improvement Certification (GIC) wajib menjaga informasi klien yang diperoleh dari pelaksanaan kegiatan sertifikasi dan tidak akan memberikan informasi apa pun tentang klien kepada pihak ketiga, kecuali dipersyaratkan dalam peraturan tertulis.</p>
-                                <p class="description">Semua informasi yang tidak boleh dipublikasi harus dijadikan sebagai kerahasiaan. Informasi tentang klien dari sumber selain klien harus dijadikan sebagai kerahasiaan, yang mana konsisten dengan kebijakan PT Global Improvement Certification (GIC).</p>
-                                <p class="description">PT Global Improvement Certification (GIC) paham untuk menjaga kerahasiaan setiap informasi dipersyaratkan.</p>
-                                <p class="description">Dokumen beserta informasi milik klien hanya dapat diakses oleh Personel yang memiliki kewenangan dan hak untuk mengakses. Pihak yang bukan merupakan bagian dari PT Global Improvement Certification (GIC) tidak dapat mengakses dokumen beserta informasi milik klien PT Global Improvement Certification (GIC).</p>
+                                <div class="uk-accordion-content">
+                                    <p class="description">PT Global Improvement Certification (GIC) wajib menjaga informasi klien yang diperoleh dari pelaksanaan kegiatan sertifikasi dan tidak akan memberikan informasi apa pun tentang klien kepada pihak ketiga, kecuali dipersyaratkan dalam peraturan tertulis.</p>
+                                    <p class="description">Semua informasi yang tidak boleh dipublikasi harus dijadikan sebagai kerahasiaan. Informasi tentang klien dari sumber selain klien harus dijadikan sebagai kerahasiaan, yang mana konsisten dengan kebijakan PT Global Improvement Certification (GIC).</p>
+                                    <p class="description">PT Global Improvement Certification (GIC) paham untuk menjaga kerahasiaan setiap informasi dipersyaratkan.</p>
+                                    <p class="description">Dokumen beserta informasi milik klien hanya dapat diakses oleh Personel yang memiliki kewenangan dan hak untuk mengakses. Pihak yang bukan merupakan bagian dari PT Global Improvement Certification (GIC) tidak dapat mengakses dokumen beserta informasi milik klien PT Global Improvement Certification (GIC).</p>
+                                </div>
                             </li>
                             <li class="uk-open">
                                 <a class="uk-accordion-title" href="#">Kebijakan Perusahaan:</a>
@@ -90,6 +92,12 @@
                                         <li>PT Global Improvement Certification berkomitmen untuk terus berinovasi dalam menyediakan layanan sertifikasi, termasuk dalam pengembangan teknologi yang mempermudah proses sertifikasi dan audit.</li>
                                         <li>PT Global Improvement Certification melarang dan tidak mentoleransi segala bentuk penyuapan dalam seluruh kegiatan organisasi. Kami berkomitmen untuk mencegah, mendeteksi, dan menangani segala tindakan yang bertentangan dengan prinsip anti-penyuapan, guna menjaga integritas dan kepercayaan dalam layanan kami.</li>
                                     </ul>
+                                </div>
+                            </li>
+                            <li class="uk-open">
+                                <a class="uk-accordion-title" href="#">Anti Penyuapan:</a>
+                                <div class="uk-accordion-content">
+                                    <p class="description">Setiap Personel PT Global Improvement Certification menyatakan untuk mematuhi kebijkan anti penyuapan yang berlaku di Republik Indonesia. Tidak menerima gratifikasi dari klien, pihak lain yang terkait dengan proses sertifikasi PT Global Improvement Certification. Pemberian hadiah oleh PT Global Improvement Certification tidak akan mempengaruhi hasil proses sertifikasi yang dilakukan</p>
                                 </div>
                             </li>
                         </ul>
