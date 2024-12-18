@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="{{ request()->routeIs('home') ? '' : 'global-gradient-background' }}">
+
 <head>
     <title>{{ isset($title) ? $title." - " : "" }}Global Improvement Certification</title>
     <!-- meta and the others -->
@@ -10,17 +11,17 @@
     <meta content='website' property='og:type' />
     <meta content='Indonesia' name='geo.placename' />
     <meta content='id' name='geo.country' />
-    <meta name="description" content="{{ $meta_description ?? '' }}"/>
-    <meta property="og:title" content="{{ isset($title) ? $title." - Global Improvement Certification" : "Global Improvement Certification" }}"/>
-    <meta property="og:description" content="{{ $meta_description ?? '' }}"/>
-    <meta property="og:image" content="{{ $image ?? url('images/base/default-400.png') }}"/>
+    <meta name="description" content="{{ $meta_description ?? '' }}" />
+    <meta property="og:title" content="{{ isset($title) ? $title." - Global Improvement Certification" : "Global Improvement Certification" }}" />
+    <meta property="og:description" content="{{ $meta_description ?? '' }}" />
+    <meta property="og:image" content="{{ $image ?? url('images/base/default-400.png') }}" />
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/uikit.min.css')  }}" />
     <!-- fonts -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/work-sans.css') }}">
     <!-- Custom Styling -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ksm-custome.css?v=0.0.10') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/ksm-custome.css?v=0.0.11') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/uikit-sticky.css') }}">
     <!-- Flicking -->
     <link rel="stylesheet" href="{{ asset('assets/css/flicking.css') }}" />
@@ -33,19 +34,20 @@
     <!-- Custom JS -->
     <script src="{{ asset('assets/js/uikit-custome.js') }}"></script>
 </head>
-<body>
-<div id="body-outer" style="min-height: 100%">
-    <div class="body-main">
-        <!-- navbar -->
-        @stack('menu')
-        <!-- end of navbar -->
-        @yield('content')
-        @stack('quick-contact')
-    </div>
-    @stack('footer')
-</div>
-@stack('offcanvas')
-@stack('page-script')
-</body>
-</html>
 
+<body>
+    <div id="body-outer" style="min-height: 100%">
+        <div class="body-main">
+            <!-- navbar -->
+            @stack('menu')
+            <!-- end of navbar -->
+            @yield('content')
+            @stack('quick-contact')
+        </div>
+        @stack('footer')
+    </div>
+    @stack('offcanvas')
+    @stack('page-script')
+</body>
+
+</html>
