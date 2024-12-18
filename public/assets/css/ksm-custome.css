@@ -2311,3 +2311,42 @@ html {
         margin-bottom: 0px;
     }
 }
+#klien-kami {
+    background: #efefef;
+    padding-bottom: 80px;
+}
+#klien-kami .logo-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#klien-kami .logo-client {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+#klien-kami .logo-client img {
+    height: 80px;
+    width: auto;
+}
+@media (max-width: 640px){
+    #klien-kami {
+        padding-bottom: 40px;
+    }
+    #klien-kami .logo-client img {
+        height: 60px;
+    }
+    #klien-kami .logo-card {
+        padding: 25px;
+    }
+}
