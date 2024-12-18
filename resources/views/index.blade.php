@@ -195,16 +195,16 @@
         </div>
         <div class="logo-card">
             <div class="logo-client">
-                <img src="{{ asset('assets/images/clients/01. PT Prada Tanjung Burang.JPG') }}" alt="PT Prada Tanjung Burang">
+                <img src="{{ asset('assets/images/clients/01. PT Prada Tanjung Burang.jpg') }}" alt="PT Prada Tanjung Burang">
             </div>
             <div class="logo-client">
-                <img src="{{ asset('assets/images/clients/02. PT EKA MEGA CIPTA.JPEG') }}" alt="PT EKA MEGA CIPTA">
+                <img src="{{ asset('assets/images/clients/02. PT EKA MEGA CIPTA.jpeg') }}" alt="PT EKA MEGA CIPTA">
             </div>
             <div class="logo-client">
                 <img src="{{ asset('assets/images/clients/03. PT Jago Elfah Anugrah.png') }}" alt="PT Jago Elfah Anugrah">
             </div>
             <div class="logo-client">
-                <img src="{{ asset('assets/images/clients/04. PT Tuah Naga Sakti.JPG') }}" alt="PT Tuah Naga Sakti">
+                <img src="{{ asset('assets/images/clients/04. PT Tuah Naga Sakti.jpg') }}" alt="PT Tuah Naga Sakti">
             </div>
         </div>
     </div>
